@@ -33,3 +33,10 @@ Havaitseminen:
 ## Avoimet asiat
 - IFRA 52. muutoksen notifikaatio odotetaan tammikuussa 2027 (aiemmin marraskuu 2026).
 - EU 2023/1545: 0,001 % / 0,01 % on merkintäraja, ei käyttöraja; uudet tuotteet 31.7.2026 alkaen.
+
+## Molekyylidatan hakuputki (21.11.2026)
+- `scripts/etl/seed_molecules.csv` (217 molekyyliä) → `build_molecules.py` GitHub Actionsissa (työnkulku *Päivitä molekyylidata*) → `src/data/generated/molecules.json` + `report.md` + `raw_values.md`.
+- Höyrynpaine: PubChemin lähteet luokitellaan (A: HSDB, ICSC, DOE PAC; C: Haz-Map, CAMEO/NTP 1992 – tunnetusti virheellisiä arvoja). Ristiriidat ratkaistaan kiehumispisteen (Grain–Watson, korjattu −0,2 log) avulla.
+- Puuttuvat höyrynpaineet: ridge-regressio 10 RDKit-kuvaajalla, opetusdata mitatut + kiehumispistearviot; ristiinvalidoitu virhe 0,58 log (kerroin ~4).
+- Hajukynnykset: Abraham 2012 (Pyrfume), yhdistetty stereoisomeereille InChIKeyn ensimmäisen osan mukaan; muuten PubChem; muuten kemiallisen ryhmän mediaani (arvio). Mitattu kynnys vain 39/217 molekyylille – suurin aukko.
+- Ensimmäisen ajon tulos: 217/217 tunnistettu, 61 mitattua höyrynpainetta, 156 arviota.
