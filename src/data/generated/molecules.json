@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T22:10:50Z",
+ "generatedAt": "2026-11-20T22:15:27Z",
  "sources": [
   "PubChem PUG REST ja PUG View (NCBI)",
   "Abraham ym. 2012, Chemical Senses 37:207–218, Pyrfume-arkiston kautta"
@@ -18,14 +18,14 @@
    "xlogp": -0.1,
    "tbC": 78.5,
    "vp25": {
-    "value": 55.11,
-    "min": 0.007501,
-    "max": 750.1,
-    "n": 9,
+    "value": 59.3,
+    "min": 55.11,
+    "max": 63.52,
+    "n": 3,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 42.8,
+   "dHvap": 41.6,
    "odt": {
     "value": 2.301,
     "min": 2.301,
@@ -111,7 +111,7 @@
    "vp25": {
     "value": 9.35e-05,
     "min": 9.35e-05,
-    "max": 9.35e-05,
+    "max": 0.0009561,
     "n": 2,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
@@ -240,12 +240,12 @@
    "xlogp": 3.1,
    "tbC": null,
    "vp25": {
-    "value": 3.409,
+    "value": 1.28,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 41.5,
+   "dHvap": 44.3,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -405,12 +405,12 @@
    "xlogp": 2.8,
    "tbC": 174.0,
    "vp25": {
-    "value": 2.035,
+    "value": 1.284,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 174 °C (Grain–Watson)"
    },
-   "dHvap": 44.1,
+   "dHvap": 47.5,
    "odt": {
     "value": 1.419,
     "min": 1.419,
@@ -487,7 +487,7 @@
     "max": 9.863,
     "n": 3,
     "method": "koe",
-    "source": "Abraham ym. 2012 (Pyrfume)"
+    "source": "Abraham ym. 2012 (Pyrfume), sis. stereoisomeerit"
    },
    "family": "sitrus",
    "group": "monoterpeeni",
@@ -576,12 +576,12 @@
    "xlogp": 4.3,
    "tbC": 174.5,
    "vp25": {
-    "value": 1.99,
+    "value": 1.256,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 174 °C (Grain–Watson)"
    },
-   "dHvap": 44.1,
+   "dHvap": 47.5,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -607,12 +607,12 @@
    "xlogp": 2.8,
    "tbC": 151.0,
    "vp25": {
-    "value": 5.534,
+    "value": 3.491,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 151 °C (Grain–Watson)"
    },
-   "dHvap": 41.1,
+   "dHvap": 44.9,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -708,21 +708,21 @@
    "xlogp": 2.9,
    "tbC": 227.0,
    "vp25": {
-    "value": 1.414,
-    "min": 1.414,
-    "max": 1.414,
+    "value": 0.03,
+    "min": 0.03,
+    "max": 0.03,
     "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 38.6,
+   "dHvap": 62.2,
    "odt": {
     "value": 0.08511,
     "min": 0.08511,
     "max": 0.08511,
     "n": 1,
     "method": "koe",
-    "source": "Abraham ym. 2012 (Pyrfume)"
+    "source": "Abraham ym. 2012 (Pyrfume), sis. stereoisomeerit"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -776,14 +776,14 @@
    "xlogp": 1.8,
    "tbC": 219.5,
    "vp25": {
-    "value": 5.0,
+    "value": 0.04558,
     "min": 0.04558,
-    "max": 80.5,
-    "n": 3,
+    "max": 0.04558,
+    "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 35.0,
+   "dHvap": 61.0,
    "odt": {
     "value": 0.35,
     "min": 0.35,
@@ -811,12 +811,12 @@
    "xlogp": 2.2,
    "tbC": 212.0,
    "vp25": {
-    "value": 0.06918,
+    "value": 0.04365,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 212 °C (Grain–Watson)"
    },
-   "dHvap": 59.8,
+   "dHvap": 62.8,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -910,19 +910,19 @@
    "xlogp": 3,
    "tbC": null,
    "vp25": {
-    "value": 0.08425,
+    "value": 0.1165,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.0,
+   "dHvap": 51.1,
    "odt": {
     "value": 0.02188,
     "min": 0.02188,
     "max": 0.02188,
     "n": 1,
     "method": "koe",
-    "source": "Abraham ym. 2012 (Pyrfume)"
+    "source": "Abraham ym. 2012 (Pyrfume), sis. stereoisomeerit"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -943,12 +943,12 @@
    "xlogp": 3,
    "tbC": null,
    "vp25": {
-    "value": 0.06888,
+    "value": 0.06609,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.6,
+   "dHvap": 52.7,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -974,12 +974,12 @@
    "xlogp": 1.6,
    "tbC": 221.5,
    "vp25": {
-    "value": 0.0407,
+    "value": 0.02568,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 222 °C (Grain–Watson)"
    },
-   "dHvap": 61.4,
+   "dHvap": 64.2,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -1005,12 +1005,12 @@
    "xlogp": 2.5,
    "tbC": 201.5,
    "vp25": {
-    "value": 0.1237,
+    "value": 0.07808,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 202 °C (Grain–Watson)"
    },
-   "dHvap": 58.1,
+   "dHvap": 61.2,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -1036,12 +1036,12 @@
    "xlogp": 2.8,
    "tbC": null,
    "vp25": {
-    "value": 0.07816,
+    "value": 0.0491,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.2,
+   "dHvap": 53.5,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -1067,12 +1067,12 @@
    "xlogp": 1.4,
    "tbC": 193.5,
    "vp25": {
-    "value": 0.192,
+    "value": 0.1212,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 194 °C (Grain–Watson)"
    },
-   "dHvap": 56.9,
+   "dHvap": 60.0,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -1098,12 +1098,12 @@
    "xlogp": 2.1,
    "tbC": null,
    "vp25": {
-    "value": 0.1327,
+    "value": 0.08041,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 50.7,
+   "dHvap": 52.1,
    "odt": {
     "value": 0.08511,
     "n": 0,
@@ -1129,12 +1129,12 @@
    "xlogp": 2.6,
    "tbC": 175.1,
    "vp25": {
-    "value": 0.5211,
+    "value": 0.3288,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 175 °C (Grain–Watson)"
    },
-   "dHvap": 53.9,
+   "dHvap": 57.3,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -1160,12 +1160,12 @@
    "xlogp": 3.1,
    "tbC": 189.5,
    "vp25": {
-    "value": 0.7351,
+    "value": 0.4638,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 190 °C (Grain–Watson)"
    },
-   "dHvap": 48.4,
+   "dHvap": 51.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -1191,12 +1191,12 @@
    "xlogp": 1.3,
    "tbC": 156.5,
    "vp25": {
-    "value": 1.403,
+    "value": 0.8854,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 156 °C (Grain–Watson)"
    },
-   "dHvap": 51.0,
+   "dHvap": 54.7,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -1327,12 +1327,12 @@
    "xlogp": 1.9,
    "tbC": 258.0,
    "vp25": {
-    "value": 0.005105,
+    "value": 0.003221,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 258 °C (Grain–Watson)"
    },
-   "dHvap": 67.3,
+   "dHvap": 69.9,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -1391,12 +1391,12 @@
    "xlogp": 3,
    "tbC": null,
    "vp25": {
-    "value": 0.2833,
+    "value": 0.1515,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 48.6,
+   "dHvap": 50.3,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1457,12 +1457,12 @@
    "xlogp": 3,
    "tbC": 228.0,
    "vp25": {
-    "value": 0.117,
+    "value": 0.07382,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 228 °C (Grain–Watson)"
    },
-   "dHvap": 53.7,
+   "dHvap": 56.5,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1488,14 +1488,14 @@
    "xlogp": 3,
    "tbC": 206.5,
    "vp25": {
-    "value": 5.0,
-    "min": 5.0,
-    "max": 5.0,
+    "value": 0.28,
+    "min": 0.28,
+    "max": 0.28,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 35.0,
+   "dHvap": 51.8,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1521,12 +1521,12 @@
    "xlogp": 2.7,
    "tbC": 235.5,
    "vp25": {
-    "value": 0.08122,
+    "value": 0.05125,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 236 °C (Grain–Watson)"
    },
-   "dHvap": 54.8,
+   "dHvap": 57.5,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1552,12 +1552,12 @@
    "xlogp": 2.6,
    "tbC": 239.0,
    "vp25": {
-    "value": 0.06845,
+    "value": 0.04319,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 239 °C (Grain–Watson)"
    },
-   "dHvap": 55.3,
+   "dHvap": 58.0,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1583,12 +1583,12 @@
    "xlogp": 2.1,
    "tbC": 220.0,
    "vp25": {
-    "value": 0.1722,
+    "value": 0.1087,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 220 °C (Grain–Watson)"
    },
-   "dHvap": 52.6,
+   "dHvap": 55.5,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1614,12 +1614,12 @@
    "xlogp": 2.1,
    "tbC": null,
    "vp25": {
-    "value": 0.4463,
+    "value": 0.1675,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 47.3,
+   "dHvap": 50.0,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1645,12 +1645,12 @@
    "xlogp": 2.4,
    "tbC": null,
    "vp25": {
-    "value": 0.3933,
+    "value": 0.1979,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 47.6,
+   "dHvap": 49.6,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1814,12 +1814,12 @@
    "xlogp": 4.8,
    "tbC": null,
    "vp25": {
-    "value": 0.004476,
+    "value": 0.002236,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 60.3,
+   "dHvap": 62.2,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -1911,14 +1911,14 @@
    "smiles": "CC/C=C\\CC/C=C/C=O",
    "mw": 138.21,
    "xlogp": 2.2,
-   "tbC": 94.0,
+   "tbC": null,
    "vp25": {
-    "value": 51.66,
+    "value": 0.2775,
     "n": 0,
     "method": "arvio",
-    "source": "Arvio kiehumispisteestä 94 °C (Grain–Watson)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 35.5,
+   "dHvap": 48.6,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -2080,7 +2080,7 @@
    "vp25": {
     "value": 0.000118,
     "min": 0.000118,
-    "max": 0.000118,
+    "max": 0.004272,
     "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
@@ -2111,12 +2111,12 @@
    "xlogp": 1.4,
    "tbC": 310.5,
    "vp25": {
-    "value": 0.001895,
+    "value": 0.001196,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 310 °C (Grain–Watson)"
    },
-   "dHvap": 65.4,
+   "dHvap": 67.7,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -2175,12 +2175,12 @@
    "xlogp": 1.6,
    "tbC": 241.0,
    "vp25": {
-    "value": 0.06207,
+    "value": 0.03916,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 241 °C (Grain–Watson)"
    },
-   "dHvap": 55.5,
+   "dHvap": 58.3,
    "odt": {
     "value": 0.00091,
     "n": 0,
@@ -2207,9 +2207,9 @@
    "tbC": 209.0,
    "vp25": {
     "value": 0.2957,
-    "min": 0.2,
+    "min": 0.2957,
     "max": 0.65,
-    "n": 4,
+    "n": 3,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
@@ -2241,12 +2241,12 @@
    "xlogp": 2.3,
    "tbC": 193.0,
    "vp25": {
-    "value": 0.6236,
+    "value": 0.3934,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 193 °C (Grain–Watson)"
    },
-   "dHvap": 48.9,
+   "dHvap": 52.0,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2272,12 +2272,12 @@
    "xlogp": 2.4,
    "tbC": 231.0,
    "vp25": {
-    "value": 0.1011,
+    "value": 0.06381,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 231 °C (Grain–Watson)"
    },
-   "dHvap": 54.1,
+   "dHvap": 56.9,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2303,14 +2303,12 @@
    "xlogp": 2.4,
    "tbC": 231.0,
    "vp25": {
-    "value": 15.5,
-    "min": 15.5,
-    "max": 15.5,
-    "n": 1,
+    "value": 0.06381,
+    "n": 0,
     "method": "arvio",
-    "source": "PubChem: CAMEO Chemicals (heikko lähde)"
+    "source": "Arvio kiehumispisteestä 231 °C (Grain–Watson)"
    },
-   "dHvap": 35.0,
+   "dHvap": 56.9,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2369,12 +2367,12 @@
    "xlogp": 2.7,
    "tbC": 210.0,
    "vp25": {
-    "value": 0.2784,
+    "value": 0.1756,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 210 °C (Grain–Watson)"
    },
-   "dHvap": 51.2,
+   "dHvap": 54.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2400,12 +2398,12 @@
    "xlogp": 3,
    "tbC": null,
    "vp25": {
-    "value": 0.1125,
+    "value": 0.1254,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 51.2,
+   "dHvap": 50.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -2464,12 +2462,12 @@
    "xlogp": 2.3,
    "tbC": 200.5,
    "vp25": {
-    "value": 0.4375,
+    "value": 0.2761,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 200 °C (Grain–Watson)"
    },
-   "dHvap": 49.9,
+   "dHvap": 53.0,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2495,12 +2493,12 @@
    "xlogp": 2.2,
    "tbC": 234.0,
    "vp25": {
-    "value": 0.08738,
+    "value": 0.05514,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 234 °C (Grain–Watson)"
    },
-   "dHvap": 54.6,
+   "dHvap": 57.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2526,12 +2524,12 @@
    "xlogp": 1.6,
    "tbC": null,
    "vp25": {
-    "value": 0.8601,
+    "value": 0.1056,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 45.4,
+   "dHvap": 51.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2724,12 +2722,12 @@
    "xlogp": 2.7,
    "tbC": 261.5,
    "vp25": {
-    "value": 0.02256,
+    "value": 0.01423,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 262 °C (Grain–Watson)"
    },
-   "dHvap": 58.4,
+   "dHvap": 61.0,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2755,12 +2753,12 @@
    "xlogp": 3.2,
    "tbC": null,
    "vp25": {
-    "value": 0.0132,
+    "value": 0.009159,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 57.2,
+   "dHvap": 58.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2786,12 +2784,12 @@
    "xlogp": 3.2,
    "tbC": 275.0,
    "vp25": {
-    "value": 0.01149,
+    "value": 0.00725,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 275 °C (Grain–Watson)"
    },
-   "dHvap": 60.3,
+   "dHvap": 62.8,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2817,12 +2815,12 @@
    "xlogp": 3.5,
    "tbC": null,
    "vp25": {
-    "value": 0.03184,
+    "value": 0.0154,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.7,
+   "dHvap": 56.8,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2848,12 +2846,12 @@
    "xlogp": 2.2,
    "tbC": 285.0,
    "vp25": {
-    "value": 0.006944,
+    "value": 0.004381,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 285 °C (Grain–Watson)"
    },
-   "dHvap": 61.7,
+   "dHvap": 64.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2879,12 +2877,12 @@
    "xlogp": 3.9,
    "tbC": null,
    "vp25": {
-    "value": 0.008626,
+    "value": 0.00321,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 58.4,
+   "dHvap": 61.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2943,14 +2941,14 @@
    "smiles": "CC(=O)CCC1=CC=C(C=C1)O",
    "mw": 164.2,
    "xlogp": 1.5,
-   "tbC": 200.0,
+   "tbC": null,
    "vp25": {
-    "value": 0.448,
+    "value": 0.001863,
     "n": 0,
     "method": "arvio",
-    "source": "Arvio kiehumispisteestä 200 °C (Grain–Watson)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 49.8,
+   "dHvap": 62.7,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2976,12 +2974,12 @@
    "xlogp": 4,
    "tbC": null,
    "vp25": {
-    "value": 0.001059,
+    "value": 0.001389,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 64.3,
+   "dHvap": 63.6,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -3007,12 +3005,12 @@
    "xlogp": 3.1,
    "tbC": null,
    "vp25": {
-    "value": 0.008626,
+    "value": 0.003152,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 58.4,
+   "dHvap": 61.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -3038,12 +3036,12 @@
    "xlogp": 4.1,
    "tbC": null,
    "vp25": {
-    "value": 0.006214,
+    "value": 0.002809,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 59.3,
+   "dHvap": 61.6,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -3069,12 +3067,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.008626,
+    "value": 0.00321,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 58.4,
+   "dHvap": 61.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -3100,14 +3098,14 @@
    "xlogp": 3.3,
    "tbC": 221.0,
    "vp25": {
-    "value": 0.02701,
-    "min": 0.006571,
+    "value": 0.111,
+    "min": 0.111,
     "max": 0.111,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 64.0,
+   "dHvap": 55.2,
    "odt": {
     "value": 6.06,
     "min": 6.06,
@@ -3170,12 +3168,12 @@
    "xlogp": 3.5,
    "tbC": null,
    "vp25": {
-    "value": 0.01141,
+    "value": 0.01617,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 57.6,
+   "dHvap": 56.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3234,12 +3232,12 @@
    "xlogp": 2.4,
    "tbC": 220.0,
    "vp25": {
-    "value": 0.1722,
+    "value": 0.1087,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 220 °C (Grain–Watson)"
    },
-   "dHvap": 52.6,
+   "dHvap": 55.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3265,12 +3263,12 @@
    "xlogp": 3.6,
    "tbC": null,
    "vp25": {
-    "value": 0.01141,
+    "value": 0.01845,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 57.6,
+   "dHvap": 56.3,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3296,12 +3294,12 @@
    "xlogp": 3.8,
    "tbC": 229.0,
    "vp25": {
-    "value": 0.1114,
+    "value": 0.07032,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 229 °C (Grain–Watson)"
    },
-   "dHvap": 53.9,
+   "dHvap": 56.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3327,12 +3325,12 @@
    "xlogp": 3.8,
    "tbC": 235.0,
    "vp25": {
-    "value": 0.08323,
+    "value": 0.05251,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 235 °C (Grain–Watson)"
    },
-   "dHvap": 54.7,
+   "dHvap": 57.5,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -3358,12 +3356,12 @@
    "xlogp": 3.5,
    "tbC": 216.0,
    "vp25": {
-    "value": 0.2088,
+    "value": 0.1317,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 216 °C (Grain–Watson)"
    },
-   "dHvap": 52.1,
+   "dHvap": 55.0,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -3424,10 +3422,10 @@
    "vp25": {
     "value": 0.177,
     "min": 0.177,
-    "max": 1.425,
-    "n": 3,
+    "max": 0.177,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
    "dHvap": 53.2,
    "odt": {
@@ -3486,7 +3484,7 @@
    "smiles": "C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O",
    "mw": 228.24,
    "xlogp": 3.2,
-   "tbC": 320.0,
+   "tbC": null,
    "vp25": {
     "value": 7.8e-05,
     "min": 7.8e-05,
@@ -3495,7 +3493,7 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 80.2,
+   "dHvap": 71.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3620,12 +3618,12 @@
    "xlogp": 2.3,
    "tbC": 256.0,
    "vp25": {
-    "value": 0.02964,
+    "value": 0.0187,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 256 °C (Grain–Watson)"
    },
-   "dHvap": 57.6,
+   "dHvap": 60.3,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3651,12 +3649,12 @@
    "xlogp": 1.9,
    "tbC": null,
    "vp25": {
-    "value": 0.001194,
+    "value": 0.001044,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 64.0,
+   "dHvap": 64.4,
    "odt": {
     "value": 5.7,
     "min": 5.7,
@@ -3750,12 +3748,12 @@
    "xlogp": 2.3,
    "tbC": 263.5,
    "vp25": {
-    "value": 0.02042,
+    "value": 0.01288,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 264 °C (Grain–Watson)"
    },
-   "dHvap": 58.7,
+   "dHvap": 61.3,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3781,12 +3779,12 @@
    "xlogp": 3.8,
    "tbC": null,
    "vp25": {
-    "value": 3.554e-05,
+    "value": 0.0001012,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 73.9,
+   "dHvap": 71.0,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3812,12 +3810,12 @@
    "xlogp": 2.3,
    "tbC": 238.5,
    "vp25": {
-    "value": 0.07015,
+    "value": 0.04426,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 238 °C (Grain–Watson)"
    },
-   "dHvap": 55.2,
+   "dHvap": 57.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3878,12 +3876,12 @@
    "xlogp": 1.9,
    "tbC": 198.0,
    "vp25": {
-    "value": 0.4925,
+    "value": 0.3108,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 198 °C (Grain–Watson)"
    },
-   "dHvap": 49.6,
+   "dHvap": 52.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3944,12 +3942,12 @@
    "xlogp": 2.3,
    "tbC": 282.0,
    "vp25": {
-    "value": 0.008079,
+    "value": 0.005098,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 282 °C (Grain–Watson)"
    },
-   "dHvap": 61.3,
+   "dHvap": 63.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3975,12 +3973,12 @@
    "xlogp": 5.3,
    "tbC": null,
    "vp25": {
-    "value": 0.0001589,
+    "value": 0.000227,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 69.7,
+   "dHvap": 68.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4039,12 +4037,12 @@
    "xlogp": 1.6,
    "tbC": 272.2,
    "vp25": {
-    "value": 0.01321,
+    "value": 0.008333,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 272 °C (Grain–Watson)"
    },
-   "dHvap": 59.9,
+   "dHvap": 62.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4103,12 +4101,12 @@
    "xlogp": 2.5,
    "tbC": 281.0,
    "vp25": {
-    "value": 0.008497,
+    "value": 0.005361,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 281 °C (Grain–Watson)"
    },
-   "dHvap": 61.2,
+   "dHvap": 63.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4134,12 +4132,12 @@
    "xlogp": 3.3,
    "tbC": 297.0,
    "vp25": {
-    "value": 0.003778,
+    "value": 0.002384,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 297 °C (Grain–Watson)"
    },
-   "dHvap": 63.5,
+   "dHvap": 65.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4165,12 +4163,12 @@
    "xlogp": 2.2,
    "tbC": null,
    "vp25": {
-    "value": 0.1957,
+    "value": 0.1779,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 49.6,
+   "dHvap": 49.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4196,12 +4194,12 @@
    "xlogp": 3.1,
    "tbC": null,
    "vp25": {
-    "value": 0.09212,
+    "value": 0.06632,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 51.7,
+   "dHvap": 52.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4225,14 +4223,14 @@
    "smiles": "C1CCCCOC(=O)CCCCC/C=C\\CCC1",
    "mw": 252.39,
    "xlogp": 5.5,
-   "tbC": 398.5,
+   "tbC": null,
    "vp25": {
-    "value": 1.857e-05,
+    "value": 0.0008438,
     "n": 0,
     "method": "arvio",
-    "source": "Arvio kiehumispisteestä 398 °C (Grain–Watson)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 78.1,
+   "dHvap": 65.0,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4258,12 +4256,12 @@
    "xlogp": 5.8,
    "tbC": null,
    "vp25": {
-    "value": 0.0009958,
+    "value": 0.001938,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 64.5,
+   "dHvap": 62.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4289,12 +4287,12 @@
    "xlogp": 4.3,
    "tbC": null,
    "vp25": {
-    "value": 0.001025,
+    "value": 0.000678,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 64.4,
+   "dHvap": 65.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4320,14 +4318,14 @@
    "xlogp": 2,
    "tbC": 256.0,
    "vp25": {
-    "value": 4.098,
+    "value": 0.0221,
     "min": 0.0221,
-    "max": 760.0,
-    "n": 2,
+    "max": 0.0221,
+    "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 35.0,
+   "dHvap": 59.3,
    "odt": {
     "value": 0.002,
     "n": 0,
@@ -4421,12 +4419,12 @@
    "xlogp": 3.1,
    "tbC": 237.7,
    "vp25": {
-    "value": 0.01945,
+    "value": 0.01228,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 238 °C (Grain–Watson)"
    },
-   "dHvap": 62.9,
+   "dHvap": 65.7,
    "odt": {
     "value": 0.002,
     "n": 0,
@@ -4452,14 +4450,14 @@
    "xlogp": 1.3,
    "tbC": 205.0,
    "vp25": {
-    "value": 0.103,
-    "min": 0.103,
-    "max": 0.103,
+    "value": 0.1,
+    "min": 0.1,
+    "max": 0.1,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 58.6,
+   "dHvap": 58.8,
    "odt": {
     "value": 0.002,
     "min": 0.002,
@@ -4687,12 +4685,12 @@
    "xlogp": 2.5,
    "tbC": 246.0,
    "vp25": {
-    "value": 0.04856,
+    "value": 0.03064,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 246 °C (Grain–Watson)"
    },
-   "dHvap": 56.2,
+   "dHvap": 58.9,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4718,14 +4716,14 @@
    "xlogp": 3,
    "tbC": 235.0,
    "vp25": {
-    "value": 1.395,
+    "value": 0.0706,
     "min": 0.0706,
-    "max": 27.57,
-    "n": 2,
+    "max": 0.0706,
+    "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 37.8,
+   "dHvap": 55.7,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4751,12 +4749,12 @@
    "xlogp": 3,
    "tbC": null,
    "vp25": {
-    "value": 0.001049,
+    "value": 0.01051,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 64.4,
+   "dHvap": 57.9,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4817,12 +4815,12 @@
    "xlogp": 2.5,
    "tbC": null,
    "vp25": {
-    "value": 0.7036,
+    "value": 0.8665,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 46.0,
+   "dHvap": 45.4,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4848,12 +4846,12 @@
    "xlogp": 2.9,
    "tbC": null,
    "vp25": {
-    "value": 0.5069,
+    "value": 1.061,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 46.9,
+   "dHvap": 44.8,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4879,12 +4877,12 @@
    "xlogp": 3.6,
    "tbC": null,
    "vp25": {
-    "value": 0.01315,
+    "value": 0.006495,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 57.2,
+   "dHvap": 59.2,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4910,12 +4908,12 @@
    "xlogp": 4.7,
    "tbC": null,
    "vp25": {
-    "value": 0.00564,
+    "value": 0.006218,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 59.6,
+   "dHvap": 59.3,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4941,12 +4939,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.002801,
+    "value": 0.001898,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 61.6,
+   "dHvap": 62.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -4972,12 +4970,12 @@
    "xlogp": 4.9,
    "tbC": null,
    "vp25": {
-    "value": 0.001567,
+    "value": 0.002224,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 63.2,
+   "dHvap": 62.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5073,12 +5071,12 @@
    "xlogp": 2.6,
    "tbC": null,
    "vp25": {
-    "value": 0.01028,
+    "value": 0.05214,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 57.9,
+   "dHvap": 53.3,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -5104,12 +5102,12 @@
    "xlogp": 4.8,
    "tbC": null,
    "vp25": {
-    "value": 0.7336,
+    "value": 0.3581,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 45.9,
+   "dHvap": 47.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5135,12 +5133,12 @@
    "xlogp": 2.8,
    "tbC": null,
    "vp25": {
-    "value": 0.09304,
+    "value": 1.062,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 51.7,
+   "dHvap": 44.8,
    "odt": {
     "value": 4.099e-05,
     "n": 0,
@@ -5234,12 +5232,12 @@
    "xlogp": 2.1,
    "tbC": 300.0,
    "vp25": {
-    "value": 0.0001707,
+    "value": 0.0001077,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 300 °C (Grain–Watson)"
    },
-   "dHvap": 79.1,
+   "dHvap": 81.5,
    "odt": {
     "value": 10.0,
     "n": 0,
@@ -5300,7 +5298,7 @@
    "vp25": {
     "value": 1.4e-06,
     "min": 1.4e-06,
-    "max": 1.4e-06,
+    "max": 2.033e-05,
     "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
@@ -5333,12 +5331,12 @@
    "xlogp": 4.4,
    "tbC": 257.5,
    "vp25": {
-    "value": 0.04478,
+    "value": 0.02825,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 258 °C (Grain–Watson)"
    },
-   "dHvap": 55.1,
+   "dHvap": 57.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5364,12 +5362,12 @@
    "xlogp": 4.5,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.02634,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 55.3,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5395,12 +5393,12 @@
    "xlogp": 4.7,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.02683,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 55.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5426,12 +5424,12 @@
    "xlogp": 4.5,
    "tbC": null,
    "vp25": {
-    "value": 0.127,
+    "value": 0.006273,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 50.8,
+   "dHvap": 59.3,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5457,12 +5455,12 @@
    "xlogp": 6.1,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.0244,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 55.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5488,12 +5486,12 @@
    "xlogp": 3.8,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02143,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5519,12 +5517,12 @@
    "xlogp": 4.6,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02143,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5550,12 +5548,12 @@
    "xlogp": 4.6,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02143,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5581,12 +5579,12 @@
    "xlogp": 5.1,
    "tbC": null,
    "vp25": {
-    "value": 0.09147,
+    "value": 0.01161,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 51.8,
+   "dHvap": 57.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5612,12 +5610,12 @@
    "xlogp": 4.8,
    "tbC": null,
    "vp25": {
-    "value": 0.06589,
+    "value": 0.02187,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.7,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5643,12 +5641,12 @@
    "xlogp": 5.2,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02143,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5674,12 +5672,12 @@
    "xlogp": 5.2,
    "tbC": null,
    "vp25": {
-    "value": 0.09147,
+    "value": 0.008264,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 51.8,
+   "dHvap": 58.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5705,12 +5703,12 @@
    "xlogp": 4.6,
    "tbC": null,
    "vp25": {
-    "value": 0.06589,
+    "value": 0.02187,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.7,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5736,12 +5734,12 @@
    "xlogp": 4.8,
    "tbC": null,
    "vp25": {
-    "value": 0.06589,
+    "value": 0.01917,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.7,
+   "dHvap": 56.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5767,12 +5765,12 @@
    "xlogp": 3.9,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02104,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5798,12 +5796,12 @@
    "xlogp": 5.4,
    "tbC": null,
    "vp25": {
-    "value": 0.005824,
+    "value": 0.009274,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 59.5,
+   "dHvap": 58.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5829,12 +5827,12 @@
    "xlogp": 5.2,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.0191,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 56.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5860,12 +5858,12 @@
    "xlogp": 5.4,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.0191,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 56.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5891,12 +5889,12 @@
    "xlogp": 5.2,
    "tbC": null,
    "vp25": {
-    "value": 0.03419,
+    "value": 0.01675,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 54.5,
+   "dHvap": 56.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5922,12 +5920,12 @@
    "xlogp": 6.2,
    "tbC": null,
    "vp25": {
-    "value": 0.02463,
+    "value": 0.01493,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 55.5,
+   "dHvap": 56.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5953,12 +5951,12 @@
    "xlogp": 6.1,
    "tbC": 261.0,
    "vp25": {
-    "value": 0.03795,
+    "value": 0.02394,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 261 °C (Grain–Watson)"
    },
-   "dHvap": 55.6,
+   "dHvap": 58.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -5984,12 +5982,12 @@
    "xlogp": 4.7,
    "tbC": null,
    "vp25": {
-    "value": 0.06589,
+    "value": 0.02494,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.7,
+   "dHvap": 55.4,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6015,12 +6013,12 @@
    "xlogp": 5.1,
    "tbC": null,
    "vp25": {
-    "value": 0.06589,
+    "value": 0.02187,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 52.7,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6046,12 +6044,12 @@
    "xlogp": 5.4,
    "tbC": null,
    "vp25": {
-    "value": 0.04746,
+    "value": 0.02143,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 53.6,
+   "dHvap": 55.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6077,12 +6075,12 @@
    "xlogp": 4.4,
    "tbC": null,
    "vp25": {
-    "value": 0.1673,
+    "value": 0.03232,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 50.0,
+   "dHvap": 54.7,
    "odt": {
     "value": 0.04183,
     "n": 0,
@@ -6108,12 +6106,12 @@
    "xlogp": 4.1,
    "tbC": null,
    "vp25": {
-    "value": 0.003561,
+    "value": 0.000626,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 60.9,
+   "dHvap": 65.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6139,12 +6137,12 @@
    "xlogp": 3.9,
    "tbC": 286.0,
    "vp25": {
-    "value": 0.001001,
+    "value": 0.0006313,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 286 °C (Grain–Watson)"
    },
-   "dHvap": 71.9,
+   "dHvap": 74.4,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6170,12 +6168,12 @@
    "xlogp": 4,
    "tbC": null,
    "vp25": {
-    "value": 0.004041,
+    "value": 0.0003919,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 60.6,
+   "dHvap": 67.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6201,12 +6199,12 @@
    "xlogp": 4,
    "tbC": 312.0,
    "vp25": {
-    "value": 0.0002146,
+    "value": 0.0001354,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 312 °C (Grain–Watson)"
    },
-   "dHvap": 76.2,
+   "dHvap": 78.5,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6232,12 +6230,12 @@
    "xlogp": 3.8,
    "tbC": null,
    "vp25": {
-    "value": 0.001331,
+    "value": 0.0009034,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 63.7,
+   "dHvap": 64.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6263,12 +6261,12 @@
    "xlogp": 4.6,
    "tbC": 276.0,
    "vp25": {
-    "value": 0.001797,
+    "value": 0.001134,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 276 °C (Grain–Watson)"
    },
-   "dHvap": 70.3,
+   "dHvap": 72.8,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6327,12 +6325,12 @@
    "xlogp": 3.1,
    "tbC": 297.0,
    "vp25": {
-    "value": 0.0005231,
+    "value": 0.0003301,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 297 °C (Grain–Watson)"
    },
-   "dHvap": 73.7,
+   "dHvap": 76.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6358,12 +6356,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.002565,
+    "value": 0.001345,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 61.8,
+   "dHvap": 63.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6389,12 +6387,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.002565,
+    "value": 0.001345,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 61.8,
+   "dHvap": 63.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6420,12 +6418,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.002565,
+    "value": 0.001345,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 61.8,
+   "dHvap": 63.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6451,12 +6449,12 @@
    "xlogp": 3.1,
    "tbC": null,
    "vp25": {
-    "value": 0.001848,
+    "value": 0.001156,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 62.8,
+   "dHvap": 64.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6482,12 +6480,12 @@
    "xlogp": 2.9,
    "tbC": null,
    "vp25": {
-    "value": 0.001848,
+    "value": 0.001156,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 62.8,
+   "dHvap": 64.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6513,10 +6511,10 @@
    "xlogp": 4.4,
    "tbC": null,
    "vp25": {
-    "value": 0.001331,
+    "value": 0.001316,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
    "dHvap": 63.7,
    "odt": {
@@ -6544,12 +6542,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.001848,
+    "value": 0.001156,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 62.8,
+   "dHvap": 64.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6575,12 +6573,12 @@
    "xlogp": 3.3,
    "tbC": 303.0,
    "vp25": {
-    "value": 0.0003666,
+    "value": 0.0002313,
     "n": 0,
     "method": "arvio",
     "source": "Arvio kiehumispisteestä 303 °C (Grain–Watson)"
    },
-   "dHvap": 74.7,
+   "dHvap": 77.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6606,12 +6604,12 @@
    "xlogp": 3.7,
    "tbC": null,
    "vp25": {
-    "value": 0.002911,
+    "value": 0.001037,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 61.5,
+   "dHvap": 64.4,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6637,12 +6635,12 @@
    "xlogp": 3.6,
    "tbC": null,
    "vp25": {
-    "value": 0.001848,
+    "value": 0.001156,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 62.8,
+   "dHvap": 64.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6668,12 +6666,12 @@
    "xlogp": 4.9,
    "tbC": null,
    "vp25": {
-    "value": 1.002e-06,
+    "value": 7.856e-07,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 84.0,
+   "dHvap": 84.7,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6699,12 +6697,12 @@
    "xlogp": 4.1,
    "tbC": null,
    "vp25": {
-    "value": 6.026e-06,
+    "value": 1.109e-05,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 78.9,
+   "dHvap": 77.2,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6730,12 +6728,12 @@
    "xlogp": 4.7,
    "tbC": null,
    "vp25": {
-    "value": 9.985e-07,
+    "value": 3.02e-06,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 84.0,
+   "dHvap": 80.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6761,12 +6759,12 @@
    "xlogp": 8.2,
    "tbC": null,
    "vp25": {
-    "value": 9.134e-06,
+    "value": 9.803e-06,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 77.8,
+   "dHvap": 77.6,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6792,10 +6790,10 @@
    "xlogp": 6.2,
    "tbC": null,
    "vp25": {
-    "value": 0.001763,
+    "value": 0.001786,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
    "dHvap": 62.9,
    "odt": {
@@ -6823,12 +6821,12 @@
    "xlogp": 6.1,
    "tbC": null,
    "vp25": {
-    "value": 0.0008298,
+    "value": 0.0006927,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 65.0,
+   "dHvap": 65.5,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -6856,7 +6854,7 @@
    "vp25": {
     "value": 4.9e-05,
     "min": 4.9e-05,
-    "max": 4.9e-05,
+    "max": 0.0008474,
     "n": 1,
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
@@ -6920,12 +6918,12 @@
    "xlogp": 4.8,
    "tbC": null,
    "vp25": {
-    "value": 7.366e-06,
+    "value": 2.382e-07,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 78.4,
+   "dHvap": 88.1,
    "odt": {
     "value": 10.0,
     "n": 0,
@@ -6951,12 +6949,12 @@
    "xlogp": 2.3,
    "tbC": null,
    "vp25": {
-    "value": 8.285e-06,
+    "value": 2.044e-05,
     "n": 0,
     "method": "arvio",
-    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+    "source": "Rakennemalli (virhe noin 4-kertainen)"
    },
-   "dHvap": 78.0,
+   "dHvap": 75.5,
    "odt": {
     "value": 0.172,
     "n": 0,
