@@ -56,6 +56,13 @@ def test_vapor_pressure():
     r = parse_vapor_pressure("15.5 mmHg at 77 °F ; 31.3 mmHg at 108 °F (NTP, 1992)")
     assert close(r[0]["temp_c"], 25) and close(r[1]["temp_c"], 42.2, 0.01)
 
+    assert parse_vapor_pressure("VP: 1 mm Hg at 78.4 °C. Percent in saturated air: approx 0.004 at 25 °C, 760 mm Hg")[0]["temp_c"] == 78.4
+    assert len(parse_vapor_pressure("VP: 1 mm Hg at 78.4 °C. Percent in saturated air: approx 0.004 at 25 °C, 760 mm Hg")) == 1
+    assert parse_vapor_pressure("VP: 5 mm Hg at 80 to 81 mm Hg /L-alpha-Terpineol/") == []
+    assert parse_vapor_pressure("VP: 5 mm Hg, temp not specified") == []
+    assert parse_vapor_pressure("Vapor pressure range 1-760 mm Hg in the temperature range 63.8-233.0 °C") == []
+    assert close(parse_vapor_pressure("3.0X01-2 mm Hg at 25 °C (extrapolated)")[0]["mmhg"], 0.03)
+
     r = parse_vapor_pressure("0.123 mm Hg at 25 °C (extrapolated)")
     assert close(r[0]["mmhg"], 0.123) and r[0]["temp_c"] == 25
 

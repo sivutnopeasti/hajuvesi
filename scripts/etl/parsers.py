@@ -38,7 +38,9 @@ def to_float(s: str) -> float:
 
 
 def _norm(s: str) -> str:
-    return s.lower().replace("−", "-").replace("º", "°").replace("deg ", "°")
+    s = s.lower().replace("−", "-").replace("º", "°").replace("deg ", "°")
+    # HSDB:n kirjoitusvirhe "3.0X01-2" tarkoittaa 3,0 × 10⁻²
+    return re.sub(r"([x×])\s*01\s*-\s*(\d)", r"\g<1>10-\2", s)
 
 
 def _unit_key(u: str) -> str:
@@ -67,7 +69,7 @@ def _find_temp(text: str) -> float | None:
 def parse_vapor_pressure(raw: str) -> list[dict]:
     """Palauttaa listan {'mmhg', 'temp_c', 'estimated'}."""
     s = _norm(raw)
-    if "negligible" in s:
+    if "negligible" in s or "not specified" in s:
         return []
     estimated = "(est" in s or "estimated" in s or "calculated" in s
     out: list[dict] = []
@@ -89,15 +91,18 @@ def parse_vapor_pressure(raw: str) -> list[dict]:
         return out
 
     pattern = re.compile(NUM + r"(?:" + RANGE_SEP + NUM + r")?\s*\[?\s*" + PRESSURE_UNIT, re.I)
-    for m in pattern.finditer(s):
+    matches = list(pattern.finditer(s))
+    mentions_temp = re.search(r"\d\s*°\s*[cfk]\b", s) is not None
+    for m in matches:
         v1 = to_float(m.group(1))
         v2 = to_float(m.group(2)) if m.group(2) else None
         value = math.sqrt(v1 * v2) if v2 and v1 > 0 and v2 > 0 else v1
         unit = _unit_key(m.group(3))
         rest = s[m.end() : m.end() + 40]
         temp = _find_temp(rest)
-        if temp is None and len(out) == 0:
-            temp = _find_temp(s)
+        if temp is None and (len(matches) > 1 or mentions_temp):
+            # Esim. "1 mm Hg at 78 °C ... 760 mm Hg" tai "5 mm Hg at 80 to 81 mm Hg": lämpötila ei ole yksiselitteinen
+            continue
         out.append({"mmhg": value * PRESSURE_TO_MMHG[unit], "temp_c": temp, "estimated": estimated})
     return [o for o in out if o["mmhg"] > 0]
 

@@ -18,7 +18,6 @@ import io
 import json
 import math
 import re
-import statistics
 import sys
 import time
 from pathlib import Path
@@ -26,7 +25,7 @@ from pathlib import Path
 import numpy as np
 import requests
 from rdkit import Chem, RDLogger
-from rdkit.Chem import Descriptors, rdMolDescriptors
+from rdkit.Chem import Crippen, Descriptors, rdMolDescriptors
 
 sys.path.insert(0, str(Path(__file__).parent))
 from parsers import (  # noqa: E402
@@ -325,37 +324,74 @@ def features(smiles: str | None) -> list[float] | None:
         1.0,
         Descriptors.MolWt(mol),
         rdMolDescriptors.CalcNumHBD(mol),
+        rdMolDescriptors.CalcNumHBA(mol),
         rdMolDescriptors.CalcTPSA(mol),
         rdMolDescriptors.CalcNumAromaticRings(mol),
         rdMolDescriptors.CalcNumRings(mol),
+        rdMolDescriptors.CalcFractionCSP3(mol),
+        Crippen.MolLogP(mol),
+        Crippen.MolMR(mol),
+        rdMolDescriptors.CalcNumRotatableBonds(mol),
     ]
 
 
-class VpModel:
-    """log10(VP) ~ MW + vetysidoksen luovuttajat + TPSA + renkaat, sovitettu tämän aineiston mitattuihin arvoihin."""
+# Grain–Watson yliarvioi tässä aineistossa keskimäärin 0,2 log-yksikköä (kerroin 1,6) mitattuihin verrattuna.
+GW_BIAS = 0.2
 
-    def __init__(self, xs: list[list[float]], ys: list[float]):
-        self.n = len(ys)
+
+class VpModel:
+    """Ridge-regressio log10(VP) ~ rakenteen kuvaajat.
+
+    Opetusdata: luotettavat mitatut höyrynpaineet + kiehumispisteestä lasketut arviot niille, joilta mittaus puuttuu.
+    Virhe arvioidaan 10-kertaisella ristiinvalidoinnilla vain mitattuja arvoja vasten.
+    """
+
+    LAMBDA = 1.0
+
+    def __init__(self, measured: list[tuple[list[float], float]], pseudo: list[tuple[list[float], float]]):
+        self.n = len(measured)
+        self.n_pseudo = len(pseudo)
         self.coef = None
         self.rmse = float("nan")
         if self.n < 12:
             return
-        x = np.array(xs)
-        y = np.array(ys)
-        self.coef, *_ = np.linalg.lstsq(x, y, rcond=None)
-        # 5-kertainen ristiinvalidointi
-        idx = np.arange(len(y))
+        xm = np.array([f for f, _ in measured])
+        ym = np.array([y for _, y in measured])
+        xp = np.array([f for f, _ in pseudo]).reshape(-1, xm.shape[1])
+        yp = np.array([y for _, y in pseudo])
+        idx = np.arange(len(ym))
         errs = []
-        for k in range(5):
-            test = idx % 5 == k
-            c, *_ = np.linalg.lstsq(x[~test], y[~test], rcond=None)
-            errs.extend((x[test] @ c - y[test]).tolist())
-        self.rmse = float(np.sqrt(np.mean(np.square(errs)))) if errs else float("nan")
+        for k in range(10):
+            test = idx % 10 == k
+            fit = self._fit(np.vstack([xm[~test], xp]), np.concatenate([ym[~test], yp]))
+            errs.extend((self._apply(fit, xm[test]) - ym[test]).tolist())
+        self.rmse = float(np.sqrt(np.mean(np.square(errs))))
+        self.coef = self._fit(np.vstack([xm, xp]), np.concatenate([ym, yp]))
+
+    def _fit(self, x, y):
+        mu = x[:, 1:].mean(0)
+        sd = x[:, 1:].std(0) + 1e-9
+        z = np.hstack([x[:, :1], (x[:, 1:] - mu) / sd])
+        reg = np.eye(z.shape[1]) * self.LAMBDA
+        reg[0, 0] = 0
+        c = np.linalg.solve(z.T @ z + reg, z.T @ y)
+        return (c, mu, sd)
+
+    @staticmethod
+    def _apply(fit, x):
+        c, mu, sd = fit
+        z = np.hstack([x[:, :1], (x[:, 1:] - mu) / sd])
+        return z @ c
 
     def predict(self, f: list[float]) -> float | None:
         if self.coef is None:
             return None
-        return float(10 ** (np.array(f) @ self.coef))
+        return float(10 ** self._apply(self.coef, np.array([f]))[0])
+
+
+def gw_estimate(tb_c: float, group: str) -> float:
+    kf = GRAIN_KF.get(group, 1.0 if group in ("monoterpeeni", "seskviterpeeni", "hiilivety", "aromaattinen") else 1.05)
+    return grain_watson_vp(tb_c + 273.15, kf=kf) / 10**GW_BIAS
 
 
 def choose_pubchem_odt(texts: list[tuple[str, str]], mw: float) -> list[float]:
@@ -363,7 +399,7 @@ def choose_pubchem_odt(texts: list[tuple[str, str]], mw: float) -> list[float]:
 
 
 def short_odor(texts: list[tuple[str, str]]) -> str | None:
-    seen = []
+    seen: list[str] = []
     for text, _ in texts:
         t = re.sub(r"\s+", " ", text).strip().rstrip(".")
         if 3 < len(t) <= 140 and t.lower() not in [s.lower() for s in seen]:
@@ -397,9 +433,11 @@ def main() -> int:
     # koska eri tutkimukset ovat käyttäneet eri muotoja (esim. limoneeni, d- ja l-limoneeni).
     abraham_props = properties(sorted(abraham_raw))
     abraham: dict[str, list[float]] = {}
+    abraham_cids: dict[str, set[int]] = {}
     for acid, vals in abraham_raw.items():
         key = (abraham_props.get(acid, {}).get("InChIKey") or f"cid{acid}")[:14]
         abraham.setdefault(key, []).extend(vals)
+        abraham_cids.setdefault(key, set()).add(acid)
     print(f"Abraham-kynnysarvoja {len(abraham_raw)} yhdisteelle", flush=True)
 
     rows = []
@@ -410,16 +448,23 @@ def main() -> int:
         exp = experimental(cid)
         rows.append((row, cid, used, p, exp))
 
-    # Rakennemallin opetusaineisto: luotettavat (A/B) mitatut höyrynpaineet
-    xs, ys = [], []
+    # Rakennemallin opetusaineisto
+    measured, pseudo = [], []
     for row, cid, used, p, exp in rows:
-        good = [c for c in vp_candidates(exp.get("Vapor Pressure", [])) if c["tier"] in ("A", "B")]
+        if row.get("group") == "liuotin":
+            continue
         f = features(p.get("SMILES"))
-        if good and f and row.get("group") != "liuotin":
-            xs.append(f)
-            ys.append(math.log10(log_median([c["v"] for c in good])))
-    model = VpModel(xs, ys)
-    print(f"Rakennemalli: n = {model.n}, ristiinvalidoitu virhe {model.rmse:.2f} log-yksikköä", flush=True)
+        if not f:
+            continue
+        good = [c for c in vp_candidates(exp.get("Vapor Pressure", [])) if c["tier"] in ("A", "B")]
+        tbs = bp_candidates(exp.get("Boiling Point", []))
+        if good:
+            measured.append((f, math.log10(log_median([c["v"] for c in good]))))
+        elif tbs:
+            group, _ = classify(p.get("SMILES"))
+            pseudo.append((f, math.log10(gw_estimate(max(tbs), group))))
+    model = VpModel(measured, pseudo)
+    print(f"Rakennemalli: {model.n} mitattua + {model.n_pseudo} kiehumispistearviota, ristiinvalidoitu virhe {model.rmse:.2f} log-yksikköä", flush=True)
 
     molecules, notes, raw_lines = [], [], []
     for row, cid, used, p, exp in rows:
@@ -437,7 +482,7 @@ def main() -> int:
         tb = max(tbs) if tbs else None  # alennetun paineen arvot ovat aina liian pieniä, joten suurin on turvallisin
         gw = None
         if tb is not None:
-            gw = grain_watson_vp(tb + 273.15, kf=GRAIN_KF.get(group, 1.0 if group in ("monoterpeeni", "seskviterpeeni", "hiilivety", "aromaattinen") else 1.05))
+            gw = gw_estimate(tb, group)
             if pred and not (pred / tol <= gw <= pred * tol):
                 notes.append((row["id"], f"kiehumispiste {tb:.0f} °C ristiriidassa rakenteen kanssa; ohitettu"))
                 tb, gw = None, None
@@ -453,8 +498,19 @@ def main() -> int:
         if rejected:
             notes.append((row["id"], "hylätty epäuskottava höyrynpaine: " + ", ".join(f"{c['v']:.3g} mmHg ({c['src']})" for c in rejected)))
 
+        if tier_a and gw is not None:
+            # Ristiriitaiset vertaisarvioidut arvot: pidetään kiehumispisteen kanssa sopusoinnussa olevat
+            ok = [c for c in tier_a if gw / 10 <= c["v"] <= gw * 10]
+            if ok and len(ok) < len(tier_a):
+                dropped = [c for c in tier_a if c not in ok]
+                notes.append((row["id"], "ristiriitainen arvo ohitettu: " + ", ".join(f"{c['v']:.3g} mmHg ({c['src']})" for c in dropped)))
+                tier_a = ok
         if tier_a:
             vp = summarize_vp(tier_a, "koe")
+            if gw is not None and not (gw / 10 <= vp["value"] <= gw * 10):
+                vp["min"] = min(vp["min"], gw)
+                vp["max"] = max(vp["max"], gw)
+                notes.append((row["id"], f"mitattu {vp['value']:.3g} mmHg poikkeaa kiehumispistearviosta {gw:.3g} mmHg; vaihteluväli kattaa molemmat"))
         elif tier_b:
             vp = summarize_vp(tier_b, "koe")
         elif tier_c:
@@ -463,7 +519,7 @@ def main() -> int:
         elif gw is not None:
             vp = {"value": gw, "n": 0, "method": "arvio", "source": f"Arvio kiehumispisteestä {tb:.0f} °C (Grain–Watson)"}
         elif pred is not None and group not in ("liuotin",):
-            vp = {"value": pred, "n": 0, "method": "arvio", "source": f"Rakennemalli (n = {model.n}, virhe ±{model.rmse:.1f} log)"}
+            vp = {"value": pred, "n": 0, "method": "arvio", "source": f"Rakennemalli (virhe noin {10 ** model.rmse:.0f}-kertainen)"}
         else:
             vp = None
             notes.append((row["id"], "ei höyrynpainetta"))
@@ -481,7 +537,15 @@ def main() -> int:
         odt = None
         if key in abraham:
             vals = abraham[key]
-            odt = {"value": geometric_mean(vals), "min": min(vals), "max": max(vals), "n": len(vals), "method": "koe", "source": "Abraham ym. 2012 (Pyrfume)"}
+            pooled = len(abraham_cids.get(key, ())) > 1 or cid not in abraham_cids.get(key, ())
+            odt = {
+                "value": geometric_mean(vals),
+                "min": min(vals),
+                "max": max(vals),
+                "n": len(vals),
+                "method": "koe",
+                "source": "Abraham ym. 2012 (Pyrfume)" + (", sis. stereoisomeerit" if pooled else ""),
+            }
         else:
             vals = choose_pubchem_odt(exp.get("Odor Threshold", []), mw)
             if vals:
@@ -586,7 +650,7 @@ def write_report(seed, molecules, unresolved, notes, model):
         f"| Hajukynnys | {odt_koe} | – | {odt_arvio} |",
         "",
         (
-            f"Puuttuvien höyrynpaineiden rakennemalli: sovitettu {model.n} mitattuun arvoon, ristiinvalidoitu virhe {model.rmse:.2f} log10-yksikköä (kerroin {10 ** model.rmse:.1f})."
+            f"Puuttuvien höyrynpaineiden rakennemalli: {model.n} mitattua arvoa + {model.n_pseudo} kiehumispistearviota, ristiinvalidoitu virhe {model.rmse:.2f} log10-yksikköä (kerroin {10 ** model.rmse:.1f})."
             if model.coef is not None
             else "Rakennemallia ei sovitettu (liian vähän mitattuja arvoja)."
         ),
