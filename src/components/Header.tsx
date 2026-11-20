@@ -8,7 +8,7 @@ const NAV = [
 export function Header() {
   return (
     <header className="site-header">
-      <div className="topbar">Kehitysversio, demodata</div>
+      <div className="topbar">Kehitysversio</div>
       <div className="brand">
         <a href="#kartta" className="wordmark" aria-label="Hajuvesi, etusivu">
           <span className="wordmark-main">HAJUVESI</span>
