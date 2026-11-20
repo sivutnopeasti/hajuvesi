@@ -1,7 +1,15 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { DEFAULT_RECIPE } from '../src/data/materials.ts'
-import { DEFAULT_PARAMS, indexAt, simulate } from '../src/sim/engine.ts'
+import { DEMO_BY_ID } from '../src/data/demo.ts'
+import { DEFAULT_RECIPE, MATERIAL_BY_ID } from '../src/data/materials.ts'
+import { MOLECULES } from '../src/data/molecules.ts'
+import { DEFAULT_PARAMS, indexAt, simulate as simulateWith, type Library } from '../src/sim/engine.ts'
+import type { RecipeLine, SimParams } from '../src/sim/types.ts'
+
+// Vertailu Python-prototyyppiin tehdään aina prototyypin omilla arvoilla (demo-kirjasto),
+// jotta testi ei muutu, kun generoitu data päivittyy.
+const DEMO: Library = { molecules: DEMO_BY_ID, materials: MATERIAL_BY_ID }
+const simulate = (recipe: RecipeLine[], params: SimParams) => simulateWith(recipe, params, DEMO)
 
 // Viitearvot: prototype/evap_proto.py (scipy LSODA), aika jossa 90 % haihtunut, minuutteina
 const PY_SKIN: Record<string, number> = {
@@ -48,3 +56,20 @@ test('massa säilyy: jäljellä oleva osuus pienenee monotonisesti', () => {
     for (let j = 1; j < rem.length; j++) assert.ok(rem[j] <= rem[j - 1] + 1e-12)
   }
 })
+
+test('kirjasto: jokaisella molekyylillä on järkevät arvot', () => {
+  for (const m of MOLECULES) {
+    assert.ok(m.mw > 0, `${m.id}: MW`)
+    assert.ok(m.vp25.value >= 0 && Number.isFinite(m.vp25.value), `${m.id}: höyrynpaine`)
+    assert.ok(m.odt.value > 0, `${m.id}: hajukynnys`)
+    assert.ok(m.dHvap >= 0, `${m.id}: höyrystymislämpö`)
+  }
+})
+
+test('kirjasto: raaka-aineiden kaikki molekyylit löytyvät', () => {
+  const ids = new Set(MOLECULES.map((m) => m.id))
+  for (const mat of Object.values(MATERIAL_BY_ID)) {
+    for (const id of Object.keys(mat.composition)) assert.ok(ids.has(id), `${mat.id}: ${id} puuttuu`)
+  }
+})
+

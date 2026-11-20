@@ -8,7 +8,8 @@ import { NowPanel } from './components/NowPanel.tsx'
 import { RecipeEditor } from './components/RecipeEditor.tsx'
 import { Timeline } from './components/Timeline.tsx'
 import { TimeScrubber } from './components/TimeScrubber.tsx'
-import { DEFAULT_RECIPE } from './data/materials.ts'
+import { DEFAULT_RECIPE, OILS } from './data/materials.ts'
+import { GENERATED, MOLECULES } from './data/molecules.ts'
 import { DEFAULT_PARAMS, indexAt } from './sim/engine.ts'
 import type { Mode, RecipeLine, SimParams } from './sim/types.ts'
 import { useSimulation } from './sim/useSimulation.ts'
@@ -85,8 +86,9 @@ export default function App() {
         </section>
 
         <p className="demo-note">
-          Kehitysversio: 13 molekyyliä ja 4 luonnonraaka-ainetta. Arvioidut arvot on merkitty ≈-merkillä,
-          ja tulokset ovat suuntaa-antavia.
+          Kehitysversio: kirjastossa {MOLECULES.length} molekyyliä ja {OILS.length} luonnonraaka-ainetta
+          {GENERATED.generatedAt ? ` (data haettu ${new Date(GENERATED.generatedAt).toLocaleDateString('fi-FI')})` : ''}.
+          Arvioidut arvot on merkitty ≈-merkillä, ja tulokset ovat suuntaa-antavia.
         </p>
 
         <TimeScrubber timeMin={timeMin} onChange={setTimeMin} sniffA={sniffA} sniffB={sniffB} />

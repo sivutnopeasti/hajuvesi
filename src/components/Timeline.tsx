@@ -8,7 +8,7 @@ import type { FamilyId, SimResult } from '../sim/types.ts'
 const PAD = { l: 44, r: 16, t: 22, b: 40 }
 const T_MIN = 0.5
 const T_MAX = 24 * 60
-const ORDER: FamilyId[] = ['puu', 'balsami', 'kukka', 'havu', 'sitrus', 'alkoholi']
+const ORDER: FamilyId[] = ['puu', 'myski', 'balsami', 'mauste', 'kukka', 'hedelma', 'vihrea', 'havu', 'sitrus', 'alkoholi']
 const TICKS = [1, 2, 5, 10, 30, 60, 120, 240, 480, 1440]
 const TICKS_COMPACT = [1, 10, 60, 480]
 

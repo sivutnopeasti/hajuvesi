@@ -4,7 +4,7 @@ Työkalu hajuvesien tekijöille: näe molekyylitasolla, miten tuoksu muuttuu iho
 
 Sivu: https://sivutnopeasti.github.io/hajuvesi/
 
-> Kehitysversio. Kirjastossa on 13 molekyyliä ja 4 luonnonraaka-ainetta prototyypin datalla. Osa höyrynpaineista ja hajukynnyksistä on arvioita (merkitty ≈), joten tulokset ovat suuntaa-antavia.
+> Kehitysversio. Molekyylikirjasto (noin 220 tuoksumolekyyliä) haetaan automaattisesti PubChemistä ja Pyrfumesta. Luonnonraaka-aineita on vielä vähän. Osa höyrynpaineista ja hajukynnyksistä on arvioita (merkitty ≈), joten tulokset ovat suuntaa-antavia.
 
 ## Miten se toimii
 
@@ -30,7 +30,8 @@ Vaatii Node.js 22 tai uudemman.
 
 | Polku | Sisältö |
 | --- | --- |
-| `src/data/` | Molekyylit lähteineen, raaka-aineiden koostumukset, hajuperheet |
+| `src/data/` | Molekyylikirjasto, raaka-aineiden koostumukset, hajuperheet |
+| `scripts/etl/` | Molekyylidatan haku (Python) |
 | `src/sim/engine.ts` | Haihtumis- ja havaintomalli |
 | `src/sim/explain.ts` | Haistohetkien vertailu ja syykoodit |
 | `src/sim/worker.ts` | Simulaatio Web Workerissa |
@@ -43,6 +44,22 @@ Vaatii Node.js 22 tai uudemman.
 
 Jokainen push `main`-haaraan rakentaa sivun ja julkaisee sen `gh-pages`-haaraan (`.github/workflows/deploy.yml`). GitHub Pagesin lähteeksi asetetaan repon asetuksissa **Settings → Pages → Deploy from a branch → `gh-pages` / root**.
 
-## Data ja API-avaimet
+## Molekyylidata
 
-Datan haku ulkoisista lähteistä (PubChem, EPA CompTox) tehdään erillisellä skriptillä, ei selaimessa. Jos käytössä on EPA:n CTX API -avain, se luetaan ympäristömuuttujasta eikä sitä koskaan tallenneta repoon.
+Sivu ei kutsu ulkoisia rajapintoja. Molekyylien tiedot haetaan GitHub Actionsissa ja tallennetaan repoon tiedostoon `src/data/generated/molecules.json`.
+
+| Tiedosto | Tehtävä |
+| --- | --- |
+| `scripts/etl/seed_molecules.csv` | Haettavat molekyylit: tunniste, suomenkielinen nimi, PubChem-hakunimi (vaihtoehdot `\|`-merkillä), hajuperhe, lyhyt kuvaus |
+| `scripts/etl/build_molecules.py` | Hakee PubChemistä rakenteen, MW:n, CAS-numeron, kokeellisen höyrynpaineen, kiehumispisteen ja hajukynnyksen sekä Pyrfumesta Abraham 2012 -hajukynnykset |
+| `scripts/etl/report.md` | Ajon raportti: mitä ei löytynyt, mitkä arvot ovat arvioita ja PubChemin tunnistukset tarkistettavaksi |
+| `src/data/molecules.ts` | Yhdistää generoidun datan, käsin kuratoidut arvot (lähteineen) ja demodatan |
+
+**Molekyylin lisääminen:** lisää rivi `seed_molecules.csv`-tiedostoon ja tee commit. Työnkulku *Päivitä molekyylidata* käynnistyy, hakee tiedot, tallentaa ne repoon ja julkaisee sivun. Ajon voi käynnistää myös käsin: Actions → Päivitä molekyylidata → Run workflow.
+
+**Arvojen valinta:**
+- Höyrynpaine: PubChemin kokeelliset arvot 15–35 °C:ssa korjattuna 25 °C:een; useasta lähteestä mediaani ja vaihteluväli. Jos mitattua arvoa ei ole, arvio kiehumispisteestä (modifioitu Grain–Watson), merkitty arvioksi.
+- Hajukynnys: Abraham ym. 2012 (Pyrfume), muuten PubChemin ilman hajukynnykset; jos kumpaakaan ei ole, kemiallisen ryhmän mediaani, merkitty arvioksi.
+- Kemiallinen ryhmä päätellään rakenteesta RDKitillä.
+
+Jos käytössä on EPA:n CTX API -avain, se lisätään repon salaisuudeksi (Settings → Secrets) eikä koskaan tiedostoihin.

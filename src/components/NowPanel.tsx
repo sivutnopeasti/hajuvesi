@@ -27,21 +27,58 @@ function MoleculeCard({ result, j, id, onClose }: { result: SimResult; j: number
         </button>
       </div>
       <p className="card-odor">{m.odor}</p>
+      {m.odorEn && <p className="card-odor-en">PubChem: {m.odorEn}</p>}
       <dl className="facts">
         <dt>Ryhmä</dt>
         <dd>{GROUP_BY_ID[m.group].name}</dd>
+        {m.cas && (
+          <>
+            <dt>CAS</dt>
+            <dd>
+              {m.cid ? (
+                <a href={`https://pubchem.ncbi.nlm.nih.gov/compound/${m.cid}`} target="_blank" rel="noreferrer">
+                  {m.cas}
+                </a>
+              ) : (
+                m.cas
+              )}
+            </dd>
+          </>
+        )}
         <dt>Molekyylipaino</dt>
         <dd>{num(m.mw, 3)} g/mol</dd>
+        {m.tbC != null && (
+          <>
+            <dt>Kiehumispiste</dt>
+            <dd>{Math.round(m.tbC)} °C</dd>
+          </>
+        )}
         <dt>Höyrynpaine 25 °C</dt>
         <dd title={m.vp25.source}>
           {m.vp25.method === 'koe' ? '' : '≈ '}
           {num(m.vp25.value)} mmHg
+          {m.vp25.min !== undefined && m.vp25.max !== undefined && m.vp25.max / m.vp25.min > 1.2 && (
+            <span className="src">
+              lähteissä {num(m.vp25.min)}–{num(m.vp25.max)}
+            </span>
+          )}
           <span className="src">{m.vp25.source}</span>
         </dd>
         <dt>Hajukynnys</dt>
         <dd title={m.odt.source}>
-          {m.odt.method === 'koe' ? '' : '≈ '}
-          {num(m.odt.value)} ppm
+          {Number.isFinite(m.odt.value) ? (
+            <>
+              {m.odt.method === 'koe' ? '' : '≈ '}
+              {num(m.odt.value)} ppm
+              {m.odt.min !== undefined && m.odt.max !== undefined && m.odt.max / m.odt.min > 1.2 && (
+                <span className="src">
+                  lähteissä {num(m.odt.min)}–{num(m.odt.max)}
+                </span>
+              )}
+            </>
+          ) : (
+            'ei tiedossa'
+          )}
           <span className="src">{m.odt.source}</span>
         </dd>
         <dt>Jäljellä nyt</dt>

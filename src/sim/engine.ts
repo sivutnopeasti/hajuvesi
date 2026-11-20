@@ -1,6 +1,14 @@
 import { MATERIAL_BY_ID } from '../data/materials.ts'
 import { MOLECULE_BY_ID } from '../data/molecules.ts'
-import type { Molecule, Mode, RecipeLine, SimParams, SimResult } from './types.ts'
+import type { Material, Molecule, Mode, RecipeLine, SimParams, SimResult } from './types.ts'
+
+/** Molekyyli- ja raaka-ainekirjasto; testit antavat oman, kiinteän kirjastonsa. */
+export interface Library {
+  molecules: Record<string, Molecule>
+  materials: Record<string, Material>
+}
+
+export const DEFAULT_LIBRARY: Library = { molecules: MOLECULE_BY_ID, materials: MATERIAL_BY_ID }
 
 const R = 8.314 // J/(mol K)
 const P_ATM = 101325 // Pa
@@ -26,10 +34,10 @@ export function psat(m: Molecule, T: number): number {
 }
 
 /** Resepti (grammoina) → molekyylien massat grammoina. Koostumuksen mallintamaton osa jätetään pois. */
-export function recipeToMolecules(recipe: RecipeLine[]): Map<string, number> {
+export function recipeToMolecules(recipe: RecipeLine[], lib: Library = DEFAULT_LIBRARY): Map<string, number> {
   const out = new Map<string, number>()
   for (const line of recipe) {
-    const mat = MATERIAL_BY_ID[line.materialId]
+    const mat = lib.materials[line.materialId]
     if (!mat || !(line.grams > 0)) continue
     for (const [molId, pct] of Object.entries(mat.composition)) {
       out.set(molId, (out.get(molId) ?? 0) + (line.grams * pct) / 100)
@@ -57,10 +65,14 @@ export function timeGrid(tEndMin: number, points = 400): number[] {
  * Ratkaistaan eksponentiaalisella keskipistemenetelmällä, joka on stabiili
  * jäykällekin systeemille (etanoli haihtuu minuuteissa, patsulioli päivissä).
  */
-export function simulate(recipe: RecipeLine[], params: SimParams = DEFAULT_PARAMS): SimResult {
-  const masses = recipeToMolecules(recipe)
-  const ids = [...masses.keys()].filter((id) => MOLECULE_BY_ID[id] && (masses.get(id) ?? 0) > 0)
-  const mols = ids.map((id) => MOLECULE_BY_ID[id])
+export function simulate(
+  recipe: RecipeLine[],
+  params: SimParams = DEFAULT_PARAMS,
+  lib: Library = DEFAULT_LIBRARY,
+): SimResult {
+  const masses = recipeToMolecules(recipe, lib)
+  const ids = [...masses.keys()].filter((id) => lib.molecules[id] && (masses.get(id) ?? 0) > 0)
+  const mols = ids.map((id) => lib.molecules[id])
   const totalMass = ids.reduce((s, id) => s + (masses.get(id) ?? 0), 0)
   const T = temperatureK(params.mode)
   const doseKgM2 = params.doseMgCm2 * 0.01 // 1 mg/cm² = 0,01 kg/m²

@@ -6,12 +6,14 @@ import { num, pct } from '../lib/format.ts'
 import { useWidth } from '../lib/useWidth.ts'
 import type { SimResult } from '../sim/types.ts'
 
-const VP_HI = 200 // mmHg, vasen reuna
-const VP_LO = 5e-5 // mmHg, oikea reuna
-const MW_LO = 30
-const MW_HI = 240
+interface Domain {
+  vpHi: number
+  vpLo: number
+  mwLo: number
+  mwHi: number
+}
 
-interface Geometry {
+interface Geometry extends Domain {
   W: number
   H: number
   pad: { l: number; r: number; t: number; b: number }
@@ -21,24 +23,34 @@ interface Geometry {
 }
 
 /** Mitat todellisissa CSS-pikseleissä, jotta teksti pysyy luettavana myös puhelimella. */
-function geometry(width: number): Geometry {
+function geometry(width: number, d: Domain): Geometry {
   const compact = width < 640
   const W = width
   const H = compact ? Math.round(Math.max(420, width * 1.15)) : Math.round(width * 0.634)
   const pad = compact ? { l: 44, r: 12, t: 28, b: 58 } : { l: 64, r: 28, t: 28, b: 64 }
-  const X = (vp: number) =>
-    pad.l + ((Math.log10(VP_HI) - Math.log10(vp)) / (Math.log10(VP_HI) - Math.log10(VP_LO))) * (W - pad.l - pad.r)
-  const Y = (mw: number) => pad.t + ((mw - MW_LO) / (MW_HI - MW_LO)) * (H - pad.t - pad.b)
-  return { W, H, pad, X, Y, compact }
+  const lhi = Math.log10(d.vpHi)
+  const llo = Math.log10(d.vpLo)
+  const X = (vp: number) => {
+    const v = Math.min(d.vpHi, Math.max(d.vpLo, vp))
+    return pad.l + ((lhi - Math.log10(v)) / (lhi - llo)) * (W - pad.l - pad.r)
+  }
+  const Y = (mw: number) => pad.t + ((mw - d.mwLo) / (d.mwHi - d.mwLo)) * (H - pad.t - pad.b)
+  return { ...d, W, H, pad, X, Y, compact }
 }
 
-const X_TICKS = [100, 10, 1, 0.1, 0.01, 1e-3, 1e-4]
-const X_TICKS_COMPACT = [100, 1, 0.01, 1e-4]
-const Y_TICKS = [50, 100, 150, 200]
-const ZONES = [
-  { from: VP_HI, to: 0.5, label: 'Nopeasti haihtuvat', short: 'Nopeat' },
-  { from: 0.5, to: 0.01, label: 'Keskihaihtuvat', short: 'Keski' },
-  { from: 0.01, to: VP_LO, label: 'Hitaasti haihtuvat', short: 'Hitaat' },
+function decadeTicks(d: Domain, compact: boolean): number[] {
+  const out: number[] = []
+  const step = compact ? 2 : 1
+  for (let e = Math.floor(Math.log10(d.vpHi)); e >= Math.ceil(Math.log10(d.vpLo)); e -= step) out.push(10 ** e)
+  return out
+}
+
+const Y_STEP = 50
+const ZONE_BOUNDS = [0.5, 0.01]
+const ZONE_LABELS = [
+  { label: 'Nopeasti haihtuvat', short: 'Nopeat' },
+  { label: 'Keskihaihtuvat', short: 'Keski' },
+  { label: 'Hitaasti haihtuvat', short: 'Hitaat' },
 ]
 
 interface Props {
@@ -112,8 +124,6 @@ function placeLabels(items: { id: string; x: number; y: number; r: number; label
 export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props) {
   const recog = result.params.recognitionFactor
   const [ref, width] = useWidth<HTMLElement>()
-  const g = useMemo(() => geometry(width), [width])
-  const { W, H, pad: PAD, X, Y } = g
 
   const visible = useMemo(
     () =>
@@ -122,6 +132,22 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
         .filter(({ m }) => m.vp25.value > 0),
     [result],
   )
+
+  const domain = useMemo<Domain>(() => {
+    const vps = visible.flatMap(({ m }) => [m.vp25.value, m.vp25.min ?? m.vp25.value, m.vp25.max ?? m.vp25.value])
+    const mws = visible.map(({ m }) => m.mw)
+    const vpHi = 10 ** Math.ceil(Math.log10(Math.max(200, ...vps) * 1.5))
+    const vpLo = 10 ** Math.floor(Math.log10(Math.max(1e-9, Math.min(5e-5, ...vps) / 1.5)))
+    const mwHi = Math.max(240, Math.ceil((Math.max(...mws, 0) + 20) / Y_STEP) * Y_STEP)
+    return { vpHi, vpLo, mwLo: 30, mwHi }
+  }, [visible])
+
+  const g = useMemo(() => geometry(width, domain), [width, domain])
+  const { W, H, pad: PAD, X, Y } = g
+  const bounds = [g.vpHi, ...ZONE_BOUNDS, g.vpLo]
+  const zones = ZONE_LABELS.map((z, k) => ({ from: bounds[k], to: bounds[k + 1], ...z }))
+  const yTicks: number[] = []
+  for (let v = Y_STEP; v < g.mwHi; v += Y_STEP) yTicks.push(v)
 
   const mRef = useMemo(() => {
     const masses = visible.filter(({ m }) => m.group !== 'liuotin').map(({ i }) => result.initialMass[i])
@@ -177,7 +203,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
         aria-label="Molekyylikartta: molekyylipaino ja höyrynpaine, kuplan koko kertoo jäljellä olevan määrän"
         onClick={() => onSelect(null)}
       >
-        {ZONES.map((z, k) => (
+        {zones.map((z, k) => (
           <g key={z.label}>
             <rect
               x={X(z.from)}
@@ -192,7 +218,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
           </g>
         ))}
 
-        {(g.compact ? X_TICKS_COMPACT : X_TICKS).map((v) => (
+        {decadeTicks(g, g.compact).map((v) => (
           <g key={v}>
             <line x1={X(v)} x2={X(v)} y1={PAD.t} y2={H - PAD.b} className="grid" />
             <text x={X(v)} y={H - PAD.b + 18} textAnchor="middle" className="tick">
@@ -200,7 +226,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
             </text>
           </g>
         ))}
-        {Y_TICKS.map((v) => (
+        {yTicks.map((v) => (
           <g key={v}>
             <line x1={PAD.l} x2={W - PAD.r} y1={Y(v)} y2={Y(v)} className="grid" />
             <text x={PAD.l - 10} y={Y(v) + 4} textAnchor="end" className="tick">
@@ -219,6 +245,18 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
           Molekyylipaino (g/mol) – kevyt ylhäällä
         </text>
 
+        {placed.map((p) => {
+          const vp = MOLECULE_BY_ID[p.id].vp25
+          if (!vp.min || !vp.max || vp.max / vp.min < 1.5) return null
+          return (
+            <g key={`range-${p.id}`} className="vp-range">
+              <title>{`Höyrynpaine lähteittäin ${num(vp.min)}–${num(vp.max)} mmHg`}</title>
+              <line x1={X(vp.max)} x2={X(vp.min)} y1={p.y} y2={p.y} />
+              <line x1={X(vp.max)} x2={X(vp.max)} y1={p.y - 4} y2={p.y + 4} />
+              <line x1={X(vp.min)} x2={X(vp.min)} y1={p.y - 4} y2={p.y + 4} />
+            </g>
+          )
+        })}
         {placed.map((p) => (
           <circle key={`ghost-${p.id}`} cx={p.x} cy={p.y} r={p.r0} className="ghost" />
         ))}

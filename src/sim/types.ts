@@ -1,23 +1,48 @@
 /** Arvon alkuperä: koe = vertaisarvioitu mittaus, ennuste = QSAR-malli, arvio = karkea arvio. */
 export type Method = 'koe' | 'ennuste' | 'arvio'
 
-export type FamilyId = 'alkoholi' | 'sitrus' | 'havu' | 'kukka' | 'puu' | 'balsami' | 'haihtumaton'
+export type FamilyId =
+  | 'alkoholi'
+  | 'sitrus'
+  | 'havu'
+  | 'vihrea'
+  | 'kukka'
+  | 'hedelma'
+  | 'mauste'
+  | 'balsami'
+  | 'puu'
+  | 'myski'
+  | 'haihtumaton'
 
 export type GroupId =
   | 'liuotin'
   | 'monoterpeeni'
-  | 'terpeenialkoholi'
-  | 'esteri'
-  | 'oksidi-ketoni'
   | 'seskviterpeeni'
-  | 'seskviterpeenialkoholi'
+  | 'hiilivety'
   | 'aromaattinen'
+  | 'terpeenialkoholi'
+  | 'seskviterpeenialkoholi'
+  | 'alkoholi'
+  | 'aldehydi'
+  | 'ketoni'
+  | 'esteri'
+  | 'laktoni'
+  | 'fenoli'
+  | 'eetteri-oksidi'
+  | 'happo'
+  | 'typpi-rikki'
+  | 'muu'
   | 'haihtumaton'
 
 export interface SourcedValue {
   value: number
   method: Method
   source: string
+  /** Pienin ja suurin lähteiden arvo, kun niitä on useita */
+  min?: number
+  max?: number
+  /** Lähdearvojen määrä */
+  n?: number
 }
 
 export interface Molecule {
@@ -38,6 +63,14 @@ export interface Molecule {
   odor: string
   /** Stevensin eksponentti (oletus 0,5) */
   stevens?: number
+  cid?: number
+  smiles?: string
+  formula?: string
+  /** Normaalikiehumispiste, °C */
+  tbC?: number | null
+  xlogp?: number | null
+  /** PubChemin hajukuvaus englanniksi */
+  odorEn?: string | null
 }
 
 export interface Material {

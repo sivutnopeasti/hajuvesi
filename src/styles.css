@@ -626,6 +626,17 @@ input[type='range']::-moz-range-thumb {
   font-size: 18px;
 }
 
+.card-odor-en {
+  margin: -6px 0 12px;
+  font-size: 13px;
+  color: var(--smoke);
+}
+
+.vp-range line {
+  stroke: #8f8ba3;
+  stroke-width: 1.25;
+}
+
 .facts {
   display: grid;
   grid-template-columns: auto 1fr;
