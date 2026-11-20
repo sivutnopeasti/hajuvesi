@@ -15,6 +15,7 @@ RANGE_SEP = r"\s*(?:-|–|to)\s*"
 
 PRESSURE_TO_MMHG = {
     "mmhg": 1.0,
+    "mm": 1.0,
     "torr": 1.0,
     "pa": 1 / 133.322,
     "kpa": 7.50062,
@@ -25,7 +26,7 @@ PRESSURE_TO_MMHG = {
     "psi": 51.7149,
 }
 
-PRESSURE_UNIT = r"(mm\s*hg|mmhg|torr|kpa|hpa|mbar|pa|atm|bar|psi)\b"
+PRESSURE_UNIT = r"(mm\s*hg|mmhg|mm|torr|kpa|hpa|mbar|pa|atm|bar|psi)\b"
 
 
 def to_float(s: str) -> float:

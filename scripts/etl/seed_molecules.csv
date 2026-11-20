@@ -1,6 +1,6 @@
 id,name,query,family,odor,group
 etanoli,"Etanoli","ethanol",alkoholi,"alkoholinen, pistävä",liuotin
-dpg,"Dipropyleeniglykoli","dipropylene glycol",alkoholi,"lähes hajuton",liuotin
+dpg,"Dipropyleeniglykoli","1,1'-oxydipropan-2-ol|dipropylene glycol",alkoholi,"lähes hajuton",liuotin
 trietyylisitraatti,"Trietyylisitraatti","triethyl citrate",alkoholi,"lähes hajuton",liuotin
 ipm,"Isopropyylimyristaatti","isopropyl myristate",alkoholi,"lähes hajuton",liuotin
 alfa-pineeni,"α-pineeni","alpha-pinene",havu,"havu, terpeeninen",
@@ -41,7 +41,7 @@ bentsyylialkoholi,"Bentsyylialkoholi","benzyl alcohol",kukka,"heikko, makea",
 fenyylietanoli,"2-fenyylietanoli","2-phenylethanol",kukka,"ruusu, hunaja",
 kanelialkoholi,"Kanelialkoholi","cinnamyl alcohol",balsami,"balsami, hyasintti",
 anisyylialkoholi,"Anisyylialkoholi","anisyl alcohol|4-methoxybenzyl alcohol",kukka,"kukkainen, makea",
-sitraali,"Sitraali","citral",sitrus,"sitruuna",
+sitraali,"Sitraali","3,7-dimethylocta-2,6-dienal|citral",sitrus,"sitruuna",
 geraniaali,"Geraniaali","geranial",sitrus,"sitruuna, raikas",
 neraali,"Neraali","neral",sitrus,"sitruuna, makea",
 sitronellaali,"Sitronellaali","citronellal",sitrus,"sitruunainen, vihreä",

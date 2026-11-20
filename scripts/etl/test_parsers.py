@@ -53,12 +53,20 @@ def test_vapor_pressure():
     r = parse_vapor_pressure("0.01-0.04 mm Hg at 20 °C")
     assert close(r[0]["mmhg"], 0.02)
 
+    r = parse_vapor_pressure("15.5 mmHg at 77 °F ; 31.3 mmHg at 108 °F (NTP, 1992)")
+    assert close(r[0]["temp_c"], 25) and close(r[1]["temp_c"], 42.2, 0.01)
+
+    r = parse_vapor_pressure("0.123 mm Hg at 25 °C (extrapolated)")
+    assert close(r[0]["mmhg"], 0.123) and r[0]["temp_c"] == 25
+
 
 def test_boiling_point():
     assert close(parse_boiling_point("198 °C")[0], 198)
     assert close(parse_boiling_point("388 °F at 760 mm Hg")[0], 197.8, 0.01)
     assert parse_boiling_point("85 °C at 10 mm Hg") == []
     assert close(parse_boiling_point("198-199 °C")[0], 198.5)
+    assert parse_boiling_point("94.00 to 95.00 °C. @ 18.00 mm Hg") == []
+    assert parse_boiling_point("116 °C at 13 mm") == []
 
 
 def test_odor_threshold():

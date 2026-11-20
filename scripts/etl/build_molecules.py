@@ -23,8 +23,10 @@ import sys
 import time
 from pathlib import Path
 
+import numpy as np
 import requests
 from rdkit import Chem, RDLogger
+from rdkit.Chem import Descriptors, rdMolDescriptors
 
 sys.path.insert(0, str(Path(__file__).parent))
 from parsers import (  # noqa: E402
@@ -43,6 +45,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SEED = ROOT / "scripts/etl/seed_molecules.csv"
 OUT = ROOT / "src/data/generated/molecules.json"
 REPORT = ROOT / "scripts/etl/report.md"
+RAW_REPORT = ROOT / "scripts/etl/raw_values.md"
 CACHE = ROOT / "scripts/etl/.cache"
 
 PUG = "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
@@ -122,8 +125,8 @@ def properties(cids: list[int]) -> dict[int, dict]:
         ids = ",".join(map(str, chunk))
         js = None
         for props in (
-            "Title,MolecularWeight,MolecularFormula,SMILES,XLogP,IUPACName",
-            "Title,MolecularWeight,MolecularFormula,IsomericSMILES,XLogP,IUPACName",
+            "Title,MolecularWeight,MolecularFormula,SMILES,XLogP,IUPACName,InChIKey",
+            "Title,MolecularWeight,MolecularFormula,IsomericSMILES,XLogP,IUPACName,InChIKey",
         ):
             js = fetch(f"{PUG}/compound/cid/property/{props}/JSON", data={"cid": ids}, cache_key=f"props:{props}:{ids}")
             if js:
@@ -264,9 +267,22 @@ GRAIN_KF = {"alkoholi": 1.22, "terpeenialkoholi": 1.22, "seskviterpeenialkoholi"
 # ---------------------------------------------------------------- Arvojen valinta
 
 
-def choose_vp(texts: list[tuple[str, str]]) -> dict | None:
-    """Valitsee 25 °C:n höyrynpaineen. Koearvot 15–35 °C korjataan 25 °C:een (ΔH ≈ 55 kJ/mol)."""
-    measured, estimated = [], []
+# Lähteiden luotettavuus: A = vertaisarvioidut kokoelmat, C = tunnetusti virheellisiä arvoja sisältävät
+TIER_A = ("Hazardous Substances Data Bank", "International Chemical Safety Cards", "ICSC", "PAC Chemical Database", "DOE")
+TIER_C = ("Haz-Map", "CAMEO")
+
+
+def source_tier(src: str) -> str:
+    if any(k in src for k in TIER_A):
+        return "A"
+    if any(k in src for k in TIER_C):
+        return "C"
+    return "B"
+
+
+def vp_candidates(texts: list[tuple[str, str]]) -> list[dict]:
+    """Kaikki 15–35 °C:n höyrynpainearvot korjattuna 25 °C:een, lähteen luotettavuusluokan kanssa."""
+    out = []
     for text, src in texts:
         for p in parse_vapor_pressure(text):
             t = p["temp_c"]
@@ -275,25 +291,71 @@ def choose_vp(texts: list[tuple[str, str]]) -> dict | None:
             v = p["mmhg"]
             if t is not None and t != 25:
                 v = v * math.exp(-55000 / R * (1 / 298.15 - 1 / (t + 273.15)))
-            (estimated if p["estimated"] else measured).append((v, src))
-    pool = measured or estimated
-    if not pool:
-        return None
-    values = [v for v, _ in pool]
-    sources = sorted({s for _, s in pool if s})
+            if not (1e-9 < v < 800):
+                continue
+            out.append({"v": v, "src": src, "tier": "C" if p["estimated"] else source_tier(src), "est": p["estimated"]})
+    return out
+
+
+def summarize_vp(cands: list[dict], method: str) -> dict:
+    values = [c["v"] for c in cands]
+    sources = sorted({c["src"] for c in cands if c["src"]})
     return {
         "value": log_median(values),
         "min": min(values),
         "max": max(values),
         "n": len(values),
-        "method": "koe" if measured else "ennuste",
-        "source": "PubChem: " + ", ".join(sources[:3]) if sources else "PubChem",
+        "method": method,
+        "source": ("PubChem: " + ", ".join(sources[:3])) if sources else "PubChem",
     }
 
 
-def choose_bp(texts: list[tuple[str, str]]) -> float | None:
-    values = [v for text, _ in texts for v in parse_boiling_point(text)]
-    return statistics.median(values) if values else None
+def bp_candidates(texts: list[tuple[str, str]]) -> list[float]:
+    return [v for text, _ in texts for v in parse_boiling_point(text)]
+
+
+# ---------------------------------------------------------------- Rakennemalli puuttuville höyrynpaineille
+
+
+def features(smiles: str | None) -> list[float] | None:
+    mol = Chem.MolFromSmiles(smiles) if smiles else None
+    if mol is None:
+        return None
+    return [
+        1.0,
+        Descriptors.MolWt(mol),
+        rdMolDescriptors.CalcNumHBD(mol),
+        rdMolDescriptors.CalcTPSA(mol),
+        rdMolDescriptors.CalcNumAromaticRings(mol),
+        rdMolDescriptors.CalcNumRings(mol),
+    ]
+
+
+class VpModel:
+    """log10(VP) ~ MW + vetysidoksen luovuttajat + TPSA + renkaat, sovitettu tämän aineiston mitattuihin arvoihin."""
+
+    def __init__(self, xs: list[list[float]], ys: list[float]):
+        self.n = len(ys)
+        self.coef = None
+        self.rmse = float("nan")
+        if self.n < 12:
+            return
+        x = np.array(xs)
+        y = np.array(ys)
+        self.coef, *_ = np.linalg.lstsq(x, y, rcond=None)
+        # 5-kertainen ristiinvalidointi
+        idx = np.arange(len(y))
+        errs = []
+        for k in range(5):
+            test = idx % 5 == k
+            c, *_ = np.linalg.lstsq(x[~test], y[~test], rcond=None)
+            errs.extend((x[test] @ c - y[test]).tolist())
+        self.rmse = float(np.sqrt(np.mean(np.square(errs)))) if errs else float("nan")
+
+    def predict(self, f: list[float]) -> float | None:
+        if self.coef is None:
+            return None
+        return float(10 ** (np.array(f) @ self.coef))
 
 
 def choose_pubchem_odt(texts: list[tuple[str, str]], mw: float) -> list[float]:
@@ -330,43 +392,108 @@ def main() -> int:
     cids = sorted({cid for _, cid, _ in resolved})
     props = properties(cids)
     cas = cas_numbers(cids)
-    abraham = abraham_thresholds()
-    print(f"Abraham-kynnysarvoja {len(abraham)} yhdisteelle", flush=True)
+    abraham_raw = abraham_thresholds()
+    # Hajukynnykset yhdistetään saman rakenteen stereoisomeereille (InChIKeyn ensimmäinen osa),
+    # koska eri tutkimukset ovat käyttäneet eri muotoja (esim. limoneeni, d- ja l-limoneeni).
+    abraham_props = properties(sorted(abraham_raw))
+    abraham: dict[str, list[float]] = {}
+    for acid, vals in abraham_raw.items():
+        key = (abraham_props.get(acid, {}).get("InChIKey") or f"cid{acid}")[:14]
+        abraham.setdefault(key, []).extend(vals)
+    print(f"Abraham-kynnysarvoja {len(abraham_raw)} yhdisteelle", flush=True)
 
-    molecules, notes = [], []
+    rows = []
     for k, (row, cid, used) in enumerate(resolved, 1):
         if k % 25 == 0:
             print(f"  {k}/{len(resolved)}", flush=True)
         p = props.get(cid, {})
+        exp = experimental(cid)
+        rows.append((row, cid, used, p, exp))
+
+    # Rakennemallin opetusaineisto: luotettavat (A/B) mitatut höyrynpaineet
+    xs, ys = [], []
+    for row, cid, used, p, exp in rows:
+        good = [c for c in vp_candidates(exp.get("Vapor Pressure", [])) if c["tier"] in ("A", "B")]
+        f = features(p.get("SMILES"))
+        if good and f and row.get("group") != "liuotin":
+            xs.append(f)
+            ys.append(math.log10(log_median([c["v"] for c in good])))
+    model = VpModel(xs, ys)
+    print(f"Rakennemalli: n = {model.n}, ristiinvalidoitu virhe {model.rmse:.2f} log-yksikköä", flush=True)
+
+    molecules, notes, raw_lines = [], [], []
+    for row, cid, used, p, exp in rows:
         mw = float(p.get("MolecularWeight") or 0)
         smiles = p.get("SMILES")
         group, n_c = classify(smiles)
         if row.get("group"):
             group = row["group"]
-        exp = experimental(cid)
+        f = features(smiles)
+        pred = model.predict(f) if f else None
+        tol = 10 ** max(1.0, 3 * model.rmse) if model.coef is not None else 1e9  # sallittu poikkeama rakennemallista
 
-        tb = choose_bp(exp.get("Boiling Point", []))
-        vp = choose_vp(exp.get("Vapor Pressure", []))
-        if vp is None and tb is not None:
-            est = grain_watson_vp(tb + 273.15, kf=GRAIN_KF.get(group, 1.0 if group in ("monoterpeeni", "seskviterpeeni", "hiilivety", "aromaattinen") else 1.05))
-            vp = {"value": est, "n": 0, "method": "arvio", "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"}
-        if vp is None:
-            notes.append((row["id"], "ei höyrynpainetta eikä kiehumispistettä"))
+        cands = vp_candidates(exp.get("Vapor Pressure", []))
+        tbs = bp_candidates(exp.get("Boiling Point", []))
+        tb = max(tbs) if tbs else None  # alennetun paineen arvot ovat aina liian pieniä, joten suurin on turvallisin
+        gw = None
+        if tb is not None:
+            gw = grain_watson_vp(tb + 273.15, kf=GRAIN_KF.get(group, 1.0 if group in ("monoterpeeni", "seskviterpeeni", "hiilivety", "aromaattinen") else 1.05))
+            if pred and not (pred / tol <= gw <= pred * tol):
+                notes.append((row["id"], f"kiehumispiste {tb:.0f} °C ristiriidassa rakenteen kanssa; ohitettu"))
+                tb, gw = None, None
+
+        def plausible(v: float) -> bool:
+            ref = gw or pred
+            return ref is None or ref / tol <= v <= ref * tol
+
+        tier_a = [c for c in cands if c["tier"] == "A"]
+        tier_b = [c for c in cands if c["tier"] == "B" and plausible(c["v"])]
+        tier_c = [c for c in cands if c["tier"] == "C" and plausible(c["v"])]
+        rejected = [c for c in cands if c not in tier_a + tier_b + tier_c]
+        if rejected:
+            notes.append((row["id"], "hylätty epäuskottava höyrynpaine: " + ", ".join(f"{c['v']:.3g} mmHg ({c['src']})" for c in rejected)))
+
+        if tier_a:
+            vp = summarize_vp(tier_a, "koe")
+        elif tier_b:
+            vp = summarize_vp(tier_b, "koe")
+        elif tier_c:
+            vp = summarize_vp(tier_c, "arvio")
+            vp["source"] += " (heikko lähde)"
+        elif gw is not None:
+            vp = {"value": gw, "n": 0, "method": "arvio", "source": f"Arvio kiehumispisteestä {tb:.0f} °C (Grain–Watson)"}
+        elif pred is not None and group not in ("liuotin",):
+            vp = {"value": pred, "n": 0, "method": "arvio", "source": f"Rakennemalli (n = {model.n}, virhe ±{model.rmse:.1f} log)"}
+        else:
+            vp = None
+            notes.append((row["id"], "ei höyrynpainetta"))
 
         if vp and tb is not None and 0 < vp["value"] < 760:
             dh = R * math.log(760 / vp["value"]) / (1 / 298.15 - 1 / (tb + 273.15))
             dh_kj = min(110.0, max(35.0, dh / 1000))
+        elif vp and 0 < vp["value"] < 760:
+            # Kiehumispistettä ei ole: arvio Troutonin säännön tyyppisestä riippuvuudesta
+            dh_kj = min(110.0, max(35.0, 45.0 - 6.5 * math.log10(vp["value"])))
         else:
             dh_kj = 55.0
 
+        key = (p.get("InChIKey") or f"cid{cid}")[:14]
         odt = None
-        if cid in abraham:
-            vals = abraham[cid]
+        if key in abraham:
+            vals = abraham[key]
             odt = {"value": geometric_mean(vals), "min": min(vals), "max": max(vals), "n": len(vals), "method": "koe", "source": "Abraham ym. 2012 (Pyrfume)"}
         else:
             vals = choose_pubchem_odt(exp.get("Odor Threshold", []), mw)
             if vals:
                 odt = {"value": geometric_mean(vals), "min": min(vals), "max": max(vals), "n": len(vals), "method": "koe", "source": "PubChem (HSDB/muut)"}
+
+        raw_lines.append(f"### {row['id']} ({p.get('Title')}, CID {cid})")
+        for text, src in exp.get("Vapor Pressure", []):
+            raw_lines.append(f"- VP: {text} — *{src}*")
+        for text, src in exp.get("Boiling Point", []):
+            raw_lines.append(f"- Tb: {text} — *{src}*")
+        raw_lines.append(f"- Rakennemalli: {pred:.3g} mmHg" if pred else "- Rakennemalli: –")
+        raw_lines.append("")
 
         molecules.append(
             {
@@ -435,12 +562,13 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    write_report(seed, molecules, unresolved, notes)
+    write_report(seed, molecules, unresolved, notes, model)
+    RAW_REPORT.write_text("# PubChemin lähdearvot\n\nKaikki haetut höyrynpaine- ja kiehumispistetekstit tarkistusta varten.\n\n" + "\n".join(raw_lines) + "\n", encoding="utf-8")
     print(f"Kirjoitettu {OUT}: {len(molecules)} molekyyliä", flush=True)
     return 0
 
 
-def write_report(seed, molecules, unresolved, notes):
+def write_report(seed, molecules, unresolved, notes, model):
     n = len(molecules)
     vp_koe = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "koe")
     vp_ennuste = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "ennuste")
@@ -456,6 +584,12 @@ def write_report(seed, molecules, unresolved, notes):
         "| --- | --- | --- | --- |",
         f"| Höyrynpaine 25 °C | {vp_koe} | {vp_ennuste} | {vp_arvio} |",
         f"| Hajukynnys | {odt_koe} | – | {odt_arvio} |",
+        "",
+        (
+            f"Puuttuvien höyrynpaineiden rakennemalli: sovitettu {model.n} mitattuun arvoon, ristiinvalidoitu virhe {model.rmse:.2f} log10-yksikköä (kerroin {10 ** model.rmse:.1f})."
+            if model.coef is not None
+            else "Rakennemallia ei sovitettu (liian vähän mitattuja arvoja)."
+        ),
         "",
     ]
     if unresolved:
