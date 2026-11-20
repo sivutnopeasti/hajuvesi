@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T22:07:01Z",
+ "generatedAt": "2026-11-20T22:10:50Z",
  "sources": [
   "PubChem PUG REST ja PUG View (NCBI)",
   "Abraham ym. 2012, Chemical Senses 37:207–218, Pyrfume-arkiston kautta"
@@ -16,16 +16,16 @@
    "smiles": "CCO",
    "mw": 46.07,
    "xlogp": -0.1,
-   "tbC": 78.3,
+   "tbC": 78.5,
    "vp25": {
-    "value": 52.49,
+    "value": 55.11,
     "min": 0.007501,
     "max": 750.1,
-    "n": 14,
+    "n": 9,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 43.7,
+   "dHvap": 42.8,
    "odt": {
     "value": 2.301,
     "min": 2.301,
@@ -43,30 +43,30 @@
   {
    "id": "dpg",
    "name": "Dipropyleeniglykoli",
-   "cid": 134692469,
-   "cas": "25265-71-8",
-   "pubchemTitle": "Dipropylene Glycol",
-   "query": "dipropylene glycol",
-   "formula": "C12H28O6",
-   "smiles": "CC(CO)OC(C)CO.CC(COCC(C)O)O",
-   "mw": 268.35,
-   "xlogp": null,
-   "tbC": 231.0,
+   "cid": 8087,
+   "cas": "110-98-5",
+   "pubchemTitle": "1,1'-Oxydi-2-propanol",
+   "query": "1,1'-oxydipropan-2-ol",
+   "formula": "C6H14O3",
+   "smiles": "CC(COCC(C)O)O",
+   "mw": 134.17,
+   "xlogp": -0.4,
+   "tbC": 232.8,
    "vp25": {
     "value": 0.03,
     "min": 0.03,
-    "max": 0.0319,
-    "n": 3,
+    "max": 0.03,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 61.5,
+   "dHvap": 61.2,
    "odt": null,
    "family": "alkoholi",
    "group": "liuotin",
-   "carbons": 12,
+   "carbons": 6,
    "odor": "lähes hajuton",
-   "odorEn": "Odorless"
+   "odorEn": "Nearly odorless"
   },
   {
    "id": "trietyylisitraatti",
@@ -79,16 +79,16 @@
    "smiles": "CCOC(=O)CC(CC(=O)OCC)(C(=O)OCC)O",
    "mw": 276.28,
    "xlogp": 0.1,
-   "tbC": 294.0,
+   "tbC": null,
    "vp25": {
-    "value": 0.00189,
+    "value": 0.001243,
     "min": 0.000687,
     "max": 0.00225,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 67.4,
+   "dHvap": 63.9,
    "odt": null,
    "family": "alkoholi",
    "group": "liuotin",
@@ -112,9 +112,9 @@
     "value": 9.35e-05,
     "min": 9.35e-05,
     "max": 9.35e-05,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
    "dHvap": 80.0,
    "odt": null,
@@ -135,14 +135,14 @@
    "smiles": "CC1=CCC2CC1C2(C)C",
    "mw": 136.23,
    "xlogp": 2.8,
-   "tbC": 156.1,
+   "tbC": 156.2,
    "vp25": {
     "value": 4.75,
     "min": 4.75,
     "max": 4.75,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 41.2,
    "odt": {
@@ -170,16 +170,16 @@
    "smiles": "CC1(C2CCC(=C)C1C2)C",
    "mw": 136.23,
    "xlogp": 3.1,
-   "tbC": 165.2,
+   "tbC": 166.0,
    "vp25": {
     "value": 2.93,
     "min": 2.93,
     "max": 2.93,
-    "n": 3,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), Occupational Safety and Health Administration (OSHA)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 43.1,
+   "dHvap": 42.9,
    "odt": {
     "value": 0.6227,
     "min": 0.6227,
@@ -205,16 +205,16 @@
    "smiles": "CC1(C2CCC(C2)C1=C)C",
    "mw": 136.23,
    "xlogp": 3.3,
-   "tbC": 158.0,
+   "tbC": 161.0,
    "vp25": {
-    "value": 2.5,
+    "value": 3.309,
     "min": 2.5,
     "max": 4.38,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 45.9,
+   "dHvap": 43.0,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -239,8 +239,13 @@
    "mw": 136.23,
    "xlogp": 3.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 3.409,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 41.5,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -264,16 +269,16 @@
    "smiles": "CC(=CCCC(=C)C=C)C",
    "mw": 136.23,
    "xlogp": 4.3,
-   "tbC": 166.8,
+   "tbC": 167.0,
    "vp25": {
     "value": 2.09,
-    "min": 2.01,
-    "max": 4.61,
-    "n": 3,
+    "min": 2.09,
+    "max": 2.09,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 45.4,
+   "dHvap": 45.3,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -303,8 +308,8 @@
     "min": 1.4,
     "max": 1.4,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 46.6,
    "odt": {
@@ -336,8 +341,8 @@
     "min": 1.59,
     "max": 1.59,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 46.2,
    "odt": {
@@ -363,16 +368,16 @@
    "smiles": "CC1=CCC2C(C1)C2(C)C",
    "mw": 136.23,
    "xlogp": 2.8,
-   "tbC": 171.5,
+   "tbC": 176.5,
    "vp25": {
     "value": 3.72,
     "min": 3.72,
     "max": 3.72,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 40.0,
+   "dHvap": 39.1,
    "odt": {
     "value": 1.671,
     "min": 1.671,
@@ -398,14 +403,14 @@
    "smiles": "CC1=CC=C(CC1)C(C)C",
    "mw": 136.23,
    "xlogp": 2.8,
-   "tbC": 173.5,
+   "tbC": 174.0,
    "vp25": {
-    "value": 2.08,
+    "value": 2.035,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 174 °C (Grain–Watson)"
    },
-   "dHvap": 44.0,
+   "dHvap": 44.1,
    "odt": {
     "value": 1.419,
     "min": 1.419,
@@ -437,8 +442,8 @@
     "min": 1.09,
     "max": 1.09,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 47.0,
    "odt": {
@@ -471,16 +476,16 @@
     "value": 1.55,
     "min": 1.55,
     "max": 1.55,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 45.3,
    "odt": {
-    "value": 0.038,
+    "value": 1.196,
     "min": 0.038,
-    "max": 0.038,
-    "n": 1,
+    "max": 9.863,
+    "n": 3,
     "method": "koe",
     "source": "Abraham ym. 2012 (Pyrfume)"
    },
@@ -501,14 +506,14 @@
    "smiles": "CC1=CC=C(C=C1)C(C)C",
    "mw": 134.22,
    "xlogp": 4.1,
-   "tbC": 177.1,
+   "tbC": 177.2,
    "vp25": {
     "value": 1.5,
-    "min": 1.46,
+    "min": 1.5,
     "max": 2.19,
-    "n": 4,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
    "dHvap": 45.7,
    "odt": {
@@ -536,16 +541,16 @@
    "smiles": "CC1=CCC(=C(C)C)CC1",
    "mw": 136.23,
    "xlogp": 2.8,
-   "tbC": 184.0,
+   "tbC": 187.0,
    "vp25": {
     "value": 0.74,
     "min": 0.74,
     "max": 0.74,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 49.4,
+   "dHvap": 48.8,
    "odt": {
     "value": 1.321,
     "n": 0,
@@ -574,7 +579,7 @@
     "value": 1.99,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 174 °C (Grain–Watson)"
    },
    "dHvap": 44.1,
    "odt": {
@@ -605,7 +610,7 @@
     "value": 5.534,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 151 °C (Grain–Watson)"
    },
    "dHvap": 41.1,
    "odt": {
@@ -631,16 +636,16 @@
    "smiles": "CC(=CCCC(C)(C=C)O)C",
    "mw": 154.25,
    "xlogp": 2.7,
-   "tbC": 198.0,
+   "tbC": 199.0,
    "vp25": {
-    "value": 0.16,
+    "value": 0.1674,
     "min": 0.1575,
     "max": 0.1779,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 57.2,
+   "dHvap": 56.6,
    "odt": {
     "value": 0.9506,
     "min": 0.9506,
@@ -672,8 +677,8 @@
     "min": 0.03,
     "max": 0.03,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 61.7,
    "odt": {
@@ -701,21 +706,23 @@
    "smiles": "CC(=CCC/C(=C\\CO)/C)C",
    "mw": 154.25,
    "xlogp": 2.9,
-   "tbC": 226.0,
+   "tbC": 227.0,
    "vp25": {
-    "value": 0.206,
-    "min": 0.03,
+    "value": 1.414,
+    "min": 1.414,
     "max": 1.414,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 50.6,
+   "dHvap": 38.6,
    "odt": {
-    "value": 0.1726,
-    "n": 0,
-    "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "value": 0.08511,
+    "min": 0.08511,
+    "max": 0.08511,
+    "n": 1,
+    "method": "koe",
+    "source": "Abraham ym. 2012 (Pyrfume)"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -734,21 +741,21 @@
    "smiles": "CC(CCC=C(C)C)CCO",
    "mw": 156.26,
    "xlogp": 3.2,
-   "tbC": 224.5,
+   "tbC": 225.0,
    "vp25": {
-    "value": 0.02828,
+    "value": 0.02,
     "min": 0.02,
-    "max": 0.04,
-    "n": 2,
+    "max": 0.02,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 63.1,
+   "dHvap": 65.1,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -767,16 +774,16 @@
    "smiles": "CC1=CCC(CC1)C(C)(C)O",
    "mw": 154.25,
    "xlogp": 1.8,
-   "tbC": 218.2,
+   "tbC": 219.5,
    "vp25": {
-    "value": 0.04558,
-    "min": 0.03,
+    "value": 5.0,
+    "min": 0.04558,
     "max": 80.5,
-    "n": 5,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 61.3,
+   "dHvap": 35.0,
    "odt": {
     "value": 0.35,
     "min": 0.35,
@@ -802,19 +809,19 @@
    "smiles": "CC1=CCC(CC1)(C(C)C)O",
    "mw": 154.25,
    "xlogp": 2.2,
-   "tbC": 210.5,
+   "tbC": 212.0,
    "vp25": {
-    "value": 0.0752,
+    "value": 0.06918,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 212 °C (Grain–Watson)"
    },
-   "dHvap": 59.6,
+   "dHvap": 59.8,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -835,19 +842,19 @@
    "xlogp": 2.7,
    "tbC": 212.0,
    "vp25": {
-    "value": 0.03881,
-    "min": 0.03,
+    "value": 0.0502,
+    "min": 0.0502,
     "max": 0.0502,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 63.6,
+   "dHvap": 61.9,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -866,16 +873,16 @@
    "smiles": "CC1CCC(C(C1)O)C(C)C",
    "mw": 156.26,
    "xlogp": 3,
-   "tbC": 214.8,
+   "tbC": 216.1,
    "vp25": {
-    "value": 0.06182,
-    "min": 0.06,
+    "value": 0.0637,
+    "min": 0.0637,
     "max": 0.0637,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 60.0,
+   "dHvap": 59.6,
    "odt": {
     "value": 0.02188,
     "min": 0.02188,
@@ -902,13 +909,20 @@
    "mw": 156.26,
    "xlogp": 3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.1726,
+   "vp25": {
+    "value": 0.08425,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.0,
+   "odt": {
+    "value": 0.02188,
+    "min": 0.02188,
+    "max": 0.02188,
+    "n": 1,
+    "method": "koe",
+    "source": "Abraham ym. 2012 (Pyrfume)"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -928,13 +942,18 @@
    "mw": 154.25,
    "xlogp": 3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.1726,
+   "vp25": {
+    "value": 0.06888,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.6,
+   "odt": {
+    "value": 0.08511,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -953,19 +972,19 @@
    "smiles": "CC1(C2CC=C(C1C2)CO)C",
    "mw": 152.23,
    "xlogp": 1.6,
-   "tbC": 221.2,
+   "tbC": 221.5,
    "vp25": {
-    "value": 0.04127,
+    "value": 0.0407,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 222 °C (Grain–Watson)"
    },
-   "dHvap": 61.3,
+   "dHvap": 61.4,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -989,14 +1008,14 @@
     "value": 0.1237,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 202 °C (Grain–Watson)"
    },
    "dHvap": 58.1,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -1016,13 +1035,18 @@
    "mw": 152.23,
    "xlogp": 2.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.1726,
+   "vp25": {
+    "value": 0.07816,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.2,
+   "odt": {
+    "value": 0.08511,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -1046,14 +1070,14 @@
     "value": 0.192,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 194 °C (Grain–Watson)"
    },
    "dHvap": 56.9,
    "odt": {
-    "value": 0.1726,
+    "value": 0.08511,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "terpeenialkoholi",
@@ -1073,13 +1097,18 @@
    "mw": 154.25,
    "xlogp": 2.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.1726,
+   "vp25": {
+    "value": 0.1327,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 4"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 50.7,
+   "odt": {
+    "value": 0.08511,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (terpeenialkoholi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "terpeenialkoholi",
@@ -1103,7 +1132,7 @@
     "value": 0.5211,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 175 °C (Grain–Watson)"
    },
    "dHvap": 53.9,
    "odt": {
@@ -1134,7 +1163,7 @@
     "value": 0.7351,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 190 °C (Grain–Watson)"
    },
    "dHvap": 48.4,
    "odt": {
@@ -1165,7 +1194,7 @@
     "value": 1.403,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 156 °C (Grain–Watson)"
    },
    "dHvap": 51.0,
    "odt": {
@@ -1191,16 +1220,16 @@
    "smiles": "CCCCCCCCO",
    "mw": 130.23,
    "xlogp": 3,
-   "tbC": 194.8,
+   "tbC": 195.0,
    "vp25": {
-    "value": 0.0794,
-    "min": 0.07,
+    "value": 0.08698,
+    "min": 0.0794,
     "max": 0.09527,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 62.6,
+   "dHvap": 62.0,
    "odt": {
     "value": 0.003433,
     "min": 0.003433,
@@ -1226,16 +1255,16 @@
    "smiles": "C1=CC=C(C=C1)CO",
    "mw": 108.14,
    "xlogp": 1.1,
-   "tbC": 205.2,
+   "tbC": 205.5,
    "vp25": {
-    "value": 0.1446,
-    "min": 0.09,
-    "max": 0.146,
-    "n": 5,
+    "value": 0.1166,
+    "min": 0.094,
+    "max": 0.1446,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 56.4,
+   "dHvap": 57.7,
    "odt": {
     "value": 5.5,
     "min": 5.5,
@@ -1261,16 +1290,16 @@
    "smiles": "C1=CC=C(C=C1)CCO",
    "mw": 122.16,
    "xlogp": 1.4,
-   "tbC": 219.0,
+   "tbC": 220.0,
    "vp25": {
-    "value": 0.0868,
-    "min": 0.08,
+    "value": 0.0872,
+    "min": 0.0868,
     "max": 0.08761,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 57.1,
+   "dHvap": 56.9,
    "odt": {
     "value": 0.006457,
     "min": 0.006457,
@@ -1296,14 +1325,14 @@
    "smiles": "C1=CC=C(C=C1)/C=C/CO",
    "mw": 134.17,
    "xlogp": 1.9,
-   "tbC": 250.0,
+   "tbC": 258.0,
    "vp25": {
-    "value": 0.008086,
+    "value": 0.005105,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 258 °C (Grain–Watson)"
    },
-   "dHvap": 66.0,
+   "dHvap": 67.3,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -1327,16 +1356,16 @@
    "smiles": "COC1=CC=C(C=C1)CO",
    "mw": 138.16,
    "xlogp": 1.1,
-   "tbC": 259.1,
+   "tbC": 259.5,
    "vp25": {
     "value": 0.0038,
     "min": 0.0038,
     "max": 0.0038,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 68.8,
+   "dHvap": 68.7,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -1352,37 +1381,33 @@
   {
    "id": "sitraali",
    "name": "Sitraali",
-   "cid": 638011,
-   "cas": "5392-40-5",
-   "pubchemTitle": "Citral",
-   "query": "citral",
+   "cid": 8843,
+   "cas": null,
+   "pubchemTitle": "3,7-Dimethylocta-2,6-Dienal",
+   "query": "3,7-dimethylocta-2,6-dienal",
    "formula": "C10H16O",
-   "smiles": "CC(=CCC/C(=C/C=O)/C)C",
+   "smiles": "CC(=CCCC(=CC=O)C)C",
    "mw": 152.23,
    "xlogp": 3,
-   "tbC": 228.5,
+   "tbC": null,
    "vp25": {
-    "value": 0.09,
-    "min": 0.09,
-    "max": 0.09,
-    "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "value": 0.2833,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
    },
-   "dHvap": 55.2,
+   "dHvap": 48.6,
    "odt": {
-    "value": 0.2939,
-    "min": 0.12,
-    "max": 0.46,
-    "n": 3,
-    "method": "koe",
-    "source": "PubChem (HSDB/muut)"
+    "value": 0.00091,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "sitrus",
    "group": "aldehydi",
    "carbons": 10,
    "odor": "sitruuna",
-   "odorEn": "Strong lemon odor"
+   "odorEn": null
   },
   {
    "id": "geraniaali",
@@ -1395,14 +1420,14 @@
    "smiles": "CC(=CCC/C(=C/C=O)/C)C",
    "mw": 152.23,
    "xlogp": 3,
-   "tbC": 228.5,
+   "tbC": 229.0,
    "vp25": {
     "value": 0.09,
     "min": 0.09,
     "max": 0.09,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 55.2,
    "odt": {
@@ -1435,14 +1460,14 @@
     "value": 0.117,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 228 °C (Grain–Watson)"
    },
    "dHvap": 53.7,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "sitrus",
    "group": "aldehydi",
@@ -1461,21 +1486,21 @@
    "smiles": "CC(CCC=C(C)C)CC=O",
    "mw": 154.25,
    "xlogp": 3,
-   "tbC": 206.0,
+   "tbC": 206.5,
    "vp25": {
-    "value": 1.183,
-    "min": 0.28,
+    "value": 5.0,
+    "min": 5.0,
     "max": 5.0,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 42.4,
+   "dHvap": 35.0,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "sitrus",
    "group": "aldehydi",
@@ -1499,14 +1524,14 @@
     "value": 0.08122,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 236 °C (Grain–Watson)"
    },
    "dHvap": 54.8,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "mauste",
    "group": "aldehydi",
@@ -1530,14 +1555,14 @@
     "value": 0.06845,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 239 °C (Grain–Watson)"
    },
    "dHvap": 55.3,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "mauste",
    "group": "aldehydi",
@@ -1561,14 +1586,14 @@
     "value": 0.1722,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 220 °C (Grain–Watson)"
    },
    "dHvap": 52.6,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "havu",
    "group": "aldehydi",
@@ -1588,13 +1613,18 @@
    "mw": 150.22,
    "xlogp": 2.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.001947,
+   "vp25": {
+    "value": 0.4463,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 47.3,
+   "odt": {
+    "value": 0.00091,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "mauste",
    "group": "aldehydi",
@@ -1614,13 +1644,18 @@
    "mw": 152.23,
    "xlogp": 2.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.001947,
+   "vp25": {
+    "value": 0.3933,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 47.6,
+   "odt": {
+    "value": 0.00091,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "vihrea",
    "group": "aldehydi",
@@ -1641,14 +1676,14 @@
    "xlogp": 2.7,
    "tbC": 171.0,
    "vp25": {
-    "value": 1.18,
+    "value": 1.017,
     "min": 0.876,
     "max": 1.18,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 48.8,
+   "dHvap": 49.9,
    "odt": {
     "value": 0.000191,
     "min": 0.000191,
@@ -1674,16 +1709,16 @@
    "smiles": "CCCCCCCCC=O",
    "mw": 142.24,
    "xlogp": 3.3,
-   "tbC": 193.1,
+   "tbC": 195.0,
    "vp25": {
     "value": 0.37,
     "min": 0.37,
     "max": 0.37,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 52.5,
+   "dHvap": 52.1,
    "odt": {
     "value": 0.0004253,
     "min": 0.0004253,
@@ -1709,16 +1744,16 @@
    "smiles": "CCCCCCCCCC=O",
    "mw": 156.26,
    "xlogp": 3.8,
-   "tbC": 208.8,
+   "tbC": 212.0,
    "vp25": {
     "value": 0.103,
-    "min": 0.1,
+    "min": 0.103,
     "max": 0.103,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 57.9,
+   "dHvap": 57.3,
    "odt": {
     "value": 0.0004,
     "min": 0.0004,
@@ -1750,15 +1785,15 @@
     "min": 0.01,
     "max": 0.01,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 64.9,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "sitrus",
    "group": "aldehydi",
@@ -1778,13 +1813,18 @@
    "mw": 218.33,
    "xlogp": 4.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.001947,
+   "vp25": {
+    "value": 0.004476,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 60.3,
+   "odt": {
+    "value": 0.00091,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "sitrus",
    "group": "aldehydi",
@@ -1803,16 +1843,16 @@
    "smiles": "CCCCCC=O",
    "mw": 100.16,
    "xlogp": 1.8,
-   "tbC": 130.5,
+   "tbC": 131.0,
    "vp25": {
     "value": 11.3,
     "min": 11.3,
     "max": 15.33,
-    "n": 4,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 39.9,
+   "dHvap": 39.8,
    "odt": {
     "value": 0.001947,
     "min": 0.001947,
@@ -1844,15 +1884,15 @@
     "min": 6.6,
     "max": 6.6,
     "n": 2,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 55.0,
+   "dHvap": 39.7,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "vihrea",
    "group": "aldehydi",
@@ -1876,14 +1916,14 @@
     "value": 51.66,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 94 °C (Grain–Watson)"
    },
    "dHvap": 35.5,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "vihrea",
    "group": "aldehydi",
@@ -1902,21 +1942,21 @@
    "smiles": "C1=CC=C(C=C1)C=O",
    "mw": 106.12,
    "xlogp": 1.5,
-   "tbC": 178.9,
+   "tbC": 179.0,
    "vp25": {
-    "value": 0.9134,
-    "min": 0.12,
+    "value": 0.9263,
+    "min": 0.127,
     "max": 1.27,
-    "n": 5,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 49.0,
+   "dHvap": 48.8,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "hedelma",
    "group": "aldehydi",
@@ -1935,7 +1975,7 @@
    "smiles": "C1=CC=C(C=C1)/C=C/C=O",
    "mw": 132.16,
    "xlogp": 1.9,
-   "tbC": 249.0,
+   "tbC": 253.0,
    "vp25": {
     "value": 0.0289,
     "min": 0.0289,
@@ -1944,7 +1984,7 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 58.8,
+   "dHvap": 58.2,
    "odt": {
     "value": 0.75,
     "min": 0.75,
@@ -1976,15 +2016,15 @@
     "min": 0.39,
     "max": 0.39,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 51.7,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "aldehydi",
@@ -2003,21 +2043,21 @@
    "smiles": "COC1=CC=C(C=C1)C=O",
    "mw": 136.15,
    "xlogp": 1.8,
-   "tbC": 248.5,
+   "tbC": 255.0,
    "vp25": {
-    "value": 0.03142,
-    "min": 0.03,
+    "value": 0.0329,
+    "min": 0.0329,
     "max": 0.0329,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 58.4,
+   "dHvap": 57.2,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "aldehydi",
@@ -2036,21 +2076,21 @@
    "smiles": "COC1=C(C=CC(=C1)C=O)O",
    "mw": 152.15,
    "xlogp": 1.2,
-   "tbC": 285.0,
+   "tbC": 285.5,
    "vp25": {
     "value": 0.000118,
     "min": 0.000118,
     "max": 0.000118,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 83.4,
+   "dHvap": 83.3,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "balsami",
    "group": "aldehydi",
@@ -2069,19 +2109,19 @@
    "smiles": "C1=CC(=CC=C1C=O)O",
    "mw": 122.12,
    "xlogp": 1.4,
-   "tbC": 310.2,
+   "tbC": 310.5,
    "vp25": {
-    "value": 0.001919,
+    "value": 0.001895,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 310 °C (Grain–Watson)"
    },
-   "dHvap": 65.3,
+   "dHvap": 65.4,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "balsami",
    "group": "aldehydi",
@@ -2100,21 +2140,21 @@
    "smiles": "C1OC2=C(O1)C=C(C=C2)C=O",
    "mw": 150.13,
    "xlogp": 1.1,
-   "tbC": 263.0,
+   "tbC": 264.0,
    "vp25": {
     "value": 0.01,
     "min": 0.01,
     "max": 0.01,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 62.8,
+   "dHvap": 62.6,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "balsami",
    "group": "aldehydi",
@@ -2138,14 +2178,14 @@
     "value": 0.06207,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 241 °C (Grain–Watson)"
    },
    "dHvap": 55.5,
    "odt": {
-    "value": 0.001947,
+    "value": 0.00091,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (aldehydi) mediaani, n = 7"
+    "source": "Ryhmän (aldehydi) mediaani, n = 6"
    },
    "family": "kukka",
    "group": "aldehydi",
@@ -2164,16 +2204,16 @@
    "smiles": "CC1(C2CCC1(C(=O)C2)C)C",
    "mw": 152.23,
    "xlogp": 2.2,
-   "tbC": 203.9,
+   "tbC": 209.0,
    "vp25": {
-    "value": 0.2432,
+    "value": 0.2957,
     "min": 0.2,
     "max": 0.65,
-    "n": 8,
+    "n": 4,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 53.2,
+   "dHvap": 51.0,
    "odt": {
     "value": 0.0172,
     "min": 0.0004176,
@@ -2204,7 +2244,7 @@
     "value": 0.6236,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 193 °C (Grain–Watson)"
    },
    "dHvap": 48.9,
    "odt": {
@@ -2230,14 +2270,14 @@
    "smiles": "CC1=CC[C@H](CC1=O)C(=C)C",
    "mw": 150.22,
    "xlogp": 2.4,
-   "tbC": 229.8,
+   "tbC": 231.0,
    "vp25": {
-    "value": 0.1075,
+    "value": 0.1011,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 231 °C (Grain–Watson)"
    },
-   "dHvap": 54.0,
+   "dHvap": 54.1,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2261,14 +2301,14 @@
    "smiles": "CC1=CC[C@@H](CC1=O)C(=C)C",
    "mw": 150.22,
    "xlogp": 2.4,
-   "tbC": 230.0,
+   "tbC": 231.0,
    "vp25": {
     "value": 15.5,
     "min": 15.5,
     "max": 15.5,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: CAMEO Chemicals"
+    "method": "arvio",
+    "source": "PubChem: CAMEO Chemicals (heikko lähde)"
    },
    "dHvap": 35.0,
    "odt": {
@@ -2294,16 +2334,16 @@
    "smiles": "C[C@@H]1CC[C@H](C(=O)C1)C(C)C",
    "mw": 154.25,
    "xlogp": 2.7,
-   "tbC": 208.5,
+   "tbC": 210.0,
    "vp25": {
     "value": 0.27,
     "min": 0.27,
     "max": 0.27,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 51.7,
+   "dHvap": 51.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2327,14 +2367,14 @@
    "smiles": "C[C@H]1CC[C@H](C(=O)C1)C(C)C",
    "mw": 154.25,
    "xlogp": 2.7,
-   "tbC": 208.2,
+   "tbC": 210.0,
    "vp25": {
-    "value": 0.3026,
+    "value": 0.2784,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 210 °C (Grain–Watson)"
    },
-   "dHvap": 51.0,
+   "dHvap": 51.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2359,13 +2399,18 @@
    "mw": 150.22,
    "xlogp": 3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.1125,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (muu) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 51.2,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (muu) mediaani, n = 39"
    },
    "family": "havu",
    "group": "muu",
@@ -2386,14 +2431,14 @@
    "xlogp": 2.8,
    "tbC": 224.0,
    "vp25": {
-    "value": 4.12,
+    "value": 0.123,
     "min": 0.123,
-    "max": 138.0,
-    "n": 2,
+    "max": 0.123,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 35.0,
+   "dHvap": 54.1,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2422,7 +2467,7 @@
     "value": 0.4375,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 200 °C (Grain–Watson)"
    },
    "dHvap": 49.9,
    "odt": {
@@ -2453,7 +2498,7 @@
     "value": 0.08738,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 234 °C (Grain–Watson)"
    },
    "dHvap": 54.6,
    "odt": {
@@ -2480,8 +2525,13 @@
    "mw": 150.22,
    "xlogp": 1.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.8601,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 45.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2505,16 +2555,16 @@
    "smiles": "CCCCCC(=O)CC",
    "mw": 128.21,
    "xlogp": 2.3,
-   "tbC": 168.0,
+   "tbC": 171.0,
    "vp25": {
-    "value": 2.417,
-    "min": 2.0,
+    "value": 2.92,
+    "min": 2.92,
     "max": 2.92,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 44.0,
+   "dHvap": 41.9,
    "odt": {
     "value": 6.0,
     "min": 6.0,
@@ -2546,8 +2596,8 @@
     "min": 0.75,
     "max": 0.75,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 51.7,
    "odt": {
@@ -2575,14 +2625,14 @@
    "xlogp": 4.1,
    "tbC": 231.5,
    "vp25": {
-    "value": 0.0405,
-    "min": 0.04,
+    "value": 0.041,
+    "min": 0.041,
     "max": 0.041,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 59.6,
+   "dHvap": 59.5,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2606,7 +2656,7 @@
    "smiles": "CC1=C(C(CCC1)(C)C)/C=C/C(=O)C",
    "mw": 192.3,
    "xlogp": 2.9,
-   "tbC": 267.5,
+   "tbC": 271.0,
    "vp25": {
     "value": 0.054,
     "min": 0.054,
@@ -2615,7 +2665,7 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 52.8,
+   "dHvap": 52.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2639,7 +2689,7 @@
    "smiles": "CC1=CCCC(C1/C=C/C(=O)C)(C)C",
    "mw": 192.3,
    "xlogp": 3,
-   "tbC": 247.5,
+   "tbC": 258.0,
    "vp25": {
     "value": 0.019,
     "min": 0.019,
@@ -2648,7 +2698,7 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 61.5,
+   "dHvap": 59.9,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2677,7 +2727,7 @@
     "value": 0.02256,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 262 °C (Grain–Watson)"
    },
    "dHvap": 58.4,
    "odt": {
@@ -2704,8 +2754,13 @@
    "mw": 206.32,
    "xlogp": 3.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.0132,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 57.2,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2729,14 +2784,14 @@
    "smiles": "C/C=C/C(=O)C1=C(C=CCC1(C)C)C",
    "mw": 190.28,
    "xlogp": 3.2,
-   "tbC": 167.5,
+   "tbC": 275.0,
    "vp25": {
-    "value": 2.042,
+    "value": 0.01149,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 275 °C (Grain–Watson)"
    },
-   "dHvap": 45.4,
+   "dHvap": 60.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2761,8 +2816,13 @@
    "mw": 192.3,
    "xlogp": 3.5,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.03184,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.7,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2786,14 +2846,14 @@
    "smiles": "CC/C=C\\CC1=C(CCC1=O)C",
    "mw": 164.24,
    "xlogp": 2.2,
-   "tbC": 266.5,
+   "tbC": 285.0,
    "vp25": {
-    "value": 0.01758,
+    "value": 0.006944,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 285 °C (Grain–Watson)"
    },
-   "dHvap": 59.1,
+   "dHvap": 61.7,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2818,8 +2878,13 @@
    "mw": 218.33,
    "xlogp": 3.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.008626,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 58.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2843,16 +2908,16 @@
    "smiles": "CC(=O)C1=CC=CC=C1",
    "mw": 120.15,
    "xlogp": 1.6,
-   "tbC": 202.0,
+   "tbC": 202.5,
    "vp25": {
-    "value": 0.3935,
+    "value": 0.397,
     "min": 0.292,
     "max": 2.155,
-    "n": 4,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 50.3,
+   "dHvap": 50.2,
    "odt": {
     "value": 0.2999,
     "min": 0.2999,
@@ -2883,7 +2948,7 @@
     "value": 0.448,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 200 °C (Grain–Watson)"
    },
    "dHvap": 49.8,
    "odt": {
@@ -2910,8 +2975,13 @@
    "mw": 216.32,
    "xlogp": 4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.001059,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 64.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2936,8 +3006,13 @@
    "mw": 218.33,
    "xlogp": 3.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.008626,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 58.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2962,8 +3037,13 @@
    "mw": 218.33,
    "xlogp": 4.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.006214,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 59.3,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -2988,8 +3068,13 @@
    "mw": 218.33,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.008626,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 58.4,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -3013,16 +3098,16 @@
    "smiles": "CC(=CCCC(C)(C=C)OC(=O)C)C",
    "mw": 196.29,
    "xlogp": 3.3,
-   "tbC": 220.0,
+   "tbC": 221.0,
    "vp25": {
-    "value": 0.11,
+    "value": 0.02701,
     "min": 0.006571,
     "max": 0.111,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 55.4,
+   "dHvap": 64.0,
    "odt": {
     "value": 6.06,
     "min": 6.06,
@@ -3048,14 +3133,14 @@
    "smiles": "CC(=CCC/C(=C/COC(=O)C)/C)C",
    "mw": 196.29,
    "xlogp": 3.5,
-   "tbC": 242.4,
+   "tbC": 242.5,
    "vp25": {
     "value": 0.0296,
     "min": 0.0292,
     "max": 0.03,
     "n": 2,
-    "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 59.7,
    "odt": {
@@ -3084,8 +3169,13 @@
    "mw": 196.29,
    "xlogp": 3.5,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.01141,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 57.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3109,14 +3199,14 @@
    "smiles": "CC(=O)O[C@@H]1C[C@@H]2CC[C@]1(C2(C)C)C",
    "mw": 196.29,
    "xlogp": 3.3,
-   "tbC": 225.5,
+   "tbC": 226.0,
    "vp25": {
     "value": 0.6,
     "min": 0.6,
     "max": 0.6,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 44.0,
    "odt": {
@@ -3147,7 +3237,7 @@
     "value": 0.1722,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 220 °C (Grain–Watson)"
    },
    "dHvap": 52.6,
    "odt": {
@@ -3174,8 +3264,13 @@
    "mw": 196.29,
    "xlogp": 3.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.01141,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 57.6,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3204,7 +3299,7 @@
     "value": 0.1114,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 229 °C (Grain–Watson)"
    },
    "dHvap": 53.9,
    "odt": {
@@ -3235,7 +3330,7 @@
     "value": 0.08323,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 235 °C (Grain–Watson)"
    },
    "dHvap": 54.7,
    "odt": {
@@ -3266,7 +3361,7 @@
     "value": 0.2088,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 216 °C (Grain–Watson)"
    },
    "dHvap": 52.1,
    "odt": {
@@ -3292,16 +3387,16 @@
    "smiles": "CC1CCC(C(C1)OC(=O)C)C(C)C",
    "mw": 198.3,
    "xlogp": 3.6,
-   "tbC": 227.2,
+   "tbC": 227.5,
    "vp25": {
     "value": 0.05,
     "min": 0.05,
     "max": 0.05,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 59.1,
+   "dHvap": 59.0,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3325,16 +3420,16 @@
    "smiles": "CC(=O)OCC1=CC=CC=C1",
    "mw": 150.17,
    "xlogp": 2,
-   "tbC": 213.5,
+   "tbC": 215.5,
    "vp25": {
     "value": 0.177,
-    "min": 0.17,
+    "min": 0.177,
     "max": 1.425,
-    "n": 4,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 53.5,
+   "dHvap": 53.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3358,14 +3453,14 @@
    "smiles": "C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2",
    "mw": 212.24,
    "xlogp": 4,
-   "tbC": 323.5,
+   "tbC": 324.0,
    "vp25": {
-    "value": 0.000224,
+    "value": 0.000222,
     "min": 0.00022,
     "max": 0.000224,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), PAC Chemical Database, U.S. Department of Energy"
    },
    "dHvap": 74.5,
    "odt": {
@@ -3391,7 +3486,7 @@
    "smiles": "C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O",
    "mw": 228.24,
    "xlogp": 3.2,
-   "tbC": 310.0,
+   "tbC": 320.0,
    "vp25": {
     "value": 7.8e-05,
     "min": 7.8e-05,
@@ -3400,7 +3495,7 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 81.6,
+   "dHvap": 80.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3424,16 +3519,16 @@
    "smiles": "COC(=O)C1=CC=CC=C1O",
    "mw": 152.15,
    "xlogp": 2.3,
-   "tbC": 222.6,
+   "tbC": 223.3,
    "vp25": {
     "value": 0.0343,
-    "min": 0.03,
+    "min": 0.0343,
     "max": 0.1424,
-    "n": 5,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 62.2,
+   "dHvap": 62.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3457,16 +3552,16 @@
    "smiles": "COC(=O)C1=CC=CC=C1",
    "mw": 136.15,
    "xlogp": 2.1,
-   "tbC": 198.8,
+   "tbC": 199.6,
    "vp25": {
-    "value": 0.38,
+    "value": 0.3871,
     "min": 0.38,
     "max": 0.3942,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 51.2,
+   "dHvap": 50.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3490,16 +3585,16 @@
    "smiles": "COC(=O)C1=CC=CC=C1N",
    "mw": 151.16,
    "xlogp": 1.9,
-   "tbC": 256.0,
+   "tbC": 256.1,
    "vp25": {
-    "value": 0.02328,
-    "min": 0.02,
+    "value": 0.0271,
+    "min": 0.0271,
     "max": 0.0271,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 59.0,
+   "dHvap": 58.1,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3528,7 +3623,7 @@
     "value": 0.02964,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 256 °C (Grain–Watson)"
    },
    "dHvap": 57.6,
    "odt": {
@@ -3555,8 +3650,13 @@
    "mw": 224.3,
    "xlogp": 1.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.001194,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 64.0,
    "odt": {
     "value": 5.7,
     "min": 5.7,
@@ -3588,8 +3688,8 @@
     "min": 0.00327,
     "max": 0.00327,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 67.7,
    "odt": {
@@ -3621,8 +3721,8 @@
     "min": 0.04,
     "max": 0.04,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 55.1,
    "odt": {
@@ -3653,7 +3753,7 @@
     "value": 0.02042,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 264 °C (Grain–Watson)"
    },
    "dHvap": 58.7,
    "odt": {
@@ -3680,8 +3780,13 @@
    "mw": 238.28,
    "xlogp": 3.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 3.554e-05,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 73.9,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3705,14 +3810,14 @@
    "smiles": "CC(=O)OCCC1=CC=CC=C1",
    "mw": 164.2,
    "xlogp": 2.3,
-   "tbC": 235.2,
+   "tbC": 238.5,
    "vp25": {
-    "value": 0.08222,
+    "value": 0.07015,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 238 °C (Grain–Watson)"
    },
-   "dHvap": 54.7,
+   "dHvap": 55.2,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3736,16 +3841,16 @@
    "smiles": "CCCCCCOC(=O)C",
    "mw": 144.21,
    "xlogp": 2.4,
-   "tbC": 170.5,
+   "tbC": 171.5,
    "vp25": {
     "value": 1.32,
     "min": 1.32,
     "max": 1.32,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 48.0,
+   "dHvap": 47.8,
    "odt": {
     "value": 0.01485,
     "min": 0.01485,
@@ -3776,7 +3881,7 @@
     "value": 0.4925,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 198 °C (Grain–Watson)"
    },
    "dHvap": 49.6,
    "odt": {
@@ -3802,16 +3907,16 @@
    "smiles": "CCCCCCCCOC(=O)C",
    "mw": 172.26,
    "xlogp": 3.4,
-   "tbC": 207.0,
+   "tbC": 208.5,
    "vp25": {
     "value": 0.4,
     "min": 0.4,
     "max": 0.4,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 49.4,
+   "dHvap": 49.1,
    "odt": {
     "value": 0.08913,
     "min": 0.08913,
@@ -3842,7 +3947,7 @@
     "value": 0.008079,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 282 °C (Grain–Watson)"
    },
    "dHvap": 61.3,
    "odt": {
@@ -3869,8 +3974,13 @@
    "mw": 264.4,
    "xlogp": 5.3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.0001589,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 69.7,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -3894,21 +4004,21 @@
    "smiles": "C1=CC=C2C(=C1)C=CC(=O)O2",
    "mw": 146.14,
    "xlogp": 1.4,
-   "tbC": 298.5,
+   "tbC": 301.7,
    "vp25": {
     "value": 0.00098,
     "min": 0.00098,
     "max": 0.00098,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 70.3,
+   "dHvap": 69.8,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "balsami",
    "group": "laktoni",
@@ -3927,21 +4037,19 @@
    "smiles": "C1CC(=O)OC2=CC=CC=C21",
    "mw": 148.16,
    "xlogp": 1.6,
-   "tbC": 272.0,
+   "tbC": 272.2,
    "vp25": {
-    "value": 13.4,
-    "min": 13.4,
-    "max": 13.4,
-    "n": 2,
-    "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
-   },
-   "dHvap": 35.0,
-   "odt": {
-    "value": 0.2249,
+    "value": 0.01321,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Arvio kiehumispisteestä 272 °C (Grain–Watson)"
+   },
+   "dHvap": 59.9,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "balsami",
    "group": "laktoni",
@@ -3966,15 +4074,15 @@
     "min": 0.00512,
     "max": 0.00512,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 63.9,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "hedelma",
    "group": "laktoni",
@@ -3998,14 +4106,14 @@
     "value": 0.008497,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 281 °C (Grain–Watson)"
    },
    "dHvap": 61.2,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "hedelma",
    "group": "laktoni",
@@ -4029,14 +4137,14 @@
     "value": 0.003778,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 297 °C (Grain–Watson)"
    },
    "dHvap": 63.5,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "hedelma",
    "group": "laktoni",
@@ -4056,13 +4164,18 @@
    "mw": 156.22,
    "xlogp": 2.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.1957,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 49.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "hedelma",
    "group": "laktoni",
@@ -4082,13 +4195,18 @@
    "mw": 168.23,
    "xlogp": 3.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.09212,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 51.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "hedelma",
    "group": "laktoni",
@@ -4112,14 +4230,14 @@
     "value": 1.857e-05,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 398 °C (Grain–Watson)"
    },
    "dHvap": 78.1,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "myski",
    "group": "laktoni",
@@ -4139,13 +4257,18 @@
    "mw": 240.38,
    "xlogp": 5.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.0009958,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 64.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "myski",
    "group": "laktoni",
@@ -4165,13 +4288,18 @@
    "mw": 250.38,
    "xlogp": 4.3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001025,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 64.4,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "myski",
    "group": "laktoni",
@@ -4190,16 +4318,16 @@
    "smiles": "COC1=C(C=CC(=C1)CC=C)O",
    "mw": 164.2,
    "xlogp": 2,
-   "tbC": 253.9,
+   "tbC": 256.0,
    "vp25": {
-    "value": 0.0221,
-    "min": 0.01,
+    "value": 4.098,
+    "min": 0.0221,
     "max": 760.0,
-    "n": 5,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 59.6,
+   "dHvap": 35.0,
    "odt": {
     "value": 0.002,
     "n": 0,
@@ -4223,16 +4351,16 @@
    "smiles": "C/C=C/C1=CC(=C(C=C1)O)OC",
    "mw": 164.2,
    "xlogp": 2.6,
-   "tbC": 266.0,
+   "tbC": 266.1,
    "vp25": {
-    "value": 0.02,
+    "value": 0.0135,
     "min": 0.0135,
-    "max": 0.02,
-    "n": 3,
+    "max": 0.0135,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 58.5,
+   "dHvap": 60.6,
    "odt": {
     "value": 0.002,
     "n": 0,
@@ -4256,16 +4384,16 @@
    "smiles": "CC1=CC(=C(C=C1)C(C)C)O",
    "mw": 150.22,
    "xlogp": 3.3,
-   "tbC": 232.5,
+   "tbC": 233.0,
    "vp25": {
-    "value": 0.005933,
-    "min": 0.0022,
+    "value": 0.016,
+    "min": 0.016,
     "max": 0.016,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 71.0,
+   "dHvap": 65.0,
    "odt": {
     "value": 0.01677,
     "min": 0.001,
@@ -4291,12 +4419,12 @@
    "smiles": "CC1=C(C=C(C=C1)C(C)C)O",
    "mw": 150.22,
    "xlogp": 3.1,
-   "tbC": 237.5,
+   "tbC": 237.7,
    "vp25": {
-    "value": 0.01967,
+    "value": 0.01945,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 238 °C (Grain–Watson)"
    },
    "dHvap": 62.9,
    "odt": {
@@ -4324,14 +4452,14 @@
    "xlogp": 1.3,
    "tbC": 205.0,
    "vp25": {
-    "value": 0.1015,
-    "min": 0.1,
+    "value": 0.103,
+    "min": 0.103,
     "max": 0.103,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 58.7,
+   "dHvap": 58.6,
    "odt": {
     "value": 0.002,
     "min": 0.002,
@@ -4357,16 +4485,16 @@
    "smiles": "CC1=CC=C(C=C1)O",
    "mw": 108.14,
    "xlogp": 1.9,
-   "tbC": 201.9,
+   "tbC": 202.2,
    "vp25": {
-    "value": 0.11,
-    "min": 0.0584,
+    "value": 0.1112,
+    "min": 0.11,
     "max": 0.1125,
-    "n": 6,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 58.8,
+   "dHvap": 58.7,
    "odt": {
     "value": 5.4e-05,
     "min": 5.4e-05,
@@ -4398,8 +4526,8 @@
     "min": 1.14,
     "max": 1.14,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 48.0,
    "odt": {
@@ -4425,16 +4553,16 @@
    "smiles": "C/C=C/C1=CC=C(C=C1)OC",
    "mw": 148.2,
    "xlogp": 3.3,
-   "tbC": 234.2,
+   "tbC": 234.5,
    "vp25": {
-    "value": 0.05287,
-    "min": 0.05,
+    "value": 0.05591,
+    "min": 0.05591,
     "max": 0.05591,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 57.5,
+   "dHvap": 57.2,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4458,14 +4586,14 @@
    "smiles": "COC1=CC=C(C=C1)CC=C",
    "mw": 148.2,
    "xlogp": 3.4,
-   "tbC": 216.0,
+   "tbC": 216.1,
    "vp25": {
     "value": 0.05,
     "min": 0.05,
     "max": 0.05,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
    "dHvap": 61.1,
    "odt": {
@@ -4494,11 +4622,11 @@
    "tbC": 254.7,
    "vp25": {
     "value": 0.012,
-    "min": 0.01,
-    "max": 0.0292,
-    "n": 3,
+    "min": 0.012,
+    "max": 0.012,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 63.0,
    "odt": {
@@ -4524,16 +4652,16 @@
    "smiles": "COC1=CC(=CC2=C1OCO2)CC=C",
    "mw": 192.21,
    "xlogp": 2.9,
-   "tbC": 263.2,
+   "tbC": 276.5,
    "vp25": {
     "value": 0.00646,
     "min": 0.00646,
     "max": 0.00646,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 65.2,
+   "dHvap": 63.3,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4562,7 +4690,7 @@
     "value": 0.04856,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 246 °C (Grain–Watson)"
    },
    "dHvap": 56.2,
    "odt": {
@@ -4588,16 +4716,16 @@
    "smiles": "C=CCC1=CC2=C(C=C1)OCO2",
    "mw": 162.18,
    "xlogp": 3,
-   "tbC": 233.0,
+   "tbC": 235.0,
    "vp25": {
-    "value": 0.0706,
-    "min": 0.06,
+    "value": 1.395,
+    "min": 0.0706,
     "max": 27.57,
-    "n": 3,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 56.0,
+   "dHvap": 37.8,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4622,8 +4750,13 @@
    "mw": 208.25,
    "xlogp": 3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.001049,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 64.4,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4647,16 +4780,16 @@
    "smiles": "CC1(C2CCC(O1)(CC2)C)C",
    "mw": 154.25,
    "xlogp": 2.5,
-   "tbC": 176.4,
+   "tbC": 176.7,
    "vp25": {
     "value": 1.9,
     "min": 1.9,
     "max": 1.9,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 44.1,
+   "dHvap": 44.0,
    "odt": {
     "value": 0.3199,
     "min": 0.3199,
@@ -4683,8 +4816,13 @@
    "mw": 154.25,
    "xlogp": 2.5,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.7036,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 46.0,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4709,8 +4847,13 @@
    "mw": 154.25,
    "xlogp": 2.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.5069,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 46.9,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4735,8 +4878,13 @@
    "mw": 220.35,
    "xlogp": 3.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.01315,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 57.2,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4761,8 +4909,13 @@
    "mw": 236.39,
    "xlogp": 4.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.00564,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 59.6,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4787,13 +4940,18 @@
    "mw": 214.3,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.002801,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (muu) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 61.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (muu) mediaani, n = 39"
    },
    "family": "balsami",
    "group": "muu",
@@ -4813,13 +4971,18 @@
    "mw": 218.33,
    "xlogp": 4.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001567,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (muu) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 63.2,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (muu) mediaani, n = 39"
    },
    "family": "balsami",
    "group": "muu",
@@ -4838,16 +5001,16 @@
    "smiles": "C1=CC=C2C(=C1)C=CN2",
    "mw": 117.15,
    "xlogp": 2.1,
-   "tbC": 253.8,
+   "tbC": 254.0,
    "vp25": {
-    "value": 0.01105,
-    "min": 0.01,
+    "value": 0.0122,
+    "min": 0.0122,
     "max": 0.0122,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 63.6,
+   "dHvap": 63.0,
    "odt": {
     "value": 0.0003,
     "min": 0.0003,
@@ -4878,9 +5041,9 @@
     "value": 0.0055,
     "min": 0.0055,
     "max": 0.0055,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 65.7,
    "odt": {
@@ -4909,8 +5072,13 @@
    "mw": 166.22,
    "xlogp": 2.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.01028,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 57.9,
    "odt": {
     "value": 0.3199,
     "n": 0,
@@ -4935,13 +5103,18 @@
    "mw": 150.26,
    "xlogp": 4.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.7336,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (hiilivety) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 45.9,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (hiilivety) mediaani, n = 39"
    },
    "family": "vihrea",
    "group": "hiilivety",
@@ -4961,8 +5134,13 @@
    "mw": 170.32,
    "xlogp": 2.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.09304,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 51.7,
    "odt": {
     "value": 4.099e-05,
     "n": 0,
@@ -4986,16 +5164,16 @@
    "smiles": "C=CC1=CC=CC=C1",
    "mw": 104.15,
    "xlogp": 2.9,
-   "tbC": 145.0,
+   "tbC": 145.6,
    "vp25": {
     "value": 6.4,
-    "min": 4.867,
-    "max": 9.287,
-    "n": 9,
+    "min": 5.756,
+    "max": 7.337,
+    "n": 3,
     "method": "koe",
-    "source": "PubChem: CAMEO Chemicals, Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs), PAC Chemical Database, U.S. Department of Energy"
    },
-   "dHvap": 41.3,
+   "dHvap": 41.1,
    "odt": {
     "value": 0.04183,
     "min": 0.04183,
@@ -5021,16 +5199,16 @@
    "smiles": "C1=CC=C(C=C1)C(=O)O",
    "mw": 122.12,
    "xlogp": 1.9,
-   "tbC": 249.0,
+   "tbC": 249.2,
    "vp25": {
-    "value": 0.0007501,
+    "value": 0.0007246,
     "min": 0.0007,
-    "max": 0.00083,
-    "n": 3,
+    "max": 0.0007501,
+    "n": 2,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB), ILO-WHO International Chemical Safety Cards (ICSCs)"
    },
-   "dHvap": 79.9,
+   "dHvap": 80.1,
    "odt": {
     "value": 10.0,
     "n": 0,
@@ -5054,14 +5232,14 @@
    "smiles": "C1=CC=C(C=C1)/C=C/C(=O)O",
    "mw": 148.16,
    "xlogp": 2.1,
-   "tbC": 299.5,
+   "tbC": 300.0,
    "vp25": {
-    "value": 0.0001762,
+    "value": 0.0001707,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 300 °C (Grain–Watson)"
    },
-   "dHvap": 79.0,
+   "dHvap": 79.1,
    "odt": {
     "value": 10.0,
     "n": 0,
@@ -5085,14 +5263,14 @@
    "smiles": "C1=CC=C(C=C1)CC(=O)O",
    "mw": 136.15,
    "xlogp": 1.4,
-   "tbC": 265.0,
+   "tbC": 265.5,
    "vp25": {
     "value": 0.0038,
     "min": 0.0038,
     "max": 0.0038,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 67.8,
    "odt": {
@@ -5123,9 +5301,9 @@
     "value": 1.4e-06,
     "min": 1.4e-06,
     "max": 1.4e-06,
-    "n": 2,
+    "n": 1,
     "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases, Hazardous Substances Data Bank (HSDB)"
+    "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
    "dHvap": 99.2,
    "odt": {
@@ -5153,19 +5331,19 @@
    "smiles": "C/C/1=C\\CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C",
    "mw": 204.35,
    "xlogp": 4.4,
-   "tbC": 256.8,
+   "tbC": 257.5,
    "vp25": {
-    "value": 0.04639,
+    "value": 0.04478,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 258 °C (Grain–Watson)"
    },
-   "dHvap": 55.0,
+   "dHvap": 55.1,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5185,13 +5363,18 @@
    "mw": 204.35,
    "xlogp": 4.5,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5211,13 +5394,18 @@
    "mw": 204.35,
    "xlogp": 4.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5237,13 +5425,18 @@
    "mw": 204.35,
    "xlogp": 4.5,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.127,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 50.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5263,13 +5456,18 @@
    "mw": 204.35,
    "xlogp": 6.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5289,13 +5487,18 @@
    "mw": 204.35,
    "xlogp": 3.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5315,13 +5518,18 @@
    "mw": 204.35,
    "xlogp": 4.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5341,13 +5549,18 @@
    "mw": 204.35,
    "xlogp": 4.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5367,13 +5580,18 @@
    "mw": 204.35,
    "xlogp": 5.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.09147,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 51.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5393,13 +5611,18 @@
    "mw": 204.35,
    "xlogp": 4.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.06589,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5419,13 +5642,18 @@
    "mw": 204.35,
    "xlogp": 5.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "sitrus",
    "group": "seskviterpeeni",
@@ -5445,13 +5673,18 @@
    "mw": 204.35,
    "xlogp": 5.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.09147,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 51.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5471,13 +5704,18 @@
    "mw": 204.35,
    "xlogp": 4.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.06589,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5497,13 +5735,18 @@
    "mw": 204.35,
    "xlogp": 4.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.06589,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5523,13 +5766,18 @@
    "mw": 204.35,
    "xlogp": 3.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5549,13 +5797,18 @@
    "mw": 202.33,
    "xlogp": 5.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.005824,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 59.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "mauste",
    "group": "seskviterpeeni",
@@ -5575,13 +5828,18 @@
    "mw": 204.35,
    "xlogp": 5.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "mauste",
    "group": "seskviterpeeni",
@@ -5601,13 +5859,18 @@
    "mw": 204.35,
    "xlogp": 5.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "mauste",
    "group": "seskviterpeeni",
@@ -5627,13 +5890,18 @@
    "mw": 204.35,
    "xlogp": 5.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.03419,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 54.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "mauste",
    "group": "seskviterpeeni",
@@ -5653,13 +5921,18 @@
    "mw": 204.35,
    "xlogp": 6.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.02463,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 55.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "vihrea",
    "group": "seskviterpeeni",
@@ -5683,14 +5956,14 @@
     "value": 0.03795,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 261 °C (Grain–Watson)"
    },
    "dHvap": 55.6,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "vihrea",
    "group": "seskviterpeeni",
@@ -5710,13 +5983,18 @@
    "mw": 204.35,
    "xlogp": 4.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.06589,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5736,13 +6014,18 @@
    "mw": 204.35,
    "xlogp": 5.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.06589,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 52.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5762,13 +6045,18 @@
    "mw": 204.35,
    "xlogp": 5.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.04746,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeeni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 53.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeeni) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeeni",
@@ -5788,8 +6076,13 @@
    "mw": 184.28,
    "xlogp": 4.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.1673,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 50.0,
    "odt": {
     "value": 0.04183,
     "n": 0,
@@ -5814,13 +6107,18 @@
    "mw": 222.37,
    "xlogp": 4.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.003561,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 60.9,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -5844,14 +6142,14 @@
     "value": 0.001001,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 286 °C (Grain–Watson)"
    },
    "dHvap": 71.9,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -5871,13 +6169,18 @@
    "mw": 220.35,
    "xlogp": 4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.004041,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 60.6,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -5901,14 +6204,14 @@
     "value": 0.0002146,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 312 °C (Grain–Watson)"
    },
    "dHvap": 76.2,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -5928,13 +6231,18 @@
    "mw": 222.37,
    "xlogp": 3.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001331,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 63.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "kukka",
    "group": "seskviterpeenialkoholi",
@@ -5958,14 +6266,14 @@
     "value": 0.001797,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 276 °C (Grain–Watson)"
    },
    "dHvap": 70.3,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "kukka",
    "group": "seskviterpeenialkoholi",
@@ -5984,21 +6292,21 @@
    "smiles": "CC(=CCC/C(=C/CC/C(=C/CO)/C)/C)C",
    "mw": 222.37,
    "xlogp": 4.8,
-   "tbC": 187.2,
+   "tbC": 283.5,
    "vp25": {
     "value": 3.94e-05,
     "min": 3.94e-05,
     "max": 3.94e-05,
     "n": 1,
-    "method": "koe",
-    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases"
+    "method": "arvio",
+    "source": "PubChem: Haz-Map, Information on Hazardous Chemicals and Occupational Diseases (heikko lähde)"
    },
-   "dHvap": 110.0,
+   "dHvap": 89.5,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "kukka",
    "group": "seskviterpeenialkoholi",
@@ -6022,14 +6330,14 @@
     "value": 0.0005231,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 297 °C (Grain–Watson)"
    },
    "dHvap": 73.7,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6049,13 +6357,18 @@
    "mw": 222.37,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.002565,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 61.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6075,13 +6388,18 @@
    "mw": 222.37,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.002565,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 61.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6101,13 +6419,18 @@
    "mw": 222.37,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.002565,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 61.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6127,13 +6450,18 @@
    "mw": 222.37,
    "xlogp": 3.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001848,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 62.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6152,19 +6480,19 @@
    "smiles": "CC1CCC2=C(CCC(CC12)C(C)(C)O)C",
    "mw": 222.37,
    "xlogp": 2.9,
-   "tbC": 137.0,
+   "tbC": null,
    "vp25": {
-    "value": 3.879,
+    "value": 0.001848,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
    },
-   "dHvap": 47.9,
+   "dHvap": 62.8,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6184,13 +6512,18 @@
    "mw": 222.37,
    "xlogp": 4.4,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001331,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 63.7,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6210,13 +6543,18 @@
    "mw": 222.37,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001848,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 62.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6240,14 +6578,14 @@
     "value": 0.0003666,
     "n": 0,
     "method": "arvio",
-    "source": "Grain–Watson-arvio kiehumispisteestä (PubChem)"
+    "source": "Arvio kiehumispisteestä 303 °C (Grain–Watson)"
    },
    "dHvap": 74.7,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6267,13 +6605,18 @@
    "mw": 220.35,
    "xlogp": 3.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.002911,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 61.5,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6293,13 +6636,18 @@
    "mw": 222.37,
    "xlogp": 3.6,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 0.001848,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 62.8,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (seskviterpeenialkoholi) mediaani, n = 39"
    },
    "family": "puu",
    "group": "seskviterpeenialkoholi",
@@ -6319,8 +6667,13 @@
    "mw": 308.5,
    "xlogp": 4.9,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 1.002e-06,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 84.0,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6345,8 +6698,13 @@
    "mw": 306.5,
    "xlogp": 4.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 6.026e-06,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 78.9,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6371,8 +6729,13 @@
    "mw": 348.5,
    "xlogp": 4.7,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 9.985e-07,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 84.0,
    "odt": {
     "value": 0.172,
     "n": 0,
@@ -6397,8 +6760,13 @@
    "mw": 296.5,
    "xlogp": 8.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 9.134e-06,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 77.8,
    "odt": {
     "value": 0.006457,
     "n": 0,
@@ -6423,8 +6791,13 @@
    "mw": 238.41,
    "xlogp": 6.2,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.001763,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 62.9,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -6449,8 +6822,13 @@
    "mw": 250.4,
    "xlogp": 6.1,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 0.0008298,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 65.0,
    "odt": {
     "value": 0.2999,
     "n": 0,
@@ -6485,10 +6863,10 @@
    },
    "dHvap": 81.2,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (hiilivety) mediaani, n = 38"
+    "source": "Ryhmän (hiilivety) mediaani, n = 39"
    },
    "family": "haihtumaton",
    "group": "hiilivety",
@@ -6507,7 +6885,7 @@
    "smiles": "CCCCCCCCCCCCCCCCCCCCC",
    "mw": 296.6,
    "xlogp": 11,
-   "tbC": 357.8,
+   "tbC": 359.0,
    "vp25": {
     "value": 8.73e-05,
     "min": 8.73e-05,
@@ -6516,12 +6894,12 @@
     "method": "koe",
     "source": "PubChem: Hazardous Substances Data Bank (HSDB)"
    },
-   "dHvap": 75.1,
+   "dHvap": 75.0,
    "odt": {
-    "value": 0.2249,
+    "value": 0.172,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (hiilivety) mediaani, n = 38"
+    "source": "Ryhmän (hiilivety) mediaani, n = 39"
    },
    "family": "haihtumaton",
    "group": "hiilivety",
@@ -6541,8 +6919,13 @@
    "mw": 302.5,
    "xlogp": 4.8,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
+   "vp25": {
+    "value": 7.366e-06,
+    "n": 0,
+    "method": "arvio",
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 78.4,
    "odt": {
     "value": 10.0,
     "n": 0,
@@ -6567,13 +6950,18 @@
    "mw": 216.19,
    "xlogp": 2.3,
    "tbC": null,
-   "vp25": null,
-   "dHvap": 55.0,
-   "odt": {
-    "value": 0.2249,
+   "vp25": {
+    "value": 8.285e-06,
     "n": 0,
     "method": "arvio",
-    "source": "Ryhmän (laktoni) mediaani, n = 38"
+    "source": "Rakennemalli (n = 59, virhe ±0.9 log)"
+   },
+   "dHvap": 78.0,
+   "odt": {
+    "value": 0.172,
+    "n": 0,
+    "method": "arvio",
+    "source": "Ryhmän (laktoni) mediaani, n = 39"
    },
    "family": "haihtumaton",
    "group": "laktoni",
