@@ -217,6 +217,8 @@ TRADE_NAME_LIST = [
 TRADE_NAMES = {n.lower() for n in TRADE_NAME_LIST}
 
 DOTTED_GREEK = re.compile(r"\.[a-z]+\.", re.I)
+# Laatumerkinnät nimen lopussa: "(Standard)", "(USP)", "(TN)"
+GRADE_SUFFIX = re.compile(r"\((?:[A-Za-z][a-z]+|[A-Z]{2,})\)\s*$")
 
 
 def _key(s: str) -> str:
@@ -238,6 +240,8 @@ def search_synonyms(synonyms: list[str], exclude: set[str], limit: int = 12, max
             trade.append(t)
             continue
         if not (3 <= len(t) <= max_len) or SYN_SKIP.search(t) or DOTTED_GREEK.search(t) or INVERTED.search(t):
+            continue
+        if GRADE_SUFFIX.search(t):
             continue
         if any(c in t for c in "%#?!*@"):
             continue

@@ -725,7 +725,7 @@ def main() -> int:
                 "odor": row["odor"],
                 "odorEn": short_odor(exp.get("Odor", [])),
                 "synonyms": search_synonyms(
-                    trade.get(cid, []) + synonyms.get(cid, []), exclude={row["name"], p.get("Title") or ""}
+                    trade.get(cid, []) + [p.get("Title") or ""] + synonyms.get(cid, []), exclude={row["name"]}
                 ),
                 "origin": row["origin"],
             }

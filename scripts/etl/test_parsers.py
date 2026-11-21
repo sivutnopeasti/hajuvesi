@@ -133,7 +133,7 @@ def test_search_synonyms():
     assert got == ["Hedione", "Kharismal", "MDJ"], got
     # Kauppanimi nousee alkuun, toistot ja kirjoitusmuunnelmat karsitaan
     syns = ["Kharismal", "Cepionate", "Methyldihydrojasmonate", "DIHYDROJASMONIC ACID, METHYL ESTER",
-            ".alpha.-Hedione", "Isoborneol, (-)-", "Sclareolide, 97%", "Jessamona", "Hedione"]
+            ".alpha.-Hedione", "Isoborneol, (-)-", "Sclareolide, 97%", "Jessamona", "Hedione", "MDJ (Standard)"]
     got = search_synonyms(syns, exclude={"Methyl dihydrojasmonate"})
     assert got == ["Kharismal", "Hedione", "Cepionate", "Jessamona"], got
 
