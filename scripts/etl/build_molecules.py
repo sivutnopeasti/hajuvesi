@@ -38,7 +38,13 @@ from parsers import (  # noqa: E402
     parse_vapor_pressure,
 )
 
-from descriptors import NOT_A_MOLECULE, choose_name, family_from_descriptors, search_synonyms  # noqa: E402
+from descriptors import (  # noqa: E402
+    NOT_A_MOLECULE,
+    TRADE_NAME_LIST,
+    choose_name,
+    family_from_descriptors,
+    search_synonyms,
+)
 
 RDLogger.DisableLog("rdApp.*")
 
@@ -139,14 +145,35 @@ def properties(cids: list[int]) -> dict[int, dict]:
 
 
 def synonym_lists(cids: list[int]) -> dict[int, list[str]]:
-    """PubChemin synonyymit (ensimmäiset 200) CID:ittäin."""
+    """PubChemin synonyymit CID:ittäin."""
     out: dict[int, list[str]] = {}
     for i in range(0, len(cids), 100):
         chunk = cids[i : i + 100]
         ids = ",".join(map(str, chunk))
         js = fetch(f"{PUG}/compound/cid/synonyms/JSON", data={"cid": ids}, cache_key=f"syn:{ids}")
         for info in (js or {}).get("InformationList", {}).get("Information", []):
-            out[info["CID"]] = info.get("Synonym", [])[:200]
+            out[info["CID"]] = info.get("Synonym", [])
+    return out
+
+
+def trade_name_links(props: dict[int, dict]) -> dict[int, list[str]]:
+    """Kauppanimet (Hedione, Iso E Super …) haetaan PubChemistä nimellä ja liitetään kirjaston molekyyleihin,
+    joilla on sama rakenne (InChIKeyn ensimmäinen osa), vaikka PubChem olisi tallentanut nimen eri stereoisomeerille."""
+    by_key: dict[str, list[int]] = {}
+    for cid, p in props.items():
+        if p.get("InChIKey"):
+            by_key.setdefault(p["InChIKey"][:14], []).append(cid)
+    found = {}
+    for name in TRADE_NAME_LIST:
+        cid, _ = resolve_cid(name)
+        if cid:
+            found[name] = cid
+    trade_props = properties(sorted(set(found.values())))
+    out: dict[int, list[str]] = {}
+    for name, cid in found.items():
+        key = (trade_props.get(cid, {}).get("InChIKey") or "")[:14]
+        for target in by_key.get(key, []) if key else []:
+            out.setdefault(target, []).append(name)
     return out
 
 
@@ -531,6 +558,8 @@ def main() -> int:
     props = properties(cids)
     synonyms = synonym_lists(cids)
     cas = {cid: c for cid in cids if (c := first_cas(synonyms.get(cid, [])))}
+    trade = trade_name_links(props)
+    print(f"Kauppanimiä liitetty {sum(len(v) for v in trade.values())} kpl {len(trade)} molekyyliin", flush=True)
 
     # Nimet IFRA-riveille: Pyrfumen yleisnimi tai PubChemin otsikko; samannimiset erotetaan CAS-numerolla
     taken = {r["name"].lower() for r, _, _ in resolved if r["origin"] == "seed"}
@@ -695,7 +724,9 @@ def main() -> int:
                 "carbons": n_c,
                 "odor": row["odor"],
                 "odorEn": short_odor(exp.get("Odor", [])),
-                "synonyms": search_synonyms(synonyms.get(cid, []), exclude={row["name"], p.get("Title") or ""}),
+                "synonyms": search_synonyms(
+                    trade.get(cid, []) + synonyms.get(cid, []), exclude={row["name"], p.get("Title") or ""}
+                ),
                 "origin": row["origin"],
             }
         )

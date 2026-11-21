@@ -191,8 +191,8 @@ SYN_SKIP = re.compile(
 
 
 # Tunnetut aromikemikaalien kauppanimet: pidetään hakusanoina aina, kun PubChem listaa ne yhdisteelle.
-TRADE_NAMES = {
-    n.strip().lower()
+TRADE_NAME_LIST = [
+    n.strip()
     for n in """
     Hedione|Hedione HC|Iso E Super|Iso Gamma Super|Galaxolide|Tonalide|Traseolide|Celestolide|Phantolide|Ambroxan|Ambrox|
     Ambrofix|Cetalox|Ambrocenide|Ambermax|Amber Xtreme|Orcanox|Grisalva|Spirambrene|Trimofix|Boisambrene|Kephalis|
@@ -213,7 +213,8 @@ TRADE_NAMES = {
     Methyl laitone|Coumarin|Tonka lactone|Kharismal|Ambrettone|Fixolide|Versalide|Muscenone delta|Musk T|Musk 781
     """.replace("\n", "").split("|")
     if n.strip()
-}
+]
+TRADE_NAMES = {n.lower() for n in TRADE_NAME_LIST}
 
 DOTTED_GREEK = re.compile(r"\.[a-z]+\.", re.I)
 
