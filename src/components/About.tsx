@@ -30,6 +30,12 @@ export function About() {
           </p>
         </div>
         <div>
+          <h3>Data</h3>
+          <p>
+            The ingredient list comes from the IFRA Fragrance Ingredient Glossary (2019), which covers the
+            odorous materials perfumers use; every single molecule on it is included with IFRA’s odor descriptors.
+            Vapor pressures and boiling points come from PubChem, odor thresholds from Abraham et al. (2012).
+          </p>
           <h3>Read more</h3>
           <ul className="link-list">
             <li>

@@ -1,4 +1,5 @@
 import { DEFAULT_RECIPE, MATERIALS, MATERIAL_BY_ID } from '../data/materials.ts'
+import { MaterialPicker } from './MaterialPicker.tsx'
 import { num } from '../lib/format.ts'
 import type { RecipeLine } from '../sim/types.ts'
 
@@ -8,12 +9,6 @@ interface Props {
   dose: number
   onDose: (v: number) => void
 }
-
-const GROUPS: { label: string; kinds: string[] }[] = [
-  { label: 'Oils and resinoids', kinds: ['oil', 'resinoid'] },
-  { label: 'Solvents', kinds: ['solvent'] },
-  { label: 'Isolates and synthetics', kinds: ['isolate'] },
-]
 
 export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
   const total = recipe.reduce((s, l) => s + (l.grams || 0), 0)
@@ -32,7 +27,8 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
       <h2 id="recipe-title">Formula</h2>
       <p className="muted">
         Enter amounts in grams. Materials are broken down into molecules by their typical composition, and the map
-        updates immediately.
+        updates immediately. The list holds {MATERIALS.length.toLocaleString('en-US')} materials; search by name,
+        trade name, CAS number or odor.
       </p>
       <table className="recipe-table">
         <thead>
@@ -50,24 +46,12 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
           {recipe.map((line, k) => (
             <tr key={k}>
               <td>
-                <label className="visually-hidden" htmlFor={`mat-${k}`}>
-                  Material {k + 1}
-                </label>
-                <select
+                <MaterialPicker
                   id={`mat-${k}`}
+                  label={`Material ${k + 1}`}
                   value={line.materialId}
-                  onChange={(e) => update(k, { materialId: e.target.value })}
-                >
-                  {GROUPS.map((g) => (
-                    <optgroup key={g.label} label={g.label}>
-                      {MATERIALS.filter((m) => g.kinds.includes(m.kind)).map((m) => (
-                        <option key={m.id} value={m.id}>
-                          {m.name}
-                        </option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
+                  onChange={(materialId) => update(k, { materialId })}
+                />
               </td>
               <td className="num">
                 <label className="visually-hidden" htmlFor={`g-${k}`}>

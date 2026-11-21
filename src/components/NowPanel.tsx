@@ -27,8 +27,15 @@ function MoleculeCard({ result, j, id, onClose }: { result: SimResult; j: number
         </button>
       </div>
       <p className="card-odor">{m.odor}</p>
+      {m.origin === 'ifra' && <p className="card-odor-en">Odor descriptors: IFRA Fragrance Ingredient Glossary</p>}
       {m.odorEn && <p className="card-odor-en">PubChem: {m.odorEn}</p>}
       <dl className="facts">
+        {m.synonyms && m.synonyms.length > 0 && (
+          <>
+            <dt>Also known as</dt>
+            <dd>{m.synonyms.slice(0, 4).join(', ')}</dd>
+          </>
+        )}
         <dt>Chemical group</dt>
         <dd>{GROUP_BY_ID[m.group].name}</dd>
         {m.cas && (

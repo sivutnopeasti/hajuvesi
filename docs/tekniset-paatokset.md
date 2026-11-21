@@ -40,3 +40,11 @@ Havaitseminen:
 - Puuttuvat höyrynpaineet: ridge-regressio 10 RDKit-kuvaajalla, opetusdata mitatut + kiehumispistearviot; ristiinvalidoitu virhe 0,58 log (kerroin ~4).
 - Hajukynnykset: Abraham 2012 (Pyrfume), yhdistetty stereoisomeereille InChIKeyn ensimmäisen osan mukaan; muuten PubChem; muuten kemiallisen ryhmän mediaani (arvio). Mitattu kynnys vain 39/217 molekyylille – suurin aukko.
 - Ensimmäisen ajon tulos: 217/217 tunnistettu, 61 mitattua höyrynpainetta, 156 arviota.
+
+## Raaka-ainekirjasto ja haku (21.11.2026)
+- Kieli: työkalu ja yhdisteiden nimet englanniksi; sisäiset tunnisteet (molekyylit, raaka-aineet, perheet) pysyvät suomenkielisinä, jotta tallennetut reseptit toimivat.
+- Raaka-aineluettelo: IFRA Fragrance Ingredient Glossary 2019 (Pyrfume `ifra_2019`, 1 060 molekyyliä, jokaisella 1–3 hajukuvaajaa). Glossaari kattaa IFRA Transparency Listin hajua antavat aineet, joten se vastaa kysymykseen "mitä hajuvesissä käytetään". Mukaan otetaan yksittäiset molekyylit; eteeriset öljyt ja seokset, jotka PubChemissä ovat yhtenä tietueena, jätetään pois. Kuratoitu 217 molekyylin lista säilyy ja voittaa päällekkäisyydet.
+- Ei mukana: Good Scents (~4 500) ja Leffingwell (~3 500) – suurelta osin aromiaineita ja käyttöehdoiltaan rajoitettuja; Arctander (CC BY-NC). Transparency Listin 2025 painos (3 312 hajuainetta) ei ole ladattavissa tiedostona.
+- Hajuperhe IFRA-molekyyleille: ensisijainen kuvaaja (suljettu sanasto, ~27 sanaa) → perhe (`scripts/etl/descriptors.py`). Uusi perhe *Aldehydic & marine* (aldehydic, marine, ozonic, waxy); *Balsamic* → *Balsamic & gourmand*.
+- Haku: PubChemin synonyymeistä suodatetaan enintään 10 lyhyttä nimeä (kauppanimet kuten Hedione, Galaxolide). Valikon haku vertaa nimeen, synonyymeihin, CAS-numeroon ja hajukuvaajiin.
+- Suorituskyky: Web Worker saa vain reseptin molekyylit (`src/data/library.ts`), joten koko kirjasto ladataan vain kerran pääsäikeeseen.

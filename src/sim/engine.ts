@@ -1,14 +1,13 @@
-import { MATERIAL_BY_ID } from '../data/materials.ts'
-import { MOLECULE_BY_ID } from '../data/molecules.ts'
 import type { Material, Molecule, Mode, RecipeLine, SimParams, SimResult } from './types.ts'
 
-/** Molekyyli- ja raaka-ainekirjasto; testit antavat oman, kiinteän kirjastonsa. */
+/**
+ * Molekyyli- ja raaka-ainekirjasto. Moottori ei tuo dataa itse: Web Worker saa vain reseptin tarvitsemat
+ * molekyylit (src/data/library.ts), ja testit antavat oman, kiinteän kirjastonsa.
+ */
 export interface Library {
   molecules: Record<string, Molecule>
   materials: Record<string, Material>
 }
-
-export const DEFAULT_LIBRARY: Library = { molecules: MOLECULE_BY_ID, materials: MATERIAL_BY_ID }
 
 const R = 8.314 // J/(mol K)
 const P_ATM = 101325 // Pa
@@ -34,7 +33,7 @@ export function psat(m: Molecule, T: number): number {
 }
 
 /** Resepti (grammoina) → molekyylien massat grammoina. Koostumuksen mallintamaton osa jätetään pois. */
-export function recipeToMolecules(recipe: RecipeLine[], lib: Library = DEFAULT_LIBRARY): Map<string, number> {
+export function recipeToMolecules(recipe: RecipeLine[], lib: Library): Map<string, number> {
   const out = new Map<string, number>()
   for (const line of recipe) {
     const mat = lib.materials[line.materialId]
@@ -67,8 +66,8 @@ export function timeGrid(tEndMin: number, points = 400): number[] {
  */
 export function simulate(
   recipe: RecipeLine[],
-  params: SimParams = DEFAULT_PARAMS,
-  lib: Library = DEFAULT_LIBRARY,
+  params: SimParams,
+  lib: Library,
 ): SimResult {
   const masses = recipeToMolecules(recipe, lib)
   const ids = [...masses.keys()].filter((id) => lib.molecules[id] && (masses.get(id) ?? 0) > 0)

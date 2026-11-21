@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { libraryFor } from '../data/library.ts'
 import type { RecipeLine, SimParams, SimResult } from './types.ts'
+import type { WorkerRequest } from './worker.ts'
 
 /** Ajaa simulaation Web Workerissa aina, kun resepti tai parametrit muuttuvat. */
 export function useSimulation(recipe: RecipeLine[], params: SimParams): SimResult | null {
@@ -19,7 +21,8 @@ export function useSimulation(recipe: RecipeLine[], params: SimParams): SimResul
   useEffect(() => {
     const handle = window.setTimeout(() => {
       reqId.current += 1
-      workerRef.current?.postMessage({ id: reqId.current, recipe, params })
+      const req: WorkerRequest = { id: reqId.current, recipe, params, lib: libraryFor(recipe) }
+      workerRef.current?.postMessage(req)
     }, 120)
     return () => window.clearTimeout(handle)
   }, [recipe, params])

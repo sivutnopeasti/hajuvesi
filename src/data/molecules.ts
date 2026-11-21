@@ -20,6 +20,8 @@ interface GeneratedMolecule {
   group: GroupId
   odor: string
   odorEn: string | null
+  synonyms?: string[]
+  origin?: 'seed' | 'ifra'
 }
 
 interface GeneratedFile {
@@ -65,6 +67,8 @@ function fromGenerated(g: GeneratedMolecule): Molecule {
     group: g.group,
     odor: g.odor,
     odorEn: g.odorEn,
+    synonyms: g.synonyms,
+    origin: g.origin,
   }
 }
 

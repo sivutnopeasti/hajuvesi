@@ -8,9 +8,10 @@ export const FAMILIES: { id: FamilyId; name: string; color: string }[] = [
   { id: 'kukka', name: 'Floral', color: '#A9769B' },
   { id: 'hedelma', name: 'Fruity', color: '#E08E6B' },
   { id: 'mauste', name: 'Spicy', color: '#A8432F' },
-  { id: 'balsami', name: 'Balsamic', color: '#C98A3E' },
+  { id: 'balsami', name: 'Balsamic & gourmand', color: '#C98A3E' },
   { id: 'puu', name: 'Woody & earthy', color: '#7A5A45' },
   { id: 'myski', name: 'Musk & amber', color: '#7F86A6' },
+  { id: 'raikas', name: 'Aldehydic & marine', color: '#5E9FBF' },
   { id: 'haihtumaton', name: 'Non-volatile', color: '#9A9A9A' },
 ]
 

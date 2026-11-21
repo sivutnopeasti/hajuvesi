@@ -12,6 +12,7 @@ export type FamilyId =
   | 'balsami'
   | 'puu'
   | 'myski'
+  | 'raikas'
   | 'haihtumaton'
 
 export type GroupId =
@@ -71,6 +72,10 @@ export interface Molecule {
   xlogp?: number | null
   /** PubChemin hajukuvaus englanniksi */
   odorEn?: string | null
+  /** Hakua varten: muut nimet, myös kauppanimet (esim. Hedione) */
+  synonyms?: string[]
+  /** seed = käsin kuratoitu, ifra = IFRA Fragrance Ingredient Glossary */
+  origin?: 'seed' | 'ifra'
 }
 
 export interface Material {

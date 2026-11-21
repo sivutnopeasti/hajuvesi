@@ -14,6 +14,7 @@ from parsers import (  # noqa: E402
     parse_vapor_pressure,
     to_float,
 )
+from descriptors import choose_name, family_from_descriptors, pretty_name, search_synonyms  # noqa: E402
 
 
 def close(a, b, rel=0.02):
@@ -98,6 +99,38 @@ def test_grain_watson():
     est = grain_watson_vp(471.15, kf=1.22)
     assert 0.33 < est / 0.16 < 3, est
     assert math.isfinite(est)
+
+
+def test_pretty_name():
+    assert pretty_name("alpha-pinene") == "α-Pinene"
+    assert pretty_name("(+)-beta-caryophyllene") == "(+)-β-Caryophyllene"
+    assert pretty_name("cis-3-hexenol") == "cis-3-Hexenol"
+    assert pretty_name("(e)-2-hexenal") == "(E)-2-Hexenal"
+    assert pretty_name("(2e,6z)-nona-2,6-dienal") == "(2E,6Z)-Nona-2,6-dienal"
+    assert pretty_name("methyl dihydrojasmonate") == "Methyl dihydrojasmonate"
+    assert pretty_name("4-isopropylbenzyl alcohol") == "4-Isopropylbenzyl alcohol"
+    assert pretty_name("Galaxolide") == "Galaxolide"
+    assert choose_name("28940-11-6", "Watermelon ketone", None) == "Watermelon ketone"
+    assert pretty_name("tetrahydro-4-methyl-2-phenyl-2h-pyran") == "Tetrahydro-4-methyl-2-phenyl-2H-pyran"
+    assert choose_name("unii-if3n774v66", "Isobutyl angelate", None) == "Isobutyl angelate"
+    assert choose_name("cyclohexanol, 1-methyl-4-(1-methylethyl)-", "Dihydroterpineol", None) == "Dihydroterpineol"
+
+
+def test_family_from_descriptors():
+    assert family_from_descriptors(["Floral", "Rose", "Sweet"])[0] == "kukka"
+    assert family_from_descriptors(["Aldehydic", "Waxy", "Citrus"])[0] == "raikas"
+    assert family_from_descriptors(["Sulfurous", "Tropical-Fruit", "Green"])[0] == "hedelma"
+    assert family_from_descriptors(["Sulfurous", "Onion"])[0] == "vihrea"
+    assert family_from_descriptors(["Acidic", "Cheesy", "Fatty"])[0] == "myski"
+    assert family_from_descriptors(["Musk like", "Powdery"]) == ("myski", True)
+    assert family_from_descriptors(["Woody", "Mystery"])[1] is False
+
+
+def test_search_synonyms():
+    syns = ["methyl dihydrojasmonate", "24851-98-7", "Hedione", "EINECS 246-495-9", "UNII-1B8J2S1T0N",
+            "Methyl (3-oxo-2-pentylcyclopentyl)acetate", "DTXSID4029303", "Kharismal", "MDJ", "HSDB 7495"]
+    got = search_synonyms(syns, exclude={"Methyl dihydrojasmonate"})
+    assert got == ["Hedione", "Kharismal", "MDJ"], got
 
 
 if __name__ == "__main__":

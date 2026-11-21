@@ -21,7 +21,7 @@ concurrency:
 jobs:
   etl:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -36,15 +36,24 @@ jobs:
       - name: Jäsentimien testit
         run: python scripts/etl/test_parsers.py
 
-      - name: Välimuisti (PubChem-vastaukset)
-        uses: actions/cache@v4
+      # Välimuisti palautetaan edellisestä ajosta ja tallennetaan aina uudella avaimella, myös
+      # keskeytyneen ajon jälkeen, joten seuraava ajo jatkaa siitä mihin edellinen jäi.
+      - name: Palauta välimuisti (PubChem-vastaukset)
+        uses: actions/cache/restore@v4
         with:
           path: scripts/etl/.cache
-          key: pubchem-${{ hashFiles('scripts/etl/seed_molecules.csv', 'scripts/etl/build_molecules.py') }}
+          key: pubchem-${{ github.run_id }}
           restore-keys: pubchem-
 
       - name: Hae ja yhdistä data
         run: python scripts/etl/build_molecules.py
+
+      - name: Tallenna välimuisti
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: scripts/etl/.cache
+          key: pubchem-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Tallenna tulos repoon
         run: |

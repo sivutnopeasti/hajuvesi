@@ -2,7 +2,7 @@
 """Hakee tuoksumolekyylien tiedot PubChemistä ja Pyrfumesta ja kirjoittaa ne sovelluksen JSON-tiedostoksi.
 
 Ajo:  python scripts/etl/build_molecules.py
-Syöte:   scripts/etl/seed_molecules.csv
+Syöte:   scripts/etl/seed_molecules.csv (käsin kuratoidut) ja IFRA Fragrance Ingredient Glossary 2019 (Pyrfume)
 Tulos:   src/data/generated/molecules.json ja scripts/etl/report.md
 
 PubChemin käyttöehtojen mukaisesti pyyntöjä tehdään enintään ~4 sekunnissa. Vastaukset tallennetaan
@@ -37,6 +37,8 @@ from parsers import (  # noqa: E402
     parse_odor_threshold,
     parse_vapor_pressure,
 )
+
+from descriptors import NOT_A_MOLECULE, choose_name, family_from_descriptors, search_synonyms  # noqa: E402
 
 RDLogger.DisableLog("rdApp.*")
 
@@ -136,23 +138,29 @@ def properties(cids: list[int]) -> dict[int, dict]:
     return out
 
 
-def cas_numbers(cids: list[int]) -> dict[int, str]:
-    out: dict[int, str] = {}
+def synonym_lists(cids: list[int]) -> dict[int, list[str]]:
+    """PubChemin synonyymit (ensimmäiset 200) CID:ittäin."""
+    out: dict[int, list[str]] = {}
     for i in range(0, len(cids), 100):
         chunk = cids[i : i + 100]
         ids = ",".join(map(str, chunk))
         js = fetch(f"{PUG}/compound/cid/synonyms/JSON", data={"cid": ids}, cache_key=f"syn:{ids}")
         for info in (js or {}).get("InformationList", {}).get("Information", []):
-            for syn in info.get("Synonym", []):
-                if cas_is_valid(syn):
-                    out[info["CID"]] = syn
-                    break
+            out[info["CID"]] = info.get("Synonym", [])[:200]
     return out
+
+
+def first_cas(synonyms: list[str]) -> str | None:
+    return next((s for s in synonyms if cas_is_valid(s)), None)
 
 
 def experimental(cid: int) -> dict[str, list[tuple[str, str]]]:
     """Palauttaa {otsikko: [(teksti, lähde)]} PubChemin Experimental Properties -osiosta."""
-    js = fetch(f"{VIEW}/data/compound/{cid}/JSON", params={"heading": "Experimental Properties"}, cache_key=f"view:{cid}:exp")
+    try:
+        js = fetch(f"{VIEW}/data/compound/{cid}/JSON", params={"heading": "Experimental Properties"}, cache_key=f"view:{cid}:exp")
+    except RuntimeError as e:
+        print(f"  CID {cid}: {e}", flush=True)
+        return {}
     if not js:
         return {}
     record = js.get("Record", {})
@@ -196,6 +204,36 @@ def abraham_thresholds() -> dict[int, list[float]]:
             continue
         if cid:
             out.setdefault(cid, []).append(10 ** (-log_inv))
+    return out
+
+
+def ifra_glossary() -> list[dict]:
+    """IFRA Fragrance Ingredient Glossary (2019) Pyrfume-arkistosta: hajusteainesosat ja niiden 1–3 hajukuvaajaa.
+
+    Glossaari kattaa IFRA:n Transparency Listin hajua antavat aineet. Mukaan otetaan yksittäiset molekyylit;
+    eteeriset öljyt ja muut seokset, jotka PubChemissä ovat yhtenä tietueena, jätetään pois.
+    """
+    mols = fetch(f"{PYRFUME}/ifra_2019/molecules.csv", cache_key="pyrfume:ifra:molecules", text=True)
+    behavior = fetch(f"{PYRFUME}/ifra_2019/behavior.csv", cache_key="pyrfume:ifra:behavior", text=True)
+    stimuli = fetch(f"{PYRFUME}/ifra_2019/stimuli.csv", cache_key="pyrfume:ifra:stimuli", text=True)
+    stim_to_cid = {r["Stimulus"]: int(float(r["CID"])) for r in csv.DictReader(io.StringIO(stimuli)) if r.get("CID")}
+    descriptors: dict[int, list[str]] = {}
+    for r in csv.DictReader(io.StringIO(behavior)):
+        cid = stim_to_cid.get(r["Stimulus"])
+        if not cid:
+            continue
+        lst = descriptors.setdefault(cid, [])
+        for k in ("Descriptor 1", "Descriptor 2", "Descriptor 3"):
+            d = (r.get(k) or "").strip()
+            if d and d.lower() not in (x.lower() for x in lst):
+                lst.append(d)
+    out = []
+    for r in csv.DictReader(io.StringIO(mols)):
+        cid = int(float(r["CID"]))
+        smiles = r.get("IsomericSMILES") or ""
+        if cid <= 0 or "." in smiles or NOT_A_MOLECULE.search(r.get("name") or ""):
+            continue
+        out.append({"cid": cid, "name": r.get("name"), "iupac": r.get("IUPACName"), "descriptors": descriptors.get(cid, [])})
     return out
 
 
@@ -296,9 +334,22 @@ def vp_candidates(texts: list[tuple[str, str]]) -> list[dict]:
     return out
 
 
+SHORT_SOURCE = (
+    ("Hazardous Substances Data Bank", "HSDB"),
+    ("Chemical Safety Cards", "ICSC"),
+    ("PAC Chemical Database", "PAC (US DOE)"),
+    ("Haz-Map", "Haz-Map"),
+    ("CAMEO", "CAMEO"),
+)
+
+
+def short_source(src: str) -> str:
+    return next((short for key, short in SHORT_SOURCE if key in src), src)
+
+
 def summarize_vp(cands: list[dict], method: str) -> dict:
     values = [c["v"] for c in cands]
-    sources = sorted({c["src"] for c in cands if c["src"]})
+    sources = sorted({short_source(c["src"]) for c in cands if c["src"]})
     return {
         "value": log_median(values),
         "min": min(values),
@@ -446,10 +497,52 @@ def main() -> int:
         else:
             unresolved.append(row)
     print(f"PubChem tunnisti {len(resolved)}/{len(seed)}", flush=True)
+    for row in seed:
+        row["origin"] = "seed"
+
+    # IFRA:n hajusteainesosat, joita kuratoidussa listassa ei vielä ole
+    seed_cids = {cid for _, cid, _ in resolved}
+    ifra = ifra_glossary()
+    unknown_descriptors: dict[str, int] = {}
+    for item in ifra:
+        cid = item["cid"]
+        if cid in seed_cids:
+            continue
+        family, known = family_from_descriptors(item["descriptors"])
+        if not known:
+            for d in item["descriptors"]:
+                unknown_descriptors[d] = unknown_descriptors.get(d, 0) + 1
+        row = {
+            "id": f"cid-{cid}",
+            "name": item["name"] or "",
+            "iupac": item["iupac"] or "",
+            "query": f"cid:{cid}",
+            "family": family,
+            "odor": ", ".join(d.lower() for d in item["descriptors"]),
+            "group": "",
+            "origin": "ifra",
+        }
+        resolved.append((row, cid, f"cid:{cid}"))
+        seed_cids.add(cid)
+    n_ifra = sum(1 for r, _, _ in resolved if r["origin"] == "ifra")
+    print(f"IFRA-glossaarista {len(ifra)} molekyyliä, joista {n_ifra} uusia", flush=True)
 
     cids = sorted({cid for _, cid, _ in resolved})
     props = properties(cids)
-    cas = cas_numbers(cids)
+    synonyms = synonym_lists(cids)
+    cas = {cid: c for cid in cids if (c := first_cas(synonyms.get(cid, [])))}
+
+    # Nimet IFRA-riveille: Pyrfumen yleisnimi tai PubChemin otsikko; samannimiset erotetaan CAS-numerolla
+    taken = {r["name"].lower() for r, _, _ in resolved if r["origin"] == "seed"}
+    for row, cid, _ in resolved:
+        if row["origin"] != "ifra":
+            continue
+        p = props.get(cid, {})
+        name = choose_name(row["name"], p.get("Title"), p.get("IUPACName") or row.get("iupac"))
+        if name.lower() in taken:
+            name = f"{name} ({cas.get(cid) or f'CID {cid}'})"
+        taken.add(name.lower())
+        row["name"] = name
     abraham_raw = abraham_thresholds()
     # Hajukynnykset yhdistetään saman rakenteen stereoisomeereille (InChIKeyn ensimmäinen osa),
     # koska eri tutkimukset ovat käyttäneet eri muotoja (esim. limoneeni, d- ja l-limoneeni).
@@ -464,7 +557,7 @@ def main() -> int:
 
     rows = []
     for k, (row, cid, used) in enumerate(resolved, 1):
-        if k % 25 == 0:
+        if k % 100 == 0:
             print(f"  {k}/{len(resolved)}", flush=True)
         p = props.get(cid, {})
         exp = experimental(cid)
@@ -602,6 +695,8 @@ def main() -> int:
                 "carbons": n_c,
                 "odor": row["odor"],
                 "odorEn": short_odor(exp.get("Odor", [])),
+                "synonyms": search_synonyms(synonyms.get(cid, []), exclude={row["name"], p.get("Title") or ""}),
+                "origin": row["origin"],
             }
         )
 
@@ -638,6 +733,7 @@ def main() -> int:
                 "sources": [
                     "PubChem PUG REST and PUG View (NCBI)",
                     "Abraham et al. 2012, Chemical Senses 37:207–218, via the Pyrfume archive",
+                    "IFRA Fragrance Ingredient Glossary (2019), via the Pyrfume archive",
                 ],
                 "molecules": molecules,
             },
@@ -648,13 +744,13 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    write_report(seed, molecules, unresolved, notes, model)
+    write_report(seed, molecules, unresolved, notes, model, unknown_descriptors)
     RAW_REPORT.write_text("# PubChemin lähdearvot\n\nKaikki haetut höyrynpaine- ja kiehumispistetekstit tarkistusta varten.\n\n" + "\n".join(raw_lines) + "\n", encoding="utf-8")
     print(f"Kirjoitettu {OUT}: {len(molecules)} molekyyliä", flush=True)
     return 0
 
 
-def write_report(seed, molecules, unresolved, notes, model):
+def write_report(seed, molecules, unresolved, notes, model, unknown_descriptors=None):
     n = len(molecules)
     vp_koe = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "measured")
     vp_ennuste = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "predicted")
@@ -664,7 +760,17 @@ def write_report(seed, molecules, unresolved, notes, model):
     lines = [
         "# Molekyylidatan raportti",
         "",
-        f"Ajettu {dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} UTC. Siemenlistassa {len(seed)} molekyyliä, tunnistettu {n}.",
+        f"Ajettu {dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} UTC. Kuratoidussa siemenlistassa {len(seed)} molekyyliä; "
+        f"IFRA-glossaarista lisätty {sum(1 for m in molecules if m.get('origin') == 'ifra')}. Yhteensä {n}.",
+        "",
+        "Hajuperheet: "
+        + ", ".join(
+            f"{f} {c}"
+            for f, c in sorted(
+                {f: sum(1 for m in molecules if m["family"] == f) for f in {m["family"] for m in molecules}}.items(),
+                key=lambda kv: -kv[1],
+            )
+        ),
         "",
         "| Tieto | Mitattu | PubChemin ennuste | Arvio |",
         "| --- | --- | --- | --- |",
@@ -681,6 +787,10 @@ def write_report(seed, molecules, unresolved, notes, model):
     if unresolved:
         lines += ["## Ei löytynyt PubChemistä", ""]
         lines += [f"- `{r['id']}`: {r['query']}" for r in unresolved]
+        lines.append("")
+    if unknown_descriptors:
+        lines += ["## Tuntemattomat IFRA-kuvaajat (lisää scripts/etl/descriptors.py-tiedostoon)", ""]
+        lines += [f"- {d}: {c}" for d, c in sorted(unknown_descriptors.items(), key=lambda kv: -kv[1])]
         lines.append("")
     if notes:
         lines += ["## Huomiot", ""]
