@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T12:13:28Z",
+ "generatedAt": "2026-11-21T12:15:04Z",
  "sources": [
   "PubChem PUG REST and PUG View (NCBI)",
   "Abraham et al. 2012, Chemical Senses 37:207–218, via the Pyrfume archive",
@@ -214,6 +214,7 @@
    "odor": "pine, terpenic",
    "odorEn": "CHARACTERISTIC ODOR OF PINE; Odor of turpentine",
    "synonyms": [
+    "(+-)-alpha-Pinene",
     "Acintene A",
     "pin-2(3)-ene",
     "alfa-Pinene",
@@ -224,8 +225,7 @@
     "Wilt Pruf",
     "pin-2-ene",
     "alpha-pinene, pinene",
-    "an alpha-pinene",
-    "Cyclic dexadiene"
+    "an alpha-pinene"
    ],
    "origin": "seed"
   },
@@ -264,6 +264,7 @@
    "odor": "pine, dry woody",
    "odorEn": "CHARACTERISTIC TURPENTINE ODOR; DRY, WOODY OR RESINOUS AROMA; PINEY, TURPENTINE-LIKE ODOR",
    "synonyms": [
+    "Beta-Pinene",
     "Nopinene",
     "Terebenthene",
     "Terbenthene",
@@ -274,8 +275,7 @@
     "Rosemarel",
     "Pseudopinene",
     "(1S)-(1)-beta-Pinene",
-    "2beta-pinene",
-    "beta-Pinene (pure)"
+    "2beta-pinene"
    ],
    "origin": "seed"
   },
@@ -407,12 +407,12 @@
     "b-Geraniolene",
     "Myrcene (stabilized with BHT)",
     "|A-myrcene",
-    "Myrcene (natural)",
+    "Myrcene Natural",
     "beta -mircene",
-    "Myrcene (Standard)",
     "Myrcene, technical grade",
     "Myrcene Natural ex Orange",
-    "Myrcene, analytical standard"
+    "Myrcene, analytical standard",
+    "Mycrene 1000 |Ig/mL in Isopropanol"
    ],
    "origin": "seed"
   },
@@ -449,10 +449,10 @@
    "odor": "citrus, peppery",
    "odorEn": null,
    "synonyms": [
+    "alpha-PHELLANDRENE",
     "Menthadiene",
     "alpha-Fellandrene",
     "Dihydro-p-cymene",
-    "alpha-Phellandrene (natural)",
     "alpha-Phellandren",
     "a-phellandrene",
     "1-phellandrene",
@@ -496,6 +496,7 @@
    "odor": "minty, terpenic",
    "odorEn": "PLEASANT ODOR",
    "synonyms": [
+    "Beta-Phellandrene",
     "2-p-Menthadiene",
     "b-phellandrene",
     "beta-Phellandren",
@@ -549,7 +550,7 @@
     "3-delta-Carene",
     "carene-3",
     "carene (delta-3-)",
-    "delta-3-Carene (GC)"
+    "3-Carene, analytical standard"
    ],
    "origin": "seed"
   },
@@ -586,6 +587,7 @@
    "odor": "citrus, woody",
    "odorEn": null,
    "synonyms": [
+    "Alpha-Terpinene",
     "Terpilene",
     "alpha-Terpinen",
     "a-terpinene",
@@ -632,11 +634,11 @@
    "odor": "citrus, terpenic",
    "odorEn": null,
    "synonyms": [
+    "Gamma-Terpinene",
     "Crithmene",
     "Moslene",
     "gamma-Terpinen",
     "g-Terpinene",
-    "gamma-Terpinene (natural)",
     "Chrithmene",
     "tau-terpinene",
     "Alpha terpinene",
@@ -869,6 +871,7 @@
    "odor": "woody, herbal",
    "odorEn": null,
    "synonyms": [
+    "alpha-Thujene",
     "Origanene",
     "3-Thujene",
     "thujiene",
@@ -927,7 +930,7 @@
     "Linanool",
     "Linolool",
     "Phantol",
-    "Linalool (Standard)"
+    "Caswell No. 526A"
    ],
    "origin": "seed"
   },
@@ -977,7 +980,7 @@
     "t-geraniol",
     "2E-geraniol",
     "Citrol",
-    "Geraniol (Standard)"
+    "racemic Geraniol"
    ],
    "origin": "seed"
   },
@@ -1021,13 +1024,11 @@
     "(Z)-Geraniol",
     "(Z)-Nerol",
     "Nerol 900",
-    "Nerol (natural)",
-    "Geraniol (natural)",
     "Vernol",
-    "Nerol (Standard)",
     "Nerol, analytical standard",
     "37-dimethyl-2Z6-octadien-1-ol",
-    "Nerol 1000 |Ig/mL in Isopropanol"
+    "Nerol 1000 |Ig/mL in Isopropanol",
+    "NZZ"
    ],
    "origin": "seed"
   },
@@ -1070,12 +1071,12 @@
     "Dihydrogeraniol",
     "beta-Citronellol",
     "DL-Citronellol",
-    "Citronellol (Standard)",
     "b-citronellol",
     "Insect Repellent",
-    "Citronellol (natural)",
     "nardus",
-    "mite attractant"
+    "mite attractant",
+    "rac-Citronellol",
+    "Levo-citronellol"
    ],
    "origin": "seed"
   },
@@ -1114,6 +1115,7 @@
    "odor": "lilac, pine",
    "odorEn": "Floral, lilac",
    "synonyms": [
+    "Alpha-Terpineol",
     "p-Menth-1-en-8-ol",
     "1-p-Menthen-8-ol",
     "Terpineol 350",
@@ -1124,8 +1126,7 @@
     "dl-alpha-Terpineol",
     "a-Terpineol",
     "1-alpha-terpineol",
-    "Terpineol, mixture of isomers",
-    "alpha-Terpinol"
+    "Terpineol, mixture of isomers"
    ],
    "origin": "seed"
   },
@@ -1489,14 +1490,14 @@
     "Epoxylinalool",
     "Linolool oxide",
     "Linalool oxide B",
-    "cis-linalool oxide (furanoid)",
-    "linalool oxide (furanoid)",
     "linaloloxide",
-    "(Z)-Linalool oxide (furanoid)",
     "Furan linalool oxide",
     "Linalool oxide, cis",
     "cis-Linalol furanoxide",
-    "cis-Linalool furan oxide"
+    "cis-Linalool furan oxide",
+    "cis-Linalool oxide furan",
+    "(Z)-Linalool furanoxide",
+    "cis-Furanic linalool oxid"
    ],
    "origin": "seed"
   },
@@ -1531,6 +1532,7 @@
    "odor": "herbal, minty",
    "odorEn": null,
    "synonyms": [
+    "(+)-trans-4-Thujanol",
     "4-Thujanol",
     "(E)-Sabinene hydrate"
    ],
@@ -1659,6 +1661,7 @@
    "odor": "cut grass",
    "odorEn": "Powerful grassy-green odor; Strong odor resembling that of isoamyl alcohol, approaching the odor of green leaves when highly dilute",
    "synonyms": [
+    "3-Hexenol",
     "cis-3-Hexen-1-ol",
     "(Z)-Hex-3-en-1-ol",
     "Leaf alcohol",
@@ -1667,7 +1670,6 @@
     "Z-3-Hexenol",
     "(3Z)-hex-3-en-1-ol",
     "beta-gamma-Hexenol",
-    "cis-3-Hexenol (natural)",
     "(3Z)-3-Hexen-1-ol",
     "cis-Hex-3-en-1-ol",
     "(Z)-hex-3-en-ol"
@@ -1903,6 +1905,7 @@
    "odor": "floral, sweet",
    "odorEn": null,
    "synonyms": [
+    "4-Methoxybenzyl alcohol",
     "(4-Methoxyphenyl)methanol",
     "Anise alcohol",
     "p-Methoxybenzyl alcohol",
@@ -1913,8 +1916,7 @@
     "p-Anisol alcohol",
     "Anis alcohol",
     "4-Anisylalcohol",
-    "A1BDD",
-    "(4-methoxyphenyl)methan-1-ol"
+    "A1BDD"
    ],
    "origin": "seed"
   },
@@ -1992,6 +1994,7 @@
    "odor": "lemon, fresh",
    "odorEn": "Strong lemon odor",
    "synonyms": [
+    "Citral",
     "geranialdehyde",
     "Lemsyn GB",
     "alpha-Citral",
@@ -2002,8 +2005,7 @@
     "geranal",
     "Genanial",
     "(E)-Geranial",
-    "(E)-Neral",
-    "a-Citral"
+    "(E)-Neral"
    ],
    "origin": "seed"
   },
@@ -2046,8 +2048,7 @@
     "beta-Citral",
     "(Z)-Neral",
     "Neroli aldehyde",
-    "(Z)-alpha-citral",
-    "cis-Citral (Neral)"
+    "(Z)-alpha-citral"
    ],
    "origin": "seed"
   },
@@ -2090,8 +2091,6 @@
     "Rhodinal",
     "Citronellal Extra Rhodinal",
     "D-Rhodinal",
-    "Rhodinal (VAN)",
-    "Citronella (natural)",
     "citric",
     "natural isolate",
     "racemic citronellal",
@@ -2294,6 +2293,7 @@
    "odor": "tobacco, green",
    "odorEn": null,
    "synonyms": [
+    "beta-Cyclocitral",
     "b-cyclocitral",
     "ss-Cyclocitral",
     "beta-cyclocitrol",
@@ -2532,6 +2532,7 @@
    "odor": "orange, juicy",
    "odorEn": null,
    "synonyms": [
+    "alpha-Sinensal",
     "alpha-Sinensal (Technical Grade)",
     "sinensal (alpha-)"
    ],
@@ -2857,6 +2858,7 @@
    "odor": "hawthorn, sweet",
    "odorEn": "Hawthorn odor; Odor resembles that of coumarin",
    "synonyms": [
+    "4-Methoxybenzaldehyde",
     "p-Methoxybenzaldehyde",
     "4-Anisaldehyde",
     "Crategine",
@@ -2867,7 +2869,6 @@
     "Anisic aldehyde",
     "Aubepine",
     "anisal",
-    "Anisaldehyde (para)",
     "para-methoxybenzaldehyde"
    ],
    "origin": "seed"
@@ -3000,17 +3001,17 @@
    "odorEn": "Heliotrope odor; Floral odor",
    "synonyms": [
     "Heliotropin",
+    "Piperonal",
     "Heliotropine",
     "Piperonyl aldehyde",
     "Piperonaldehyde",
     "Geliotropin",
     "heliotrin",
-    "Heliotropin (natural)",
     "Piperonale",
     "Piperanal",
     "Blue P",
-    "Heliotropine (piperonal)",
-    "4-methylenedioxybenzaldehyde"
+    "4-methylenedioxybenzaldehyde",
+    "Piperonal DRUG PRECURSOR"
    ],
    "origin": "seed"
   },
@@ -3182,12 +3183,11 @@
    "odor": "spearmint",
    "odorEn": null,
    "synonyms": [
+    "(-)-Carvone",
     "l-Carvone",
     "Levo-carvone",
     "(4R)-Carvone",
-    "l-Carvone (natural)",
     "07V",
-    "(-)-Carvone (Standard)",
     "(-)-Carvone, analytical standard"
    ],
    "origin": "seed"
@@ -3224,11 +3224,10 @@
    "odorEn": null,
    "synonyms": [
     "d-Carvone",
-    "d-Carvone (natural)",
+    "(+)-Carvone",
     "(4S)-carvone",
     "Talent",
     "d-carvon",
-    "(S)-(+)-Carvone (Standard)",
     "(+)-Carvone, analytical standard"
    ],
    "origin": "seed"
@@ -3273,11 +3272,11 @@
     "l-MENTHONE",
     "DL-Menthone",
     "L-Menthan-3-one",
-    "Menthone (natural)",
     "p-Menthan-3-one racemic",
     "menthon",
     "1-menthone",
-    "Menthan-3-one, trans"
+    "Menthan-3-one, trans",
+    "(1S)-trans-p-menthan-3-one"
    ],
    "origin": "seed"
   },
@@ -3398,8 +3397,6 @@
     "(R)-p-Menth-4(8)-en-3-one",
     "1beta-p-menth-4(8)-en-3-one",
     "(+)-4(8)-Para-menthen-3-one",
-    "Pulegone (natural)",
-    "Pulegone (Standard)",
     "1R)-(+)-Pulegone",
     "(+)-Pulegone, analytical standard"
    ],
@@ -3487,7 +3484,6 @@
     "DL-Piperitone",
     "laevo-piperitone",
     "dextro-piperitone",
-    "Piperitone (Standard)",
     "2-Cyclohexen-1-one, dimer",
     "Piperitone, analytical standard"
    ],
@@ -3527,7 +3523,6 @@
     "(R)-(+)-Verbenone",
     "d-Verbenone",
     "Verbinone",
-    "Verbenone (VAN)",
     "(1r)-(+)-pin-2-en-4-one",
     "EPA Pesticide Chemical Code 128986"
    ],
@@ -3574,12 +3569,12 @@
     "3-Oxooctane",
     "Ethyl n-amyl ketone",
     "Amyl ethyl ketone",
-    "3-Octanone (natural)",
     "EAK",
     "methylheptanone",
     "1-ethyl hexanal",
     "3-octanon",
-    "octane-3-one"
+    "octane-3-one",
+    "octan-6-one"
    ],
    "origin": "seed"
   },
@@ -3626,8 +3621,8 @@
     "6-Methyl-hepten-2-one",
     "2-Methyl-6-oxo-2-heptene",
     "6-methylheptan-5-ene-2-one",
-    "6-Methyl-5-hepten-2-one (natural)",
-    "filbert heptenone B"
+    "filbert heptenone B",
+    "2-Methyl-6-heptenone"
    ],
    "origin": "seed"
   },
@@ -3712,6 +3707,7 @@
    "odor": "violet, woody",
    "odorEn": "Warm woody, dry, and fruity odor; Odor reminiscent of cedar wood; violet-like upon dilution",
    "synonyms": [
+    "I2-Ionone",
     "(E)-beta-Ionone",
     "b-ionone",
     "beta-E-Ionone",
@@ -3721,7 +3717,6 @@
     "beta ionone",
     "beta-Ionon",
     "(E)-beta-Ionoine",
-    "beta-Ionone (trans)",
     "9-apo-beta-caroten-9-one",
     "beta-Ionone, analytical standard"
    ],
@@ -3761,6 +3756,7 @@
    "odorEn": "It has a warm, woody, floral odor with balsamic and sweet tones and is strongly reminiscent of violet flowers; Sweet-floral odor, reminiscent of violets",
    "synonyms": [
     "Irisone",
+    "Alpha-Ionone",
     "(E)-alpha-Ionone",
     "alpha-(E)-ionone",
     "alpha-Ionon",
@@ -3768,10 +3764,9 @@
     "I+--Ionone",
     "a-ionone",
     "Iraldeine",
-    "alpha-Ionone (natural)",
     "alpha-Jonone",
-    "beta-lonone (natural)",
-    "(+-)-trans-alpha-Ionone"
+    "(+-)-trans-alpha-Ionone",
+    "(E)-alpha-lonone"
    ],
    "origin": "seed"
   },
@@ -3806,6 +3801,7 @@
    "odor": "woody, violet",
    "odorEn": null,
    "synonyms": [
+    "DIHYDRO-beta-IONONE",
     "Dihydro-b-ionone",
     "Dihydro-|A-ionone",
     "Latia oxyluciferin",
@@ -3847,6 +3843,7 @@
    "odor": "orris, violet",
    "odorEn": null,
    "synonyms": [
+    "alpha-Irone",
     "Methyl alpha-ionone",
     "6-Methyl-alpha-ionone",
     "6-Methylionone",
@@ -3892,12 +3889,11 @@
    "odor": "rose, plum",
    "odorEn": null,
    "synonyms": [
+    "beta-Damascenone",
     "(E)-beta-damascenone",
     "beta-(E)-damascenone",
-    "Damascenone (natural)",
     "Damascenon",
     "damascenone (e-beta)",
-    "Damascenone (Standard)",
     "Damascenone, analytical standard"
    ],
    "origin": "seed"
@@ -3969,6 +3965,7 @@
    "odor": "jasmine, celery",
    "odorEn": "Odor of jasmine; Woody, herbal and floral, with a citrus nuance",
    "synonyms": [
+    "Jasmone",
     "(Z)-Jasmone",
     "cis-Jasmon",
     "Jasmone (6CI)",
@@ -4010,7 +4007,6 @@
    "synonyms": [
     "Nootkanone",
     "nootkaton",
-    "Nootkatone (natural)",
     "Nootkatone Impurity 1",
     "(+)-Nootkatone, crystalline"
    ],
@@ -4097,6 +4093,7 @@
    "odor": "raspberry",
    "odorEn": "Sweet fruity, warm odor resembling raspberry preserve",
    "synonyms": [
+    "4-(4'-Hydroxyphenyl)-2-butanone",
     "4-(4-Hydroxyphenyl)butan-2-one",
     "Frambinone",
     "Oxyphenalon",
@@ -4107,8 +4104,7 @@
     "4-(3-Oxobutyl)phenol",
     "1-(p-Hydroxyphenyl)-3-butanone",
     "1-(4-Hydroxyphenyl)-3-butanone",
-    "p-hydroxyphenylbutan-2-one",
-    "Rheosmin"
+    "p-hydroxyphenylbutan-2-one"
    ],
    "origin": "seed"
   },
@@ -4143,9 +4139,9 @@
    "odor": "turmeric, woody",
    "odorEn": null,
    "synonyms": [
+    "(+)-Turmerone",
     "(+)-(S)-ar-turmerone",
     "aromatic-turmerone",
-    "ar-Turmerone (Standard)",
     "2-methyl-6-p-tolylhept-2-en-4-one"
    ],
    "origin": "seed"
@@ -4181,6 +4177,7 @@
    "odor": "vetiver, earthy",
    "odorEn": null,
    "synonyms": [
+    "alpha-Vetivone",
     "Isonootkatone",
     "a-Vetivone"
    ],
@@ -4217,6 +4214,7 @@
    "odor": "cedar, sweet",
    "odorEn": null,
    "synonyms": [
+    "(+)-I+--Atlantone",
     "alpha-Atlantone",
     "(E)-alpha-Atlantone"
    ],
@@ -4298,10 +4296,10 @@
     "Licareol acetate",
     "Acetic acid linalool ester",
     "Ex bois de rose",
-    "Ex bois de rose (synthetic)",
     "Phanteine",
     "Dehydrolinalool, acetate",
-    "Aetic Acid Linalool Ester"
+    "Aetic Acid Linalool Ester",
+    "Acetic acid-linalyl ester"
    ],
    "origin": "seed"
   },
@@ -4350,8 +4348,8 @@
     "(2E)-geranyl acetate",
     "b-Geranyl Acetate",
     "geranylacetat",
-    "Geranyl acetate (natural)",
-    "acetyl geraniol"
+    "acetyl geraniol",
+    "Geranyl acetate, FCC"
    ],
    "origin": "seed"
   },
@@ -4389,8 +4387,6 @@
     "Nerol acetate",
     "cis-Geranyl acetate",
     "Neryl ethanoate",
-    "Neryl acetate (natural)",
-    "Neryl acetate (Standard)",
     "Neryl acetate, analytical standard"
    ],
    "origin": "seed"
@@ -4474,10 +4470,10 @@
    "odor": "herbal, lavender",
    "odorEn": null,
    "synonyms": [
+    "alpha-Terpinyl acetate",
     "alpha-Terpineol acetate",
     "p-Menth-1-en-8-yl acetate",
     "p-Menth-1-en-8-ol, acetate",
-    "Terpinyl acetate (natural)",
     "terpinenyl acetate",
     "a-terpinyl acetate",
     "-erpinyl acetate",
@@ -4563,12 +4559,10 @@
     "beta-Citronellyl acetate",
     "beta-citronellol acetate",
     "Citronellyl ethanoate",
-    "Ctronellyl acetate (natural)",
     "Cephreine",
     "Cephrol acetate",
     "CitronellyI acetate",
-    "DL-Citronellol acetate",
-    "Citronellyl acetate (Standard)"
+    "DL-Citronellol acetate"
    ],
    "origin": "seed"
   },
@@ -4646,7 +4640,6 @@
     "Geranyl methanoate",
     "Formic acid, geraniol ester",
     "(E)-geranyl formate",
-    "Geranyl formate (natural)",
     "Geranylformiat"
    ],
    "origin": "seed"
@@ -4742,7 +4735,7 @@
     "Plastolin I",
     "Benzyl ester of acetic acid",
     "Caswell No. 081EA",
-    "Benzyl acetate (natural)"
+    "J0Z"
    ],
    "origin": "seed"
   },
@@ -4834,7 +4827,6 @@
     "Salicylsaeurebenzylester",
     "Salicyclic acid, benzyl ester",
     "Benzyle salicylate",
-    "Benzyl salicylate (Standard)",
     "2-Hydroxybenzoic Acid Benzyl Ester"
    ],
    "origin": "seed"
@@ -4926,7 +4918,6 @@
     "Essence of niobe",
     "Methylester kyseliny benzoove",
     "Oxidate le",
-    "Methyl benzoate (natural)",
     "Methyl ester of benzoic acid",
     "methyloxycarbonylbenzene"
    ],
@@ -5022,7 +5013,7 @@
     "N-Methyl methyl anthranilate",
     "Methyl m-methylanthranilate",
     "Methyl-2-(N-methylamino)benzoate",
-    "Dimethyl anthranilate (natural)"
+    "Me N-methylanthranilate"
    ],
    "origin": "seed"
   },
@@ -5250,9 +5241,9 @@
     "Benzylester kyseliny skoricove",
     "benzyl (2Z)-3-phenylprop-2-enoate",
     "benzyl (2E)-3-phenylprop-2-enoate",
-    "Benzyl cinnamate (Standard)",
     "Benzyl 3-phenyl-2-propenoate",
-    "Benzylcinnamoate"
+    "Benzylcinnamoate",
+    "Phenylmethyl 3-phenyl-2-propenoate"
    ],
    "origin": "seed"
   },
@@ -5296,9 +5287,9 @@
     "Phenethyl alcohol, acetate",
     "beta-Phenethyl acetate",
     "Acetic acid beta-phenylethyl ester",
-    "Phenethyl acetate (natural)",
     "Acetic Acid 2-Phenylethyl Ester",
-    "phenythyl acetate"
+    "phenythyl acetate",
+    "2-phenylethyl ester"
    ],
    "origin": "seed"
   },
@@ -5347,8 +5338,8 @@
     "Acetic acid n-hexyl ester",
     "Hexyl ester of acetic acid",
     "l-Hexyl acetate",
-    "Hexyl acetate (natural)",
-    "Acetate C6"
+    "Acetate C6",
+    "acidic acid hexyl ester"
    ],
    "origin": "seed"
   },
@@ -5489,8 +5480,8 @@
     "Eugenol EP Impurity I",
     "acetate phenol",
     "acetyl eugenol fg 25",
-    "Eugenol acetate (Standard)",
-    "Acetic acid 4-allyl-2-methoxy"
+    "Acetic acid 4-allyl-2-methoxy",
+    "Acetyleugenol, analytical standard"
    ],
    "origin": "seed"
   },
@@ -5656,6 +5647,7 @@
    "odor": "peach",
    "odorEn": null,
    "synonyms": [
+    "Gamma-Decalactone",
     "gamma-Decanolactone",
     "5-hexyloxolan-2-one",
     "Decan-4-olide",
@@ -5666,8 +5658,7 @@
     "5-Hexyltetrahydro-2-furanone",
     "gamma-Hexyl-gamma-butyrolactone",
     "4-Hexyl-gamma-butyrolactone",
-    "gamma-N-Hexyl-gamma-butyrolactone",
-    "gamma-lactone decanoic acid"
+    "gamma-N-Hexyl-gamma-butyrolactone"
    ],
    "origin": "seed"
   },
@@ -5702,13 +5693,13 @@
    "odor": "creamy, coconut",
    "odorEn": null,
    "synonyms": [
+    "delta-Decalactone",
     "6-Pentyltetrahydro-2H-pyran-2-one",
     "5-Decanolide",
     "6-pentyloxan-2-one",
     "delta-Decanolactone",
     "5-Decalactone",
     "Decan-5-olide",
-    "delta-Decalactone (natural)",
     "Tetrahydro-6-pentyl-2H-pyran-2-one",
     "delta-Pentyl-delta-valerolactone",
     "6-pentylvalerolactone",
@@ -5748,6 +5739,7 @@
    "odor": "peach, creamy",
    "odorEn": null,
    "synonyms": [
+    "Gamma-undecalactone",
     "Undecan-4-olide",
     "5-heptyloxolan-2-one",
     "Persicol",
@@ -5758,8 +5750,7 @@
     "Aldehyde C-14 peach",
     "4-Hydroxyundecanoic acid lactone",
     "gamma-Undecanolide",
-    "gamma-Undekalakton",
-    "gamma-Heptyl-gamma-butyrolactone"
+    "gamma-Undekalakton"
    ],
    "origin": "seed"
   },
@@ -5796,6 +5787,7 @@
    "synonyms": [
     "Prunolide",
     "Aldehyde C-18",
+    "Gamma-Nonalactone",
     "gamma-Nonanolactone",
     "gamma-Nonanolide",
     "Cocos aldehyde",
@@ -5804,8 +5796,7 @@
     "gamma-Nonylactone",
     "apricolin",
     "4-Pentyl-butanolide",
-    "4-Nonalactone",
-    "gamma-Nonyllactone"
+    "4-Nonalactone"
    ],
    "origin": "seed"
   },
@@ -5891,9 +5882,9 @@
     "(Z)-Oxacycloheptadec-8-en-2-one",
     "(8Z)-1-oxacycloheptadec-8-en-2-one",
     "Musk natural",
-    "Musk ambrette (natural)",
     "Oxacycloheptadec-8-en-2-one",
     "Hexadec-7-en-16-olide",
+    "Musk ambrette, natural",
     "(Z)-7-Hexadecen-16-olide",
     "(8Z)-Oxacycloheptadec-8-en-2-one",
     "7-Hexadecen-16-olid"
@@ -5933,6 +5924,7 @@
    "synonyms": [
     "Exaltolide",
     "Thibetolide",
+    "Pentadecalactone",
     "Oxacyclohexadecan-2-one",
     "Cyclopentadecanolide",
     "Pentalide",
@@ -5941,8 +5933,7 @@
     "omega-Pentadecalactone",
     "Muskalactone",
     "15-Pentadecanolide",
-    "15-Pentadecanolactone",
-    "2-Pentadecalone"
+    "15-Pentadecanolactone"
    ],
    "origin": "seed"
   },
@@ -6308,6 +6299,7 @@
    "odor": "ylang, sweet",
    "odorEn": "STRONG FLORAL ODOR; PUNGENT ODOR SUGGESTIVE OF YLANG-YLANG",
    "synonyms": [
+    "4-Methylanisole",
     "4-Methoxytoluene",
     "p-Cresol methyl ether",
     "p-methyl anisole",
@@ -6318,8 +6310,7 @@
     "Methyl p-cresyl ether",
     "4-Methyl-1-methoxybenzene",
     "4-Methylphenol methyl ether",
-    "Methyl-para-cresol",
-    "para-Methoxytoluene"
+    "Methyl-para-cresol"
    ],
    "origin": "seed"
   },
@@ -6356,6 +6347,7 @@
    "odor": "anise",
    "odorEn": "ANISE OIL ODOR",
    "synonyms": [
+    "Anethole",
     "Anise camphor",
     "Monasirup",
     "Anethol",
@@ -6366,8 +6358,7 @@
     "Anethole, trans",
     "p-1-Propenylanisole",
     "1-Methoxy-4-propenylbenzene",
-    "4-Methoxypropenylbenzene",
-    "p-Propenylphenyl methyl ether"
+    "4-Methoxypropenylbenzene"
    ],
    "origin": "seed"
   },
@@ -6503,7 +6494,6 @@
     "Myristicine",
     "Myristicin (6CI)",
     "Myristicin_major",
-    "Myristicin (Standard)",
     "Myristicin, analytical standard"
    ],
    "origin": "seed"
@@ -6622,6 +6612,7 @@
    "odor": "calamus, spicy",
    "odorEn": null,
    "synonyms": [
+    "Beta-Asarone",
     "(Z)-Asarone",
     "cis-Isoelemicin",
     "cis-Asarone",
@@ -6629,8 +6620,7 @@
     "cis-beta-Asarone",
     "beta-asaron",
     "Cis-Asaron",
-    "I(2)-Asarone",
-    "Beta-asarone (Standard)"
+    "I(2)-Asarone"
    ],
    "origin": "seed"
   },
@@ -6841,7 +6831,6 @@
     "(-)-ambrox",
     "Ambroxane",
     "A1EI5",
-    "Ambroxide (Standard)",
     "(-)-Ambroxide, analytical standard"
    ],
    "origin": "seed"
@@ -6954,11 +6943,11 @@
     "1-Benzazole",
     "Ketole",
     "Caswell No. 498B",
-    "Indole (natural)",
     "1-Benzo(b)pyrrole",
     "benzazole",
     "EPA Pesticide Chemical Code 025000",
-    "IND"
+    "IND",
+    "indolyl"
    ],
    "origin": "seed"
   },
@@ -7004,7 +6993,6 @@
     "3-methyl-indole",
     "3-MI",
     "b-Methylindole",
-    "Skatole (Standard)",
     "3-methyl-1H-indol",
     "Cc1c(nH)c2c1cccc2"
    ],
@@ -7316,8 +7304,8 @@
     "Benzylcarboxylic acid",
     "Benzylformic acid",
     "Kyselina fenyloctova",
-    "Phenylacetic acid (natural)",
-    "Benzeneacetate"
+    "Benzeneacetate",
+    "Phenylacetic Acid-d7"
    ],
    "origin": "seed"
   },
@@ -7531,7 +7519,9 @@
    "carbons": 15,
    "odor": "woody, spicy",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "alpha-Copaene"
+   ],
    "origin": "seed"
   },
   {
@@ -7565,6 +7555,7 @@
    "odor": "woody, herbal",
    "odorEn": null,
    "synonyms": [
+    "Beta-Elemene",
     "beta-Elemen",
     "Levo-beta-elemene",
     "(-)-b-Elemene",
@@ -7572,7 +7563,6 @@
     "ss-Elemene",
     "Levo-b-elemene",
     "(E)-beta-elemene",
-    "|A-Elemene (Standard)",
     "Elemene - mixture of isomers"
    ],
    "origin": "seed"
@@ -7608,6 +7598,7 @@
    "odor": "woody, herbal",
    "odorEn": null,
    "synonyms": [
+    "delta-Cadinene",
     "D-Cadinene",
     "D-Amorphene",
     "delta-cardinene",
@@ -7647,6 +7638,7 @@
    "odor": "woody, earthy",
    "odorEn": null,
    "synonyms": [
+    "alpha-Bulnesene",
     "delta-Guaiene",
     "alfa-Bulnesene"
    ],
@@ -7683,6 +7675,7 @@
    "odor": "woody, balsamic",
    "odorEn": null,
    "synonyms": [
+    "alpha-Guaiene",
     "alpha-quaiene"
    ],
    "origin": "seed"
@@ -7750,7 +7743,9 @@
    "carbons": 15,
    "odor": "woody",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "alpha-Patchoulene"
+   ],
    "origin": "seed"
   },
   {
@@ -7785,9 +7780,7 @@
    "odorEn": null,
    "synonyms": [
     "Valencen",
-    "Valencene (Standard)",
     "Valencene (Technical Grade)",
-    "Valencene (natural)",
     "valence",
     "valencene(+)-val",
     "(A+/-)-valencene",
@@ -7944,6 +7937,7 @@
    "odor": "cedar, woody",
    "odorEn": null,
    "synonyms": [
+    "beta-Himachalene",
     "(R)-beta-himachalene",
     "(+)-|A-Himachalene"
    ],
@@ -7980,6 +7974,7 @@
    "odor": "herbal, spicy",
    "odorEn": null,
    "synonyms": [
+    "Curcumene",
     "alpha-Curcumene",
     "2-Methyl-6-p-tolyl-2-heptene",
     "aryl-curcumene",
@@ -8060,6 +8055,7 @@
    "odor": "ginger, woody",
    "odorEn": null,
    "synonyms": [
+    "beta-Sesquiphellandrene",
     "(-)-b-Sesquiphellandrene"
    ],
    "origin": "seed"
@@ -8095,6 +8091,7 @@
    "odor": "balsamic, spicy",
    "odorEn": null,
    "synonyms": [
+    "Beta-Bisabolene",
     "(S)-beta-bisabolene",
     "l-beta-Bisabolene",
     "b-bisabolene",
@@ -8133,6 +8130,7 @@
    "odor": "green, woody",
    "odorEn": null,
    "synonyms": [
+    "beta-Farnesene",
     "e-beta-farnesene",
     "(E)-|A-Farnesene",
     "beta-trans-farnesene",
@@ -8141,8 +8139,7 @@
     "b-trans-Farnesene",
     "(e)-b-Farnesene",
     "I(2)-farnesene",
-    "A1ETG",
-    "(E)-|A-Farnesene (Standard)"
+    "A1ETG"
    ],
    "origin": "seed"
   },
@@ -8177,11 +8174,11 @@
    "odor": "green, apple",
    "odorEn": null,
    "synonyms": [
+    "Farnesene",
     "alpha-Farnesene",
     "(E,E)-alpha-farnesene",
     "a-farnesene",
     "(E)-alpha-Farnesene",
-    "alpha-Farnesene (natural)",
     "Sesquicitronellene",
     "I+/--farnesene",
     "|  cent-Farnesene",
@@ -8262,8 +8259,7 @@
     "Kuromatsuen",
     "Longifolen",
     "d-Longifolene",
-    "Longifolene Impurity1",
-    "(+)-Longifolene (Standard)"
+    "Longifolene Impurity1"
    ],
    "origin": "seed"
   },
@@ -8298,6 +8294,7 @@
    "odor": "herbal",
    "odorEn": null,
    "synonyms": [
+    "Beta-Selinene",
     "beta-Eudesmene",
     "|A-Selinene"
    ],
@@ -8376,6 +8373,7 @@
    "odor": "earthy, damp wood",
    "odorEn": null,
    "synonyms": [
+    "Patchouli alcohol",
     "patchouli camphor",
     "Patchoulic alcohol",
     "patchoulanol",
@@ -8386,8 +8384,7 @@
     "patcholol",
     "patschuli",
     "white",
-    "Healingwood",
-    "Patchoulol Crist"
+    "Healingwood"
    ],
    "origin": "seed"
   },
@@ -8427,13 +8424,12 @@
     "a-Cedrol",
     "8betaH-Cedran-8-ol",
     "(8R)-cedran-8-ol",
-    "Cedrol (natural)",
     "Cedorol",
     "|  cent-Cedrol",
-    "Cedrol (Standard)",
     "Cedrol, redistilled",
     "8alpha-Cedran-8-ol",
-    "(+)-Cedrol,|A-Cedrol"
+    "(+)-Cedrol,|A-Cedrol",
+    "(+)-Cedrol, analytical standard"
    ],
    "origin": "seed"
   },
@@ -8468,6 +8464,7 @@
    "odor": "sandalwood, milky",
    "odorEn": "SWEET, SANDALWOOD ODOR",
    "synonyms": [
+    "Alpha-Santalol",
     "(Z)-alpha-Santalol",
     "Santalol A",
     "cis-alpha-Santalol",
@@ -8509,6 +8506,7 @@
    "odor": "sandalwood, creamy",
    "odorEn": null,
    "synonyms": [
+    "Beta-Santalol",
     "beta-Santalenol",
     "cis-beta-santalol",
     "cis-b-Santalol",
@@ -8594,6 +8592,7 @@
    "odor": "floral, woody",
    "odorEn": null,
    "synonyms": [
+    "Nerolidol",
     "Stirrup",
     "nerodilol",
     "(Z)-Nerolidol",
@@ -8602,7 +8601,6 @@
     "FCI 119b",
     "Methylvinylhomogeranyl carbinol",
     "(6E)-nerolidol",
-    "Nerolidol (natural)",
     "Nerolidol (E)",
     "EPA Pesticide Chemical Code 128910",
     "n-trans-nerolidol"
@@ -8940,6 +8938,7 @@
    "odor": "woody",
    "odorEn": null,
    "synonyms": [
+    "Beta-Eudesmol",
     "beta-Selinenol",
     "Eudesm-4(14)-en-11-ol",
     "b-eudesmol"
@@ -8977,6 +8976,7 @@
    "odor": "woody",
    "odorEn": null,
    "synonyms": [
+    "Alpha-Cadinol",
     "l-alpha-Cadinol",
     "a-Cadinol",
     "Pilgerol",
@@ -9089,8 +9089,6 @@
    "odorEn": null,
    "synonyms": [
     "Sclareol, analytical standard",
-    "Sclareol (natural)",
-    "Sclareol (Standard)",
     "Sclareol Impurity 4",
     "Sclareol 1000 microg/mL in Acetone",
     "UK6"
@@ -9128,8 +9126,7 @@
    "odor": "faint, balsamic",
    "odorEn": null,
    "synonyms": [
-    "Incensol",
-    "Incensole (Standard)"
+    "Incensol"
    ],
    "origin": "seed"
   },
@@ -9164,8 +9161,7 @@
    "odor": "faint, balsamic",
    "odorEn": null,
    "synonyms": [
-    "Incensol acetate",
-    "Incensole Acetate (Standard)"
+    "Incensol acetate"
    ],
    "origin": "seed"
   },
@@ -9365,7 +9361,6 @@
     "n-Heneicosane",
     "Henicosane",
     "henicosan",
-    "Heneicosane (Standard)",
     "Heneicosane, analytical standard"
    ],
    "origin": "seed"
@@ -9458,7 +9453,7 @@
     "Geralen",
     "Pentaderm",
     "5-methoxypsoralene",
-    "Bergaptene (DCF)"
+    "alpha-bergapten"
    ],
    "origin": "seed"
   },
@@ -9493,6 +9488,7 @@
    "odor": "floral, sweet, spicy",
    "odorEn": null,
    "synonyms": [
+    "Benzenepropanoic acid",
     "3-phenylpropionic acid",
     "Dihydrocinnamic acid",
     "Benzenepropionic acid",
@@ -9503,8 +9499,7 @@
     "Phenylpropanoate",
     "Dihydrocinnamate",
     "Benzenepropionate",
-    "3-Phenylpropionsaeure",
-    "3-phenylproionic acid"
+    "3-Phenylpropionsaeure"
    ],
    "origin": "ifra"
   },
@@ -9602,7 +9597,7 @@
     "DL-Acetoin",
     "2-Acetoin",
     "3H-2B butanone",
-    "Acetoin (natural)"
+    "3-hydroxyl-2-butanone"
    ],
    "origin": "ifra"
   },
@@ -9641,6 +9636,7 @@
    "odor": "gourmand, fruity, chocolate",
    "odorEn": "Characteristic, pungent, aldehyde odor",
    "synonyms": [
+    "Butanal",
     "n-butyraldehyde",
     "Butyral",
     "1-butanal",
@@ -9651,8 +9647,7 @@
     "n-Butanal",
     "Butylaldehyde",
     "Butalyde",
-    "Butyraldehyd",
-    "Aldeide butirrica"
+    "Butyraldehyd"
    ],
    "origin": "ifra"
   },
@@ -9737,6 +9732,7 @@
    "odor": "spicy, sweet, aromatic",
    "odorEn": null,
    "synonyms": [
+    "Cuminol",
     "Cumic alcohol",
     "cuminyl alcohol",
     "(4-Isopropylphenyl)methanol",
@@ -9747,8 +9743,7 @@
     "p-cumic alcohol",
     "4-(1-Methylethyl)benzenemethanol",
     "(4-propan-2-ylphenyl)methanol",
-    "para-cymen-7-ol",
-    "p-cymene-7-ol"
+    "para-cymen-7-ol"
    ],
    "origin": "ifra"
   },
@@ -9885,6 +9880,7 @@
    "odor": "fruity, earthy, nutty",
    "odorEn": "SUFFOCATING, FRUITY; CHARACTERISTIC ODOR SIMILAR TO ACETALDEHYDE",
    "synonyms": [
+    "Propanal",
     "Propaldehyde",
     "Propanaldehyde",
     "Propylaldehyde",
@@ -9895,8 +9891,7 @@
     "1-Propanal",
     "Propylic aldehyde",
     "n-Propionaldehyde",
-    "Aldehyde propionique",
-    "1-Propanone"
+    "Aldehyde propionique"
    ],
    "origin": "ifra"
   },
@@ -10110,6 +10105,7 @@
    "odor": "gourmand, sweet, fruity",
    "odorEn": null,
    "synonyms": [
+    "beta-Maltose",
     "beta-D-Maltose",
     "Maltose beta-anomer",
     "beta-D-Cellobiose",
@@ -10120,8 +10116,7 @@
     "Advantose 100",
     "Maltroise",
     "1wdr",
-    "Glca1-4Glcb",
-    "alpha-D-Glcp-(1->4)-beta-D-Glcp"
+    "Glca1-4Glcb"
    ],
    "origin": "ifra"
   },
@@ -10163,7 +10158,6 @@
     "Fraeseol",
     "Phenylmethylglycidic ester",
     "Fraise pure",
-    "Aldehyde C16 (misleading)",
     "ethyl-3-methyl-3-phenylglycidat"
    ],
    "origin": "ifra"
@@ -10253,6 +10247,7 @@
    "odor": "fruity, pear, light",
    "odorEn": "Acetone-like odor; Sweet, pleasant, pungent",
    "synonyms": [
+    "Methyl Ethyl Ketone",
     "Butan-2-one",
     "Butanone",
     "Ethyl methyl ketone",
@@ -10263,8 +10258,7 @@
     "Aethylmethylketon",
     "Butanone 2",
     "Ethyl methyl cetone",
-    "Metiletilchetone",
-    "Metyloetyloketon"
+    "Metiletilchetone"
    ],
    "origin": "ifra"
   },
@@ -10475,6 +10469,7 @@
    "odor": "floral, grape, neroli",
    "odorEn": "Fruity odor; FAINT ORANGE-FLOWERS ODOR",
    "synonyms": [
+    "Ethyl 2-aminobenzoate",
     "Ethyl o-aminobenzoate",
     "Anthranilic acid, ethyl ester",
     "2-Aminobenzoic acid ethyl ester",
@@ -10922,14 +10917,14 @@
     "Methyl 2-naphthyl ether",
     "2-Naphthol methyl ether",
     "beta-Naphthyl methyl ether",
-    "Nerolin (old)",
     "beta-Methoxynaphthalene",
     "beta-Naphthol methyl ether",
     "Yara yara",
     "Yura yara",
     "2-Naphthyl methyl ether",
     "2-Methoxynaphthalene-1-D",
-    "2-Methoxynaphthalene-6-D"
+    "2-Methoxynaphthalene-6-D",
+    "Naproxen EP Impurity M"
    ],
    "origin": "ifra"
   },
@@ -10969,13 +10964,13 @@
     "Ethyl 2-naphthyl ether",
     "beta-Naphthyl ethyl ether",
     "Nerolin new",
-    "Bromelia (compound)",
     "Nerolin bromelia",
     "Ethyl beta-naphthyl ether",
     "2-Naphthol ethyl ether",
     "beta-Naphthol ethyl ether",
     "Ethyl beta-naphtholate",
-    "Bromelia"
+    "Bromelia",
+    "2-ethoxynapthalene"
    ],
    "origin": "ifra"
   },
@@ -11065,7 +11060,6 @@
     "Benzoic Acid Ethyl Ester",
     "Benzoyl ethyl ether",
     "Ethylester kyseliny benzoove",
-    "Ethyl benzoate (natural)",
     "CCOC(=O)c1ccccc1"
    ],
    "origin": "ifra"
@@ -11106,7 +11100,6 @@
     "Isopentyl alcohol, benzoate",
     "1-(3-Methyl)butyl benzoate",
     "3-Methyl-1-butyl benzoate",
-    "Isoamyl benzoate (natural)",
     "Benzoic acid isoamyl ester",
     "benzoic acid 3-methylbutyl ester",
     "1-Butanol, benzoate",
@@ -11352,6 +11345,7 @@
    "odor": "acidic, sour, cheesy",
    "odorEn": null,
    "synonyms": [
+    "2-Methylvaleric acid",
     "2-Pentanecarboxylic acid",
     "Methylpropylacetic acid",
     "alpha-Methylvaleric acid",
@@ -11362,8 +11356,7 @@
     "(2S)-2-methylpentanoate",
     "n-C3H7CH(CH3)COOH",
     "racemic 2-methylvaleric acid",
-    "(S)-2-Methylpentenoic acid",
-    "Sodium Valproate EP Impurity L"
+    "(S)-2-Methylpentenoic acid"
    ],
    "origin": "ifra"
   },
@@ -11407,8 +11400,7 @@
     "Isobutyl 2-methylpropanoate",
     "2-Methylpropyl 2-methylpropionate",
     "Isobutyric acid, isobutyl ester",
-    "Isobutylester kyseliny isomaselne",
-    "Isobutyl isobutyrate (natural)"
+    "Isobutylester kyseliny isomaselne"
    ],
    "origin": "ifra"
   },
@@ -11450,7 +11442,6 @@
     "Isobutyric acid, butyl ester",
     "n-Butyl isobutyrate",
     "Isobutyric acid n-butyl ester",
-    "Butyl isobutyrate (natural)",
     "2-methylpropanoic acid butyl ester"
    ],
    "origin": "ifra"
@@ -11486,6 +11477,7 @@
    "odor": "food like, coffee, roasted",
    "odorEn": null,
    "synonyms": [
+    "2-Furanmethanethiol",
     "2-Furylmethanethiol",
     "2-Furylmethyl mercaptan",
     "2-Furfurylmercaptan",
@@ -11496,8 +11488,7 @@
     "(2-Furanyl)methylmercaptan",
     "2-furanmethanthiol",
     "alpha-Furfuryl mercaptan",
-    "2-furylmethane-1-thiol",
-    "Furfuryl mercaptan (natural)"
+    "2-furylmethane-1-thiol"
    ],
    "origin": "ifra"
   },
@@ -11678,6 +11669,7 @@
    "odor": "herbal, woody, pine",
    "odorEn": null,
    "synonyms": [
+    "1-Methyl-4-isopropylcyclohexane",
     "cis-p-Menthane",
     "menthane",
     "1-iso-Propyl-4-methylcyclohexane",
@@ -11688,8 +11680,7 @@
     "cis-menthane",
     "p-menthane skeleton",
     "(E)-para-menthane",
-    "(Z)-para-menthane",
-    "Menthane, tetradehydro derivative"
+    "(Z)-para-menthane"
    ],
    "origin": "ifra"
   },
@@ -11976,8 +11967,8 @@
     "Oxydiphenyl",
     "Chemcryl JK-EB",
     "Ether, diphenyl",
-    "Phenyl ether (vapor)",
-    "Oxydibenzene"
+    "Oxydibenzene",
+    "Phenyl ether, vapor"
    ],
    "origin": "ifra"
   },
@@ -12012,6 +12003,7 @@
    "odor": "fruity, anisic, honey",
    "odorEn": null,
    "synonyms": [
+    "Anisyl phenylacetate",
     "p-Methoxybenzyl phenylacetate",
     "Anisyl alpha-toluate",
     "p-Anisyl phenylacetate",
@@ -12193,7 +12185,6 @@
     "Phenylmethyl isovalerate",
     "Isovaleric acid-benzyl ester",
     "Butanoic acid, phenylethyl ester",
-    "Benzyl isovalerate (natural)",
     "Benzyl isova",
     "3-methylbutyric acid benzyl ester",
     "Phenylmethyl (benzyl) isovalerate"
@@ -12282,7 +12273,6 @@
     "Benzyl ether",
     "Benzyl oxide",
     "Plastikator BA",
-    "BA (plasticizer)",
     "Ether, dibenzyl",
     "Plasticator BA",
     "(Oxybis(methylene))dibenzene",
@@ -12290,7 +12280,8 @@
     "Tribenoside impurity D",
     "Tribenoside EP Impurity D",
     "phenyl(phenylmethoxy)methane",
-    "benzyloxymethylbenzene"
+    "benzyloxymethylbenzene",
+    "dibenzyl ester"
    ],
    "origin": "ifra"
   },
@@ -12378,8 +12369,8 @@
     "4-Methoxybenzenenemethyl acetate",
     "Acetic acid p-methoxybenzyl ester",
     "p-anisyl acetate",
-    "Anisyl acetate (natural)",
-    "Acetic Acid Anisyl Ester"
+    "Acetic Acid Anisyl Ester",
+    "ar-anisyl acetate"
    ],
    "origin": "ifra"
   },
@@ -12414,6 +12405,7 @@
    "odor": "green, melon, aldehydic, floral",
    "odorEn": null,
    "synonyms": [
+    "Benzenepropanal",
     "3-Phenylpropionaldehyde",
     "Hydrocinnamic aldehyde",
     "3-Phenyl-1-propanal",
@@ -12424,8 +12416,7 @@
     "Dihydrocinnamaldehyde",
     "Benzylacetaldehyde",
     "Phenylpropionaldehyde",
-    "3-Phenylpropan-1-al",
-    "hydrocinnamaidehyde"
+    "3-Phenylpropan-1-al"
    ],
    "origin": "ifra"
   },
@@ -12460,6 +12451,7 @@
    "odor": "floral, rose, hyacinth",
    "odorEn": null,
    "synonyms": [
+    "Phenethyl formate",
     "Phenethyl alcohol, formate",
     "Benzylcarbinyl formate",
     "Phenylethyl formate",
@@ -12470,8 +12462,7 @@
     "beta-Phenethyl formate",
     "Formic Acid Phenethyl Ester",
     "Formic Acid 2-Phenylethyl Ester",
-    "beta-Phenylethyl formate",
-    "Phenethyl formate (natural)"
+    "beta-Phenylethyl formate"
    ],
    "origin": "ifra"
   },
@@ -12508,6 +12499,7 @@
    "odor": "spicy, fruity, almond",
    "odorEn": "Floral odor",
    "synonyms": [
+    "4-Methylbenzaldehyde",
     "4-Tolualdehyde",
     "p-Tolylaldehyde",
     "p-Formyltoluene",
@@ -12518,8 +12510,7 @@
     "para-Toluyl aldehyde",
     "4-Toluylaldehyde",
     "PTAL",
-    "p-toluic aldehyde",
-    "p-toluenealdehyde"
+    "p-toluic aldehyde"
    ],
    "origin": "ifra"
   },
@@ -12554,6 +12545,7 @@
    "odor": "fruity, pineapple, pear",
    "odorEn": null,
    "synonyms": [
+    "Isobutyl-2-furanpropionate",
     "2-Methylpropyl 2-furanpropanoate",
     "Isobutyl 3-(2-furyl)propanoate",
     "Isobutyl furan-2-propionate",
@@ -12607,7 +12599,6 @@
     "Ethylester kyseliny propionove",
     "Ethyl n-propionate",
     "Ethyl ester of propanoic acid",
-    "Ethyl propionate (natural)",
     "ethyl proprionate",
     "n-Ethyl propanoate"
    ],
@@ -12644,6 +12635,7 @@
    "odor": "acidic, sharp, cheesy",
    "odorEn": null,
    "synonyms": [
+    "3-Methylpentanoic acid",
     "beta-Methylvaleric acid",
     "2-Methylbutane-1-carboxylic acid",
     "dl-3-methylvaleric acid",
@@ -12700,7 +12692,7 @@
     "Methylacetoacetic acid",
     "3-Oxobutyric Acid Methyl Ester",
     "Acetoacetate methyl ester",
-    "methyl acetoacetate(MAA)"
+    "3-Oxbutanoic acid methyl ester"
    ],
    "origin": "ifra"
   },
@@ -12746,9 +12738,9 @@
     "Malonic acid, diethyl ester",
     "Ethyl propanedioate",
     "Ethyl methanedicarboxylate",
-    "Ethyl malonate (VAN)",
     "Malonic acid diethyl",
-    "dietyl malonate"
+    "dietyl malonate",
+    "CH2(COOEt)2"
    ],
    "origin": "ifra"
   },
@@ -12796,7 +12788,7 @@
     "Acetals",
     "Capsicum annuum l",
     "Ethylidine diethyl ether",
-    "Acetal (natural)"
+    "diethoxy-ethane"
    ],
    "origin": "ifra"
   },
@@ -12838,15 +12830,15 @@
     "Gallex",
     "Lysol Brand disinfectant",
     "Bulk Lysol Brand Disinfectant",
-    "Gable-Tite Dark Creosote (Creola)",
-    "Gable-Tite Light Creosote (Creola)",
     "EPA Pesticide Chemical Code 086804",
     "4-Hydroxy-m-xylene",
     "Bacticin",
     "m-Xylenol",
     "RCRA waste number U101",
     "Caswell No. 907A",
-    "RCRA waste no. U101"
+    "RCRA waste no. U101",
+    "Metacresol EP Impurity F",
+    "N0D"
    ],
    "origin": "ifra"
   },
@@ -12882,7 +12874,6 @@
    "odorEn": null,
    "synonyms": [
     "Isobutyl caproate",
-    "Isobutyl caproate (natural)",
     "Isobutyl caproic acid",
     "2-Methylpropyl hexanoic acid",
     "Hexanoate 2-methylpropyl ester",
@@ -13012,7 +13003,7 @@
     "Butyric Acid Isoamyl Ester",
     "Isoamyl butylate",
     "Isopentyl-n-butyrate",
-    "Isoamyl butyrate (natural)"
+    "butanoic acid 3-methylbutyl ester"
    ],
    "origin": "ifra"
   },
@@ -13102,9 +13093,9 @@
     "octanoic acid ethyl",
     "n-Octanoic Acid Ethyl Ester",
     "n-Caprylic acid ethyl ester",
-    "Ethyl octanoate (natural)",
     "Ethyl ester octanoic acid",
-    "Ethyl ester of octanoic acid"
+    "Ethyl ester of octanoic acid",
+    "Sodium Caprylate EP Impurity G"
    ],
    "origin": "ifra"
   },
@@ -13148,11 +13139,11 @@
     "Propionic acid, propyl ester",
     "n-Propyl n-propionate",
     "Propylester kyseliny propionove",
-    "Propyl propionate (natural)",
     "Propionic acid n-propyl ester",
     "Propyl ester of propanoic acid",
     "n-Propyl n-propanoate",
-    "propyl propionic acid"
+    "propyl propionic acid",
+    "Propyl propanoic acid"
    ],
    "origin": "ifra"
   },
@@ -13202,7 +13193,7 @@
     "pentanone-2",
     "n-propyl methyl ketone",
     "n-C3H7COCH3",
-    "2-Pentanone (natural)"
+    "2-pentanal"
    ],
    "origin": "ifra"
   },
@@ -13241,6 +13232,7 @@
    "odor": "green, herbal, fruity",
    "odorEn": "Pleasant odor; Faint, ketonic and camphor odor",
    "synonyms": [
+    "Methyl Isobutyl Ketone",
     "4-Methylpentan-2-one",
     "Isopropylacetone",
     "Isobutyl methyl ketone",
@@ -13251,8 +13243,7 @@
     "4-Methyl-2-oxopentane",
     "Methylisobutylketon",
     "Isohexanone",
-    "Hexon",
-    "Metilisobutilchetone"
+    "Hexon"
    ],
    "origin": "ifra"
   },
@@ -13339,6 +13330,7 @@
    "odor": "herbal, sweet, tobacco",
    "odorEn": null,
    "synonyms": [
+    "Gamma-Valerolactone",
     "4-Pentanolide",
     "4-Valerolactone",
     "gamma-Pentalactone",
@@ -13349,8 +13341,7 @@
     "5-Methyltetrahydro-2-furanone",
     "5-Methyldihydro-2(3H)-furanone",
     "Dihydro-5-methylfuran-2(3H)-one",
-    "5-methyldihydrofuran-2(3H)-one",
-    "5-methyloxolan-2-one"
+    "5-methyldihydrofuran-2(3H)-one"
    ],
    "origin": "ifra"
   },
@@ -13392,7 +13383,8 @@
     "Lutidine",
     "LUT",
     "alpha,alpha'-Lutidin",
-    "lutidin"
+    "lutidin",
+    "2-6-lutidine"
    ],
    "origin": "ifra"
   },
@@ -13435,8 +13427,7 @@
     "3-Methylbutyric acid ethyl ester",
     "Ethyl isovalerianate",
     "3-Methylbutanoic acid ethyl ester",
-    "Isopentanoic acid ethyl ester",
-    "Ethyl isovalerate (natural)"
+    "Isopentanoic acid ethyl ester"
    ],
    "origin": "ifra"
   },
@@ -13574,9 +13565,9 @@
     "n-Butyl isopentanoate",
     "Isovaleric acid, butyl ester",
     "n-Butyl 3-methylbutanoate",
-    "Butyl isovalerate (natural)",
     "3-Methylbutyric acid butyl ester",
-    "Butyl 3-methylbutanoic acid"
+    "Butyl 3-methylbutanoic acid",
+    "3-methylbutanoic acid butyl ester"
    ],
    "origin": "ifra"
   },
@@ -13661,6 +13652,7 @@
    "odor": "floral, green, fresh",
    "odorEn": null,
    "synonyms": [
+    "5-Hexene-2-one",
     "hex-5-en-2-one",
     "Allylacetone",
     "1-Hexen-5-one",
@@ -13706,6 +13698,7 @@
    "odor": "acidic, cheesy, fruity",
    "odorEn": "UNPLEASANT ODOR, SIMILAR TO BUTYRIC ACID; Unpleasant odor",
    "synonyms": [
+    "Pentanoic Acid",
     "n-Valeric acid",
     "n-Pentanoic acid",
     "Valerianic acid",
@@ -13716,8 +13709,7 @@
     "n-Pentanoate",
     "Valeric acid, normal",
     "Pentanoate",
-    "pentoic acid",
-    "1-pentanoic acid"
+    "pentoic acid"
    ],
    "origin": "ifra"
   },
@@ -13766,8 +13758,8 @@
     "Propylester kyseliny octove",
     "n-Propyl ester of acetic acid",
     "n-Propyl ethanoate",
-    "n-Propyl acetate (natural)",
-    "4PA"
+    "4PA",
+    "n-propanol acetate"
    ],
    "origin": "ifra"
   },
@@ -13906,6 +13898,7 @@
    "odor": "gourmand, fruity, cocoa",
    "odorEn": "POWERFUL, ACRID, PUNGENT ODOR; Strong, acrid, pungent odor",
    "synonyms": [
+    "Pentanal",
     "n-Valeraldehyde",
     "n-Pentanal",
     "Valeric aldehyde",
@@ -13916,8 +13909,7 @@
     "Valeric acid aldehyde",
     "n-Valeric aldehyde",
     "Valerianic aldehyde",
-    "Pentyl aldehyde",
-    "1-pentanal"
+    "Pentyl aldehyde"
    ],
    "origin": "ifra"
   },
@@ -14008,7 +14000,6 @@
     "n-Hexyl methyl ketone",
     "Methyl n-hexyl ketone",
     "2-Oxooctane",
-    "2-Octanone (natural)",
     "Methvlhexanone",
     "octanone-2",
     "octane-2-one",
@@ -14101,6 +14092,7 @@
    "odor": "aldehydic, green, fruity",
    "odorEn": "Fragrant; FAINT, AROMATIC, FATTY",
    "synonyms": [
+    "Heptanol",
     "Heptan-1-ol",
     "Heptyl alcohol",
     "n-Heptanol",
@@ -14111,7 +14103,6 @@
     "Pri-n-heptyl alcohol",
     "Heptyl alcohol, primary",
     "1-heptyl alcohol",
-    "Heptyl alcohol (natural)",
     "heptanol-1"
    ],
    "origin": "ifra"
@@ -14199,8 +14190,7 @@
     "Uniphat A40",
     "Stepan C40",
     "formyl dodecanoate",
-    "Dodecylmethanoate",
-    "Methyl laurate (Standard)"
+    "Dodecylmethanoate"
    ],
    "origin": "ifra"
   },
@@ -14244,7 +14234,6 @@
     "n-Heptyl ethanoate",
     "Heptyl ethanoate",
     "Acetic acid n-heptyl ester",
-    "n-Heptyl acetate (natural)",
     "Heptanol acetate",
     "Acetic Acid Heptyl Est",
     "Acetic acid n-heptyl eater"
@@ -14665,6 +14654,7 @@
    "odor": "woody, vetiver, amber",
    "odorEn": null,
    "synonyms": [
+    "Vetivert acetate",
     "Vetiver acetate",
     "Vetiverol, acetate",
     "Vetiver acetate, Java",
@@ -14948,6 +14938,7 @@
    "odor": "gourmand, vanilla, caramel",
    "odorEn": "Finer and more intense vanilla; Resembles that of vanillin but approximately 3 times as strong",
    "synonyms": [
+    "Ethyl vanillin",
     "Vanillal",
     "Ethylprotal",
     "Bourbonal",
@@ -14958,8 +14949,7 @@
     "Vanilal",
     "4-Hydroxy-3-ethoxybenzaldehyde",
     "Rhodiarome",
-    "Vanirome",
-    "2-Ethoxy-4-formylphenol"
+    "Vanirome"
    ],
    "origin": "ifra"
   },
@@ -14999,8 +14989,7 @@
     "3-EPG",
     "Ethyl 3-phenyloxiranecarboxylate",
     "2-Ethyl-3-phenylglycidate",
-    "Glycidic acid, ethyl ester",
-    "Aldehyde C16 special (misleading)"
+    "Glycidic acid, ethyl ester"
    ],
    "origin": "ifra"
   },
@@ -15035,6 +15024,7 @@
    "odor": "spicy, balsamic, anisic",
    "odorEn": null,
    "synonyms": [
+    "Methyl anisate",
     "Methyl p-anisate",
     "Methyl p-methoxybenzoate",
     "Methyl 4-Anisate",
@@ -15249,6 +15239,7 @@
    "odor": "floral, ylang, phenolic",
    "odorEn": null,
    "synonyms": [
+    "4-Methylphenyl acetate",
     "p-Cresyl acetate",
     "p-Acetoxytoluene",
     "Narceol",
@@ -15259,8 +15250,7 @@
     "p-Cresol acetate",
     "4-Acetoxytoluene",
     "p-Tolyl ethanoate",
-    "Tolylacetate",
-    "P-Tolyacetate"
+    "Tolylacetate"
    ],
    "origin": "ifra"
   },
@@ -15334,7 +15324,6 @@
    "synonyms": [
     "Citronellyl n-butyrate",
     "Citronellyl butanoate",
-    "Citronellyl butyrate (natural)",
     "2, butyrate"
    ],
    "origin": "ifra"
@@ -15632,12 +15621,11 @@
    "odor": "spicy, green, peppery",
    "odorEn": null,
    "synonyms": [
-    "Apiole (dill)",
+    "Dillapiol",
     "Apiol, liquid",
     "Parsley fruit oleoresin",
     "Resins, oleo-, parsley",
     "Parsley oleoresin",
-    "Dillapiol (NIST)",
     "Dillapiole, analytical standard"
    ],
    "origin": "ifra"
@@ -15673,6 +15661,7 @@
    "odor": "floral, citrus, pine",
    "odorEn": null,
    "synonyms": [
+    "p-MENTHAN-8-OL",
     "2-(4-methylcyclohexyl)propan-2-ol",
     "Dihydro-alpha-terpineol",
     "8-p-menthanol",
@@ -15886,13 +15875,13 @@
     "omega-Chloroacetophenone",
     "Tear Gas",
     "alpha-Chloroacetophenone",
-    "Mace (lacrimator)",
     "Chloromethyl phenyl ketone",
     "Chemical mace",
     "1-Chloroacetophenone",
-    "CN (lacrimator)",
     "Phenyl chloromethyl ketone",
-    "Chloracetophenone"
+    "Chloracetophenone",
+    "3' Chloroacetophenone",
+    "2-Chloro-1-phenylethan-1-one"
    ],
    "origin": "ifra"
   },
@@ -16111,8 +16100,8 @@
     "Ethyl 3-acetylpropionate",
     "Ethyl ketovalerate",
     "4-oxopentanoic acid ethyl ester",
-    "Ethyl levulinate (natural)",
-    "4-Oxovaleric Acid Ethyl Ester"
+    "4-Oxovaleric Acid Ethyl Ester",
+    "4-Ketovaleric Acid Ethyl Ester"
    ],
    "origin": "ifra"
   },
@@ -16151,7 +16140,6 @@
    "synonyms": [
     "2-Methylpropyl butanoate",
     "Isobutyl n-butyrate",
-    "Isobutyl butyrate (natural)",
     "Isobutyl butanoic acid",
     "Isobutyl N-butyric acid",
     "Butyrate, isobutyl ester",
@@ -16160,7 +16148,8 @@
     "2-Methylpropyl butanoic acid",
     "Butanoate, methyl propyl ester",
     "2-Methyl-1-propyl butyric acid",
-    "Isobutyl butanoate"
+    "Isobutyl butanoate",
+    "2-Methylpropyl butyrate"
    ],
    "origin": "ifra"
   },
@@ -16203,7 +16192,6 @@
     "2-Methyl-1-propyl propanoate",
     "iso-Butyl n-propionate",
     "Isobutyl ester of propanoic acid",
-    "Isobutyl propionate (natural)",
     "isobutylpropionat"
    ],
    "origin": "ifra"
@@ -16286,6 +16274,7 @@
    "odorEn": "Powerful soft, sweet animal musk",
    "synonyms": [
     "Muscone",
+    "Muskone",
     "3-Methylcyclopentadecanone",
     "3-Methylcyclopentadecan-1-one",
     "Methylexaltone",
@@ -16294,8 +16283,7 @@
     "dl-muscone",
     "5-Methyl-1-cyclopentadecanone",
     "dextro,laevo-muscone",
-    "L-Muscone",
-    "Muscone (Standard)"
+    "L-Muscone"
    ],
    "origin": "ifra"
   },
@@ -16374,7 +16362,6 @@
     "Methyl 2-methylpropionate",
     "Isobutyric acid, methyl ester",
     "Methyl isobutanoate",
-    "Methyl isobutyrate (natural)",
     "Methylester kyseliny isomaselne",
     "Poly(L-lactide) SRU",
     "Methyl methylpropanoate",
@@ -16608,7 +16595,6 @@
     "3-Oxohexane",
     "Aethylpropylketon",
     "Ethyl n-propyl ketone",
-    "3-Hexanone (natural)",
     "Hexanone-(3)",
     "3-Hexanone, analytical standard"
    ],
@@ -16698,9 +16684,9 @@
     "D-n-Octanol",
     "dl-3-Octanol",
     "n-Octan-3-ol",
-    "3-Octanol (natural)",
     "Ethylhexyl alcohol",
-    "(1)-Octan-3-ol"
+    "(1)-Octan-3-ol",
+    "1-ethyl-1-hexanol"
    ],
    "origin": "ifra"
   },
@@ -16742,7 +16728,6 @@
     "Butyl propanoate",
     "Propanoic acid, butyl ester",
     "Propionic Acid Butyl Ester",
-    "Butyl propionate (natural)",
     "n-Butyl n-propionate",
     "n-butylpropionate",
     "Butyl ester of propanoic acid",
@@ -16750,7 +16735,8 @@
     "nButyl proprionate",
     "butyl propionic acid",
     "Butyl propanoic acid",
-    "Tri Butyl Propionate"
+    "Tri Butyl Propionate",
+    "Tri NButyl Propionate"
    ],
    "origin": "ifra"
   },
@@ -16785,6 +16771,7 @@
    "odor": "herbal, sweet, anisic",
    "odorEn": null,
    "synonyms": [
+    "alpha-Angelica lactone",
     "5-Methylfuran-2(3H)-one",
     "5-Methyl-2(3H)-furanone",
     "5-methyl-3H-furan-2-one",
@@ -16795,8 +16782,7 @@
     "delta(sup 2)-Angelica lactone",
     "beta,gamma-Angelica lactone",
     "4-Methyl-2(3H)-furanone",
-    "a-angelicalacton",
-    "b,g-Angelica lactone"
+    "a-angelicalacton"
    ],
    "origin": "ifra"
   },
@@ -16932,9 +16918,7 @@
    "odorEn": null,
    "synonyms": [
     "Acetylpropionyl",
-    "ethyl methyl diketone",
-    "Acetylpropionyl (VAN)",
-    "Acetyl propionyl (natural)"
+    "ethyl methyl diketone"
    ],
    "origin": "ifra"
   },
@@ -16979,8 +16963,8 @@
     "2-oxopropionic acid ethyl ester",
     "Ethyl alpha-ketopropionate",
     "PyruvicAcid-13CEthylEster",
-    "Ethyl pyruvate (natural)",
-    "2-Oxopropionic acid ethyl"
+    "2-Oxopropionic acid ethyl",
+    "Pyruvic acid, ethyl ester (8CI)"
    ],
    "origin": "ifra"
   },
@@ -17112,8 +17096,7 @@
     "meta-Ethylphenol",
     "1-Ethyl-3-hydroxybenzene",
     "m-Ethylphenol",
-    "1-Hydroxy-3-ethylbenzene",
-    "3-Ethylphenol (NIST)"
+    "1-Hydroxy-3-ethylbenzene"
    ],
    "origin": "ifra"
   },
@@ -17154,7 +17137,6 @@
     "2-methyl-1-butanol acetate",
     "Acetic acid 2-methylbutyl ester",
     "2-methylbutanol acetate",
-    "2-Methylbutyl acetate (natural)",
     "Active amyl acetate",
     "2-Methybutyl acetate"
    ],
@@ -17191,6 +17173,7 @@
    "odor": "fruity, sweet, pineapple",
    "odorEn": null,
    "synonyms": [
+    "Amyl propionate",
     "Pentyl propanoate",
     "n-Pentyl propionate",
     "Amyl propanoate",
@@ -17199,7 +17182,6 @@
     "Pentyl propanate",
     "n-Pentyl propanoate",
     "Propionic acid, pentyl ester",
-    "n-Amyl propionate (natural)",
     "N-Amyl n-propionate",
     "Tri Pentyl Propionate",
     "Tri NPentyl Propionate"
@@ -17239,7 +17221,6 @@
    "synonyms": [
     "Propyl caproate",
     "Hexanoic acid, propyl ester",
-    "Propyl hexanoate (natural)",
     "Propyl caproic acid",
     "Propyl hexanoic acid",
     "Caproate propyl ester",
@@ -17248,7 +17229,8 @@
     "Caproic acid propyl ester",
     "n-Propyl hexanoate",
     "n-Propyl n-hexanoate",
-    "caproic acid propyl ester grade I"
+    "caproic acid propyl ester grade I",
+    "propionyl hexanoate"
    ],
    "origin": "ifra"
   },
@@ -17462,6 +17444,7 @@
    "odor": "acidic, gourmand, pungent",
    "odorEn": null,
    "synonyms": [
+    "Isocaproic acid",
     "4-Methylvaleric acid",
     "Isohexanoic acid",
     "Isobutylacetic acid",
@@ -17472,8 +17455,7 @@
     "Isohexanoate",
     "Isohexoate",
     "4-Methylvalerate",
-    "4-methyl-pentanoate",
-    "4-methyl-n-valerate"
+    "4-methyl-pentanoate"
    ],
    "origin": "ifra"
   },
@@ -17636,6 +17618,7 @@
    "odor": "fruity, coconut, minty",
    "odorEn": null,
    "synonyms": [
+    "Delta-Octalactone",
     "delta-Octanolactone",
     "6-propyloxan-2-one",
     "Tetrahydro-6-propyl-2H-pyran-2-one",
@@ -17646,8 +17629,7 @@
     "d-Octalactone",
     "6-Propyl-tetrahydropyran-2-one",
     "5-Octalactone",
-    "delta-Propyl-delta-valerolactone",
-    "|_-Octanolactone"
+    "delta-Propyl-delta-valerolactone"
    ],
    "origin": "ifra"
   },
@@ -17725,7 +17707,6 @@
     "beta-Nonanone",
     "Ketone, heptyl methyl",
     "2-Nonanone-d5",
-    "2-Nonanone (natural)",
     "Nonanone",
     "n-HEPTYL METHYL KETONE",
     "2-Nonanone, analytical standard"
@@ -17804,7 +17785,6 @@
     "2-methylbutanoic acid methyl ester",
     "Methyl alpha-methylbutyrate",
     "Methyl alpha-methylbutanoate",
-    "Methyl 2-methylbutyrate (natural)",
     "(+-)-Methyl 2-methylbutanoate",
     "2-Methylbutyric acid methyl ester",
     "Methyl DL-2-Methylbutyrate",
@@ -17845,6 +17825,7 @@
    "odor": "floral, neroli, sweet",
    "odorEn": null,
    "synonyms": [
+    "1-Acetylnaphthalene",
     "1-Acetonaphthalene",
     "Methyl 1-naphthyl ketone",
     "1-(naphthalen-1-yl)ethanone",
@@ -17855,8 +17836,7 @@
     "acetylnaphthalene",
     "alpha-Naphthyl methyl ketone",
     "1-(naphthalen-4-yl)ethanone",
-    "Monomethylnaphthalene Formaldehyde",
-    "alpha-Acetonaphthone"
+    "Monomethylnaphthalene Formaldehyde"
    ],
    "origin": "ifra"
   },
@@ -17891,6 +17871,7 @@
    "odor": "floral, musk like, warm",
    "odorEn": null,
    "synonyms": [
+    "p-tert-Butylacetophenone",
     "p-tert-Butylacetylbenzene",
     "1-(4-tert-Butylphenyl)ethanone",
     "Ebastine EP Impurity B",
@@ -18160,7 +18141,7 @@
     "(2-furanyl)-1-ethanone",
     "Furyl methyl ketone",
     "1-(2-Furanyl)-ethanone",
-    "2-Furyl methyl ketone (natural)"
+    "2-Acetofurone"
    ],
    "origin": "ifra"
   },
@@ -18241,6 +18222,7 @@
    "odor": "fruity, cherry, sweet",
    "odorEn": null,
    "synonyms": [
+    "p-Cymen-8-ol",
     "8-Hydroxy-p-cymene",
     "2-(4-Methylphenyl)-2-propanol",
     "Dimethyl-p-tolyl carbinol",
@@ -18251,8 +18233,7 @@
     "p-(Hydroxyisopropyl)toluene",
     "2-(p-tolyl)propan-2-ol",
     "para-Cymen-8-ol",
-    "p-Cymenol-8",
-    "Cymen-8-ol"
+    "p-Cymenol-8"
    ],
    "origin": "ifra"
   },
@@ -18536,9 +18517,9 @@
    "odor": "fruity, pineapple, chocolate",
    "odorEn": null,
    "synonyms": [
+    "3-Methylbutyl octanoate",
     "Isoamyl octanoate",
     "Isoamyl caprylate",
-    "Isoamyl octanoate (natural)",
     "octanoic acid isopentyl ester",
     "Isoamyl caprylic acid",
     "Isoamyl octanoic acid",
@@ -18712,13 +18693,13 @@
    "odor": "fruity, pineapple, green",
    "odorEn": null,
    "synonyms": [
+    "Isoamyl hexanoate",
     "3-Methylbutyl hexanoate",
     "Isoamyl caproate",
     "Isopentyl caproate",
     "Isopentyl-n-hexanoate",
     "Hexanoic acid, isopentyl ester",
     "Isopentyl alcohol, hexanoate",
-    "Isoamyl hexanoate (natural)",
     "3-methylbutyl caproate",
     "1-Methylbutyl hexanoate",
     "iso-Amyl n-hexanoate",
@@ -18758,6 +18739,7 @@
    "odor": "green, fruity, oily",
    "odorEn": null,
    "synonyms": [
+    "Phenethyl Isothiocyanate",
     "Phenylethyl isothiocyanate",
     "(2-Isothiocyanatoethyl)benzene",
     "PEITC",
@@ -18803,6 +18785,7 @@
    "odor": "fruity, oily, peach",
    "odorEn": null,
    "synonyms": [
+    "Gamma-Dodecalactone",
     "4-Dodecanolide",
     "5-octyloxolan-2-one",
     "Dodecan-4-olide",
@@ -18813,8 +18796,7 @@
     "5-octyl-2-oxolanone",
     "5-Octyl-dihydrofuran-2(3H)-one",
     "xi-Dihydro-5-octyl-2(3H)-furanone",
-    "gamma-Laurolactone",
-    "5-octyltetrahydrofuran-2-one"
+    "gamma-Laurolactone"
    ],
    "origin": "ifra"
   },
@@ -19016,8 +18998,7 @@
     "Butyric acid, hexyl ester",
     "n-Hexyl n-butanoate",
     "n-Hexyl n-butyrate",
-    "n-Butyric acid n-hexyl ester",
-    "Hexyl butyrate (natural)"
+    "n-Butyric acid n-hexyl ester"
    ],
    "origin": "ifra"
   },
@@ -19098,6 +19079,7 @@
    "odor": "fruity, soft, strawberry",
    "odorEn": null,
    "synonyms": [
+    "Methyl n-acetylanthranilate",
     "Methyl N-acetoanthranilate",
     "N-Acetyl methyl anthranilate",
     "N-(2-Carbomethoxyphenyl)-acetamide",
@@ -19136,6 +19118,7 @@
    "odor": "spicy, dry, bayleaf",
    "odorEn": null,
    "synonyms": [
+    "4-Propylguaiacol",
     "Dihydroeugenol",
     "Guaiacylpropane",
     "Coerulignol",
@@ -19146,8 +19129,7 @@
     "(4-Hydroxy-3-methoxyphenyl)propane",
     "4-Hydroxy-3-methoxypropylbenzene",
     "Eugenol dihydro",
-    "4-Propyl-O-methoxyphenol",
-    "2-Methoxy-4-(1-propyl)phenol"
+    "4-Propyl-O-methoxyphenol"
    ],
    "origin": "ifra"
   },
@@ -19221,6 +19203,7 @@
    "odor": "food like, vegetable, fatty",
    "odorEn": "Powerful, onion, meat-like odor; Cooked potato",
    "synonyms": [
+    "Methional",
     "4-Thiapentanal",
     "3-Methylmercaptopropyl aldehyde",
     "Methylmercaptopropionic aldehyde",
@@ -19231,7 +19214,6 @@
     "beta-(Methylthio)propionaldehyde",
     "3-Methylthiopropional",
     "3-(Methythio)-propanal",
-    "Methional (natural)",
     "Methylmercaptoaldehyde"
    ],
    "origin": "ifra"
@@ -19267,6 +19249,7 @@
    "odor": "floral, rose, jasmin",
    "odorEn": null,
    "synonyms": [
+    "Methyl phenethyl ether",
     "2-Phenylethyl methyl ether",
     "Phenylethyl methyl ether",
     "Kewda ether",
@@ -19277,8 +19260,7 @@
     "1-Methoxy-2-phenylethane",
     "Phenethyl methyl ether",
     "chrysanthemum oxide",
-    "2-Phenethyl methyl ether",
-    "beta-Phenylethyl methyl ether"
+    "2-Phenethyl methyl ether"
    ],
    "origin": "ifra"
   },
@@ -19358,7 +19340,6 @@
     "Dimethylhydroxy furanone",
     "Coe 536",
     "Carmelan",
-    "Furaneol (Standard)",
     "HDMF"
    ],
    "origin": "ifra"
@@ -19509,6 +19490,7 @@
    "odor": "green, floral, leafy",
    "odorEn": "Characteristically disagreeable, but aromatic",
    "synonyms": [
+    "2-Octanol",
     "2-Octyl alcohol",
     "Hexylmethylcarbinol",
     "2-Hydroxyoctane",
@@ -19519,8 +19501,7 @@
     "n-Octan-2-ol",
     "2-Hydroxy-n-octane",
     "sec-OCTYL ALCOHOL",
-    "beta-Octyl alcohol",
-    "secondary Caprylic alcohol"
+    "beta-Octyl alcohol"
    ],
    "origin": "ifra"
   },
@@ -19598,6 +19579,7 @@
    "odor": "balsamic, vanilla, hay",
    "odorEn": null,
    "synonyms": [
+    "Octahydrocoumarin",
     "Octahydro-2H-1-benzopyran-2-one",
     "Bicyclononalactone",
     "Cyclohexyllactone",
@@ -19727,6 +19709,7 @@
    "odor": "green, floral, citrus",
    "odorEn": null,
    "synonyms": [
+    "6-Methyl-5-hepten-2-ol",
     "Sulcatol",
     "6-Hydroxy-2-methyl-2-heptene",
     "2-Methyl-2-hepten-6-ol",
@@ -19806,6 +19789,7 @@
    "odor": "floral, jasmin, green",
    "odorEn": null,
    "synonyms": [
+    "2-Pentylcyclopentan-1-one",
     "Delfone",
     "2-n-pentylcyclopentanone",
     "2-pentyl-1-cyclopentanone",
@@ -19893,7 +19877,7 @@
     "Maltol-ethyl",
     "E637",
     "3-Hydroxy-2-ethyl-gamma-pyrone",
-    "Ethyl maltol (Standard)"
+    "Ethyl maltol, analytical standard"
    ],
    "origin": "ifra"
   },
@@ -19969,6 +19953,7 @@
    "odor": "acidic, cheesy, food like",
    "odorEn": null,
    "synonyms": [
+    "Cyclohexaneacetic acid",
     "2-cyclohexylacetic acid",
     "Cyclohexylethanoic acid",
     "Hexahydrophenylacetic acid",
@@ -20245,7 +20230,6 @@
     "Capryl caproate",
     "n-Hexyl caproate",
     "Hexyl n-hexanoate",
-    "Hexyl hexanoate (natural)",
     "n-Caproic acid n-hexyl ester"
    ],
    "origin": "ifra"
@@ -21218,6 +21202,7 @@
    "odor": "floral, rose, fruity",
    "odorEn": null,
    "synonyms": [
+    "Cyclohexaneethyl acetate",
     "Cyclohexylethyl acetate",
     "Cyclohexaneethanol, acetate",
     "Ethylcyclohexyl acetate",
@@ -21265,8 +21250,7 @@
     "3-Methoxy-4-hydroxybenzylacetone",
     "(0)-Paradol",
     "(O)-Paradol",
-    "vanillylaceton",
-    "Zingerone (Standard)"
+    "vanillylaceton"
    ],
    "origin": "ifra"
   },
@@ -21306,13 +21290,13 @@
     "Propionic acid, benzyl ester",
     "Phenylmethyl propanoate",
     "Phenylmethyl propionate",
-    "Benzyl propionate (natrual)",
     "Benzyl n-propionate",
     "enzyl n-propionate",
     "benzyl propionic acid",
     "Benzyl propanoic acid",
     "propanoic acid benzyl ester",
-    "benzyl propanate"
+    "benzyl propanate",
+    "Benzyl Alcohol Impurity 4"
    ],
    "origin": "ifra"
   },
@@ -21395,6 +21379,7 @@
    "odor": "balsamic, anisic, fruity",
    "odorEn": null,
    "synonyms": [
+    "Isoamyl benzyl ether",
     "Benzyl isopentyl ether",
     "Benzyl 3-methylbutyl ether",
     "3-methylbutoxymethylbenzene",
@@ -21435,6 +21420,7 @@
    "odor": "balsamic, anisic, green",
    "odorEn": null,
    "synonyms": [
+    "1-(p-Methoxyphenyl)-2-propanone",
     "1-(4-methoxyphenyl)propan-2-one",
     "Anisketone",
     "p-Acetonylanisole",
@@ -21445,8 +21431,7 @@
     "4-Methoxybenzyl methyl ketone",
     "p-Methoxybenzyl methyl ketone",
     "1-(4-Methoxyphenyl)acetone",
-    "1-(p-Anisyl)-2-propanone",
-    "4'-Methoxyphenyl-2-propanone"
+    "1-(p-Anisyl)-2-propanone"
    ],
    "origin": "ifra"
   },
@@ -21531,6 +21516,7 @@
    "odor": "fruity, fresh, herbal",
    "odorEn": "REMINISCENT OF HAM & CHEESE",
    "synonyms": [
+    "2-Methylpentaldehyde",
     "2-Methylvaleraldehyde",
     "Methyl valeraldehyde",
     "2-Formylpentane",
@@ -21541,8 +21527,7 @@
     "Methylpentaldehyde",
     "2-Methylpental",
     "2-Methyl-n-valeraldehyde",
-    "n-C3H7CH(CH3)CHO",
-    "methyl-pentanal"
+    "n-C3H7CH(CH3)CHO"
    ],
    "origin": "ifra"
   },
@@ -21586,8 +21571,7 @@
     "Diethylester kyseliny jantarove",
     "Diethyl ethanedicarboxylate",
     "Diethyl ester of butanedioic acid",
-    "Diethyl butanoate",
-    "Diethyl succinate (Standard)"
+    "Diethyl butanoate"
    ],
    "origin": "ifra"
   },
@@ -21628,7 +21612,6 @@
     "Pelargonic Acid Ethyl Ester",
     "Ethyl nonylate",
     "Ethyl n-nonanoate",
-    "Ethyl nonanoate (natural)",
     "Nonylic Acid Ethyl Ester"
    ],
    "origin": "ifra"
@@ -21666,9 +21649,9 @@
    "odor": "fruity, pineapple, banana",
    "odorEn": null,
    "synonyms": [
+    "Ethyl hexanoate",
     "Hexanoic acid, ethyl ester",
     "Ethyl hexoate",
-    "Ethyl hexanoate (caproate)",
     "Capronic ether absolute",
     "Ethyl n-hexanoate",
     "ethyl capronate",
@@ -21719,7 +21702,6 @@
     "ethylmyristat",
     "Ethyl ester tetradecanoic acid",
     "Ethyl ester of tetradecanoic acid",
-    "Ethyl myristate (natural)",
     "ethyl miristate",
     "Ethyl Myristatec",
     "Myristic acid, ethyl ester (8CI)"
@@ -21916,6 +21898,7 @@
    "odor": "floral, rose, soft",
    "odorEn": null,
    "synonyms": [
+    "Isotridecan-1-ol",
     "11-Methyldodecanol",
     "11-methyldodecan-1-ol",
     "11-Methyl-1-dodecanol",
@@ -22032,6 +22015,7 @@
    "odor": "floral, orris, woody",
    "odorEn": null,
    "synonyms": [
+    "Dihydro-alpha-ionone",
     "alpha-Dihydroionone"
    ],
    "origin": "ifra"
@@ -22297,7 +22281,6 @@
     "Acetyl hexamethyl indan",
     "Phantolid",
     "AHMI",
-    "Phantolide (VAN)",
     "AHDI",
     "AHMI 10 microg/mL in Cyclohexane"
    ],
@@ -22334,6 +22317,7 @@
    "odor": "anisic, licorice, powdery",
    "odorEn": null,
    "synonyms": [
+    "Ethyl anisate",
     "Ethyl p-anisate",
     "Ethyl p-methoxybenzoate",
     "p-Anisic acid, ethyl ester",
@@ -22489,6 +22473,7 @@
    "odor": "floral, narcissus, hyacinth",
    "odorEn": null,
    "synonyms": [
+    "p-CRESYL PHENYLACETATE",
     "Phenylacetic acid, p-tolyl ester",
     "4-methylphenyl 2-phenylacetate",
     "4-Methylphenyl benzeneacetate",
@@ -22576,6 +22561,7 @@
    "odor": "floral, fruity, rose",
    "odorEn": null,
    "synonyms": [
+    "Phenoxyethyl isobutyrate",
     "2-Phenoxyethyl 2-methylpropanoate",
     "phenoxyethylisobutyrat",
     "2-Phenoxyethyl iso",
@@ -22614,6 +22600,7 @@
    "odor": "fruity, raspberry, cherry",
    "odorEn": null,
    "synonyms": [
+    "Anisylacetone",
     "4-(4-Methoxyphenyl)butan-2-one",
     "4-Methoxybenzylacetone",
     "Raspberry ketone methyl ether",
@@ -22624,8 +22611,7 @@
     "1-(4-Methoxyphenyl)-3-butanone",
     "Rasberry ketone methyl ether",
     "1-(p-Methoxyphenyl)-3-butanone",
-    "4-(para-methoxyphenyl)-2-butanone",
-    "Dopamine Impurity 21"
+    "4-(para-methoxyphenyl)-2-butanone"
    ],
    "origin": "ifra"
   },
@@ -22660,6 +22646,7 @@
    "odor": "fruity, buttery, oily",
    "odorEn": null,
    "synonyms": [
+    "Butyl 10-undecenoate",
     "Butyl undecylenate",
     "Butyl 10-undecylenate",
     "n-Butyl 10-undecenoate",
@@ -22975,6 +22962,7 @@
    "odor": "spicy, woody, smoky",
    "odorEn": null,
    "synonyms": [
+    "Guaiacyl acetate",
     "Guaiacol acetate",
     "1-Acetoxy-2-methoxybenzene",
     "o-Acetoxyanisole",
@@ -22985,8 +22973,7 @@
     "Phenol, o-methoxy-, acetate (8CI)",
     "Acetic Acid 2-Methoxyphenyl Ester",
     "O-Acetylguaiacol",
-    "2-acetoxyanisole",
-    "Guaicyl acetate"
+    "2-acetoxyanisole"
    ],
    "origin": "ifra"
   },
@@ -23151,7 +23138,7 @@
    "synonyms": [
     "Methylcyclopentenolone (diketo",
     "methyl-cyclopentenolone",
-    "Methylcyclopentenolone (natural)"
+    "3-Methyl-1.2-cyclopentanedione"
    ],
    "origin": "ifra"
   },
@@ -23188,7 +23175,6 @@
    "synonyms": [
     "nonan-3-one",
     "Ethyl hexyl ketone",
-    "3-Nonanone (natural)",
     "Ethyl n-hexyl ketone",
     "n-Hexyl ethyl ketone"
    ],
@@ -23298,6 +23284,7 @@
    "odor": "floral, oily, fresh",
    "odorEn": null,
    "synonyms": [
+    "2-Pentadecanone",
     "Methyl tridecyl ketone",
     "Pentadecanone",
     "2-Pentandecanone",
@@ -23461,6 +23448,7 @@
    "odor": "aldehydic, floral, muguet",
    "odorEn": null,
    "synonyms": [
+    "Citronelloxyacetaldehyde",
     "Muget aldehyde",
     "Muguet aldehyde"
    ],
@@ -23665,8 +23653,8 @@
     "n-Hexyl iso-valerate",
     "Hexyl 3-methylbutyrate",
     "3-Methylbutanoic acid hexyl ester",
-    "Hexyl 3-methylbutanoate (natural)",
-    "Isovaleric acid, hexyl ester (8CI)"
+    "Isovaleric acid, hexyl ester (8CI)",
+    "Hexyl isop"
    ],
    "origin": "ifra"
   },
@@ -24324,6 +24312,7 @@
    "odor": "floral, neroli, grape",
    "odorEn": null,
    "synonyms": [
+    "beta-NAPHTHYL ANTHRANILATE",
     "2-Naphthyl anthranilate",
     "2-Naphthyl O-aminobenzoate",
     "2-Aminobenzoyl 2-naphthalenol",
@@ -24490,7 +24479,6 @@
     "4-Thujanol",
     "(Z)-Sabinene hydrate",
     "cis-Sabinene hydrate",
-    "4-Thujanol (natural)",
     "sabinene hydrate (cis-)"
    ],
    "origin": "ifra"
@@ -24569,6 +24557,7 @@
    "odor": "smoky, spicy, clove",
    "odorEn": null,
    "synonyms": [
+    "p-alpha-Dimethyl styrene",
     "Dehydro-p-cymene",
     "2-P-Tolylpropene",
     "p-cymenene",
@@ -24579,8 +24568,7 @@
     "Methyl-p-isopropenylbenzene",
     "4-Methyl-alpha-methylstyrene",
     "alpha-Methyl-P-methylstyrene",
-    "1-p-Tolyl-1-methylethylene",
-    "1-Methyl-4-(prop-1-en-2-yl)benzene"
+    "1-p-Tolyl-1-methylethylene"
    ],
    "origin": "ifra"
   },
@@ -24699,6 +24687,7 @@
    "odor": "spicy, phenolic, woody",
    "odorEn": null,
    "synonyms": [
+    "4-Ethylguaiacol",
     "2-Methoxy-4-ethylphenol",
     "p-Ethylguaiacol",
     "4-Hydroxy-3-methoxyethylbenzene",
@@ -24709,8 +24698,7 @@
     "4-Hydroxy-3-methoxyphenylethane",
     "p-Ethyl-2-methoxyphenol",
     "1-Hydroxy-2-methoxy-4-ethylbenzene",
-    "4-ethvlguaiacol",
-    "4-Ethylguaiacol, Natural"
+    "4-ethvlguaiacol"
    ],
    "origin": "ifra"
   },
@@ -24820,6 +24808,7 @@
    "odor": "gourmand, sweet, tonka",
    "odorEn": null,
    "synonyms": [
+    "epsilon-DECALACTONE",
     "6-Butylhexanolide",
     "7-Butyl-2-oxepanone",
     "e-decalactone",
@@ -25016,6 +25005,7 @@
    "odor": "floral, earthy, musty",
    "odorEn": null,
    "synonyms": [
+    "2-Methyl-4-phenylbutyraldehyde",
     "alpha-Methylbenzenebutanal",
     "4-Phenyl-2-methylbutanal",
     "2-methyl-4-phenyl-1-butanal"
@@ -25362,6 +25352,7 @@
    "odor": "balsamic, floral, green",
    "odorEn": null,
    "synonyms": [
+    "p-Cresyl salicylate",
     "4-Methylphenyl salicylate",
     "4-Methylphenyl 2-hydroxybenzoate",
     "Salicylic acid, p-tolyl ester",
@@ -25485,6 +25476,7 @@
    "odor": "herbal, powerful, leathery",
    "odorEn": null,
    "synonyms": [
+    "Isobutyl quinoline",
     "4-(2-methylpropyl)quinoline"
    ],
    "origin": "ifra"
@@ -25748,6 +25740,7 @@
    "odor": "green, floral, aldehydic",
    "odorEn": null,
    "synonyms": [
+    "Phenoxyacetaldehyde",
     "Cortex aldehyde",
     "phenoxy-acetaldehyd"
    ],
@@ -26138,6 +26131,7 @@
    "odor": "fruity, pear, apple",
    "odorEn": null,
    "synonyms": [
+    "Isoprenyl acetate",
     "3-methylbut-3-enyl acetate",
     "3-methylbut-3-en-1-yl acetate",
     "3-methyl-3-buten-1-yl acetate",
@@ -26283,6 +26277,7 @@
    "odor": "fruity, green, floral",
    "odorEn": null,
    "synonyms": [
+    "Phenethyl 2-ethylbutanoate",
     "2-phenylethyl 2-ethylbutanoate",
     "Phenethyl 2-ethylbutyrate",
     "phenethyl diethylacetate"
@@ -26364,7 +26359,6 @@
    "synonyms": [
     "(-)-alpha-citronellol",
     "1-citronellol",
-    "Rhodinol (natural)",
     "floral",
     "lcitronellol",
     "powdery",
@@ -26408,6 +26402,7 @@
    "odor": "anisic, floral, balsamic",
    "odorEn": null,
    "synonyms": [
+    "3-Phenyl-3-buten-1-yl acetate",
     "3-phenylbut-3-en-1-yl acetate",
     "hawthorn acetate",
     "1-acetoxy-3-phenyl-but-3-ene",
@@ -26485,16 +26480,15 @@
    "odor": "herbal, terpenic, aromatic",
    "odorEn": null,
    "synonyms": [
+    "(+)-alpha-Pinene",
     "(1R)-(+)-alpha-Pinene",
-    "alpha-Pinene(dextro)",
     "(+)-Pin-2(3)-ene",
     "(+)-2-Pinene",
     "D-alpha-PINENE",
     "(r)-(+)-alpha-pinene",
     "(1R)-(+)-a-pinene",
     "(+)-|A-Pinene",
-    "l-Pinen",
-    "(1R)-|A-Pinene (Standard)"
+    "l-Pinen"
    ],
    "origin": "ifra"
   },
@@ -26532,7 +26526,6 @@
     "L-Fenchone",
     "(1R)-(-)-Fenchone",
     "l-alpha-Fenchone",
-    "(-)-Fenchone (Standard)",
     "(-)-Fenchone, analytical standard"
    ],
    "origin": "ifra"
@@ -26681,6 +26674,7 @@
    "odorEn": null,
    "synonyms": [
     "Mayol",
+    "p-Menthan-7-ol",
     "Muguet shiseol",
     "(4-propan-2-ylcyclohexyl)methanol",
     "4-isopropylcyclohexanemethanol",
@@ -26761,6 +26755,7 @@
    "odor": "floral, neroli, bergamot",
    "odorEn": null,
    "synonyms": [
+    "Methyl alpha-terpinyl ether",
     "Terpinyl methyl ether",
     "8-Methoxy-p-menth-1-ene",
     "alpha-Terpineol, methyl ether",
@@ -26834,6 +26829,7 @@
    "odor": "floral, rose, muguet",
    "odorEn": null,
    "synonyms": [
+    "Methylcyclohexenyl butanol",
     "3-(4-Methyl-3-cyclohexenyl)butanol",
     "citrus propanol"
    ],
@@ -26870,6 +26866,7 @@
    "odor": "green, pungent, foliage",
    "odorEn": null,
    "synonyms": [
+    "3-Phenylbutanal",
     "3-phenylbutylaldehyde",
     "3-Methyl-3-phenylpropanal",
     "hyacinth butanal"
@@ -26942,6 +26939,7 @@
    "odor": "floral, fresh, marine",
    "odorEn": null,
    "synonyms": [
+    "Florhydral",
     "3-(3-Isopropylphenyl)butanal",
     "FlorhydralR",
     "3-(3-propan-2-ylphenyl)butanal",
@@ -27018,6 +27016,7 @@
    "odor": "floral, soft, balsamic",
    "odorEn": null,
    "synonyms": [
+    "alpha-Bisabolene",
     "alpha1-Bisabolene",
     "alpha-Bisabolen"
    ],
@@ -27636,6 +27635,7 @@
    "odor": "fruity, minty, coconut",
    "odorEn": null,
    "synonyms": [
+    "2-Nonenoic acid gamma-lactone",
     "5-Pentyl-2(5H)-furanone",
     "2-pentyl-2H-furan-5-one",
     "5-Pentylfuran-2(5H)-one",
@@ -27678,6 +27678,7 @@
    "odor": "floral, narcissus, warm",
    "odorEn": null,
    "synonyms": [
+    "p-Tolyl ethyl carbonate",
     "Carbonic acid, ethyl p-tolyl ester",
     "Ethyl 4-methylphenyl carbonate",
     "Ethyl p-cresyl carbonate",
@@ -28561,6 +28562,7 @@
    "odor": "gourmand, vanilla, sweet",
    "odorEn": null,
    "synonyms": [
+    "Menthalactone",
     "Mintlactone"
    ],
    "origin": "ifra"
@@ -28737,6 +28739,7 @@
    "odor": "herbal, chamomile, floral",
    "odorEn": null,
    "synonyms": [
+    "Butyl 2-methylpentanoate",
     "chamomile valerate",
     "2-Methylvaleric Acid Butyl Ester",
     "2-Methylpentanoic Acid Butyl Ester"
@@ -28774,6 +28777,7 @@
    "odor": "herbal, green, fruity",
    "odorEn": null,
    "synonyms": [
+    "Isopropyl cyclohexylpropionate",
     "Cyclohexanol, propanoate"
    ],
    "origin": "ifra"
@@ -29194,8 +29198,7 @@
    "synonyms": [
     "Vetyvenol",
     "Lignolia",
-    "Vetivol",
-    "Vetiverol (natural)"
+    "Vetivol"
    ],
    "origin": "ifra"
   },
@@ -29753,12 +29756,12 @@
    "odor": "floral, fresh, jasmin",
    "odorEn": null,
    "synonyms": [
+    "Hedione",
     "Hedione HC",
     "Kharismal",
     "Cepionate",
     "Dihydrojasmonic acid methyl",
     "Jessamona",
-    "Methyl dihydrojasmonate (Standard)",
     "MDJ"
    ],
    "origin": "ifra"
@@ -30218,6 +30221,7 @@
    "odor": "green, spicy, rose",
    "odorEn": null,
    "synonyms": [
+    "2-Methoxybenzyl ethyl ether",
     "1-(ethoxymethyl)-2-methoxybenzene",
     "Ethyl o-methoxybenzyl ether",
     "Ethyl 2-methoxybenzyl ether",
@@ -30637,6 +30641,7 @@
    "odor": "fruity, green, pineapple",
    "odorEn": null,
    "synonyms": [
+    "Allyl amyl glycolate",
     "Allyl 2-(isopentyloxy)acetate",
     "Isoamyloxyacetic acid, allyl ester"
    ],
@@ -31145,6 +31150,7 @@
    "odor": "fruity, apple, tropical-fruit",
    "odorEn": null,
    "synonyms": [
+    "Pentyl 2-methylbutyrate",
     "Pentyl 2-methylbutanoate",
     "n-Amyl 2-methylbutyrate",
     "n-Amyl 2-methylbutanoate",
@@ -31601,6 +31607,7 @@
    "odorEn": null,
    "synonyms": [
     "Mefranal",
+    "Phenylmethylpentanal",
     "3-Methyl-5-phenyl-1-pentanal",
     "3-Methyl-5-phenylpentan-1-al",
     "lily pentanal",
@@ -32189,7 +32196,9 @@
    "carbons": 12,
    "odor": "fruity, floral, soapy",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "(4-Methyl-3-propylhexyl) acetate"
+   ],
    "origin": "ifra"
   },
   {
@@ -32694,6 +32703,7 @@
    "odor": "gourmand, creamy, sweet",
    "odorEn": null,
    "synonyms": [
+    "5-Tridecanolide",
     "6-Octyltetrahydro-2H-pyran-2-one",
     "delta-Tridecanolactone",
     "delta-Tridecalactone",
@@ -32941,6 +32951,7 @@
    "odor": "floral, muguet, green",
    "odorEn": null,
    "synonyms": [
+    "alpha-Methylcyclohexanepropanol",
     "4-Cyclohexyl-2-butanol"
    ],
    "origin": "ifra"
@@ -33221,6 +33232,7 @@
    "odor": "floral, fruity, jasmin",
    "odorEn": null,
    "synonyms": [
+    "3-Methyl-2-pentylcyclopentan-1-one",
     "3-Methyl-2-pentylcyclopentanone"
    ],
    "origin": "ifra"
@@ -33293,6 +33305,7 @@
    "odor": "fruity, sweet, pear",
    "odorEn": null,
    "synonyms": [
+    "Cyclohexylmethylcarbinyl acetate",
     "1-cyclohexylethan-1-yl acetate",
     "(r,s)-1-cyclohexylethyl acetate"
    ],
@@ -33574,6 +33587,7 @@
    "odor": "floral, rose, fruity",
    "odorEn": null,
    "synonyms": [
+    "Ethyl alpha-safranate",
     "Ethyl dehydrocyclogeranate"
    ],
    "origin": "ifra"
@@ -33820,8 +33834,7 @@
    "odorEn": null,
    "synonyms": [
     "Calone",
-    "Watermelon ketone",
-    "Watermelon ketone (Standard)"
+    "Watermelon ketone"
    ],
    "origin": "ifra"
   },
@@ -34519,6 +34532,7 @@
    "odor": "fruity, fermented, sweet",
    "odorEn": null,
    "synonyms": [
+    "Propyl 2-methylbutanoate",
     "n-Propyl 2-methyl butyrate",
     "Propyl 2-methylbutanoic acid",
     "2-Methyl-1-propylbutyrate",
@@ -34731,6 +34745,7 @@
    "odor": "floral, herbal, fruity",
    "odorEn": null,
    "synonyms": [
+    "Acetic acid, isononyl ester",
     "7-methyloctyl acetate"
    ],
    "origin": "ifra"
@@ -34906,7 +34921,6 @@
     "2-methylbutyl butanoate",
     "Butyric acid (2-methylbutyl) ester",
     "2-Methylbutyl Dutyrate",
-    "Isoamyl butyrate(kosher)",
     "2-methylbutyl butyrate USP/EP/BP"
    ],
    "origin": "ifra"
@@ -35406,7 +35420,6 @@
     "coolact P",
     "p-Menth-8-en-3-ol",
     "p-8(9)-Menthen-3-ol",
-    "Isopulegol (natural)",
     "rac-isopulegol",
     "1-isopulegol",
     "p-Menth-8(9)-en-3-ol",
@@ -35811,7 +35824,6 @@
     "Isovaleric acid, octyl ester",
     "Octyl isovalerianate",
     "Octyl 3-methylbutyrate",
-    "Octyl isovalerate (natural)",
     "Isovaleric acid, octyl ester (8CI)",
     "Octyl 3-methylbutanoate",
     "n-Octyl-3-methyl butyrate",
@@ -36234,6 +36246,7 @@
    "odor": "fruity, tropical-fruit, caramel",
    "odorEn": null,
    "synonyms": [
+    "Ethyl trans-crotonate",
     "ethyl (E)-but-2-enoate",
     "Ethyl (E)-crotonate",
     "Ethyl trans-2-butenoate",
@@ -36244,8 +36257,7 @@
     "(E)-ethyl crotonate",
     "(E)-2-Butenoic acid ethyl ester",
     "(E)-Ethyl but-2-enoate",
-    "Ethyl 2-butenoate",
-    "(E)-but-2-enoic acid ethyl ester"
+    "Ethyl 2-butenoate"
    ],
    "origin": "ifra"
   },
@@ -36284,8 +36296,7 @@
    "synonyms": [
     "d-Neomenthol",
     "dl-Neomenthol",
-    "(1)-Neomenthol",
-    "Neomenthol, Dl-(As)"
+    "(1)-Neomenthol"
    ],
    "origin": "ifra"
   },
@@ -36320,6 +36331,7 @@
    "odor": "earthy, woody, camphoraceous",
    "odorEn": null,
    "synonyms": [
+    "(-)-alpha-Fenchol",
     "(-)-endo-Fenchol",
     "l-alpha-Fenchyl alcohol",
     "alpha-Fenchyl alcohol",
@@ -36363,6 +36375,7 @@
    "odor": "citrus, fresh, herbal",
    "odorEn": "Citrus odor",
    "synonyms": [
+    "(+)-Limonene",
     "(R)-(+)-Limonene",
     "(+)-(4R)-Limonene",
     "(+)-Dipentene",
@@ -36373,8 +36386,7 @@
     "Glidsafe",
     "Kautschiin",
     "Carvene",
-    "Biogenic SE 374",
-    "(+)-alpha-Limonene"
+    "Biogenic SE 374"
    ],
    "origin": "ifra"
   },
@@ -36411,6 +36423,7 @@
    "odor": "herbal, pine, woody",
    "odorEn": null,
    "synonyms": [
+    "(-)-beta-Pinene",
     "(-)-nopinene",
     "l-beta-Pinene",
     "(1S)-(-)-beta-Pinene",
@@ -36421,8 +36434,7 @@
     "(1S)-(1)-beta-Pinene",
     "(S)-b-Pinene",
     "Laevo-b-pinene",
-    "L-b-Pinene",
-    "(-)-beta-piene"
+    "L-b-Pinene"
    ],
    "origin": "ifra"
   },
@@ -36457,6 +36469,7 @@
    "odor": "herbal, floral, pine",
    "odorEn": null,
    "synonyms": [
+    "(+)-alpha-Terpineol",
     "(+)-(4R)-alpha-terpineol",
     "(R)-(+)-alpha-Terpineol",
     "(R)-p-Menth-1-en-8-ol",
@@ -36467,8 +36480,7 @@
     "8-Hydroxy-p-menth-1-ene",
     "alpha-Terpinol",
     "1-alpha-terpineol",
-    "Lily of valley",
-    "alpha-terpineole"
+    "Lily of valley"
    ],
    "origin": "ifra"
   },
@@ -36503,6 +36515,7 @@
    "odor": "citrus, lemongrass, citronella",
    "odorEn": null,
    "synonyms": [
+    "(S)-(-)-Citronellal",
     "(3S)-(-)-Citronellal",
     "(S)-(-)-itronellal",
     "(-)-itronellal",
@@ -36579,6 +36592,7 @@
    "odor": "fruity, sweet, fermented",
    "odorEn": null,
    "synonyms": [
+    "(+)-2-Butanol",
     "(S)-Butan-2-ol",
     "(2S)-butan-2-ol",
     "(2S)-2-butanol",
@@ -36822,9 +36836,9 @@
    "odor": "fruity, grapefruit, floral",
    "odorEn": null,
    "synonyms": [
+    "Isobutyl N-methylanthranilate",
     "isobutyl methyl anthranilate",
     "Isobutyl 2-N-methylaminobenzoate",
-    "Isobutyl 2-(methylamino)",
     "Isobutyl-2-(methylamino)benzoat"
    ],
    "origin": "ifra"
@@ -37181,6 +37195,7 @@
    "odor": "balsamic, fruity, floral",
    "odorEn": null,
    "synonyms": [
+    "alpha-Terpinyl butyrate",
     "P-Menth-1-en-8-yl butyrate",
     "alpha-Terpineol butanoate",
     "Terpinyl n-butyrate",
@@ -37421,6 +37436,7 @@
    "odor": "green, grassy, fruity",
    "odorEn": null,
    "synonyms": [
+    "(Z)-3-Hexenal",
     "3-(Z)-Hexenal",
     "(Z)-Hex-3-enal",
     "(3Z)-3-Hexenal",
@@ -37464,7 +37480,9 @@
    "carbons": 21,
    "odor": "floral, balsamic, sweet",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Benzyl benzoyloxybenzoate"
+   ],
    "origin": "ifra"
   },
   {
@@ -37539,7 +37557,6 @@
     "(1S)-(+)-fenchone",
     "(+)-2-fenchanone",
     "(+)-fenchan-2-one",
-    "d-Fenchone (natural)",
     "(+)-Fenchone, analytical standard"
    ],
    "origin": "ifra"
@@ -37575,6 +37592,7 @@
    "odor": "aldehydic, green, herbal",
    "odorEn": null,
    "synonyms": [
+    "alpha-Campholenal",
     "alpha-Campholenaldehyde",
     "(R)-(+)-campholenic aldehyde",
     "(R)-alpha-campholenaldehyde",
@@ -38079,6 +38097,7 @@
    "odorEn": null,
    "synonyms": [
     "Pamplefleur",
+    "2-Methyl-4-phenyl-1-pentanol",
     "2-methyl-4-phenylpentan-1-ol"
    ],
    "origin": "ifra"
@@ -38527,6 +38546,7 @@
    "odor": "fruity, almond, cherry",
    "odorEn": null,
    "synonyms": [
+    "Ethyl (p-tolyloxy)acetate",
     "ethyl 2-(4-methylphenoxy)acetate",
     "Ethyl p-cresoxyacetate",
     "cherry oxyacetate",
@@ -38611,6 +38631,7 @@
    "odor": "spicy, warm, cinnamon",
    "odorEn": null,
    "synonyms": [
+    "Isoamyl Cinnamate",
     "Isopentyl alcohol, cinnamate",
     "Cinnamic acid, isopentyl ester",
     "Isopentyl 3-phenylacrylate",
@@ -38659,12 +38680,12 @@
     "Spigenin",
     "Pelargidenon 1449",
     "Chamomile oil, german",
-    "Apigenin (Standard)",
     "4der",
     "4dgm",
     "4hkk",
     "Chamomile Absolute",
-    "Apigenin Food grade"
+    "Apigenin Food grade",
+    "Prestwick_719"
    ],
    "origin": "ifra"
   },
@@ -38745,8 +38766,8 @@
    "odor": "citrus, mandarin, aldehydic",
    "odorEn": null,
    "synonyms": [
+    "beta-SINENSAL",
     "Orange terpenes",
-    "beta-Sinensal (natural)",
     "sinensal (beta-)"
    ],
    "origin": "ifra"
@@ -38828,6 +38849,7 @@
    "odor": "green, cucumber, oily",
    "odorEn": null,
    "synonyms": [
+    "2-Nonenal",
     "3-Hexylacrolein",
     "beta-Hexylacrolein",
     "3-Hexyl-2-propenal",
@@ -38838,8 +38860,7 @@
     "(2Z)-non-2-enal",
     "(E)-Non-2-enal",
     "(E)-2-Nonenal",
-    "2-trans-Nonenal",
-    "(2E)-non-2-enal"
+    "2-trans-Nonenal"
    ],
    "origin": "ifra"
   },
@@ -38874,6 +38895,7 @@
    "odor": "aldehydic, floral, clean, earthy, coriander",
    "odorEn": null,
    "synonyms": [
+    "(2E)-Decenal",
     "(E)-Dec-2-enal",
     "decenal",
     "(E)-2-Decenal",
@@ -38884,8 +38906,7 @@
     "Decylenic aldehyde",
     "(2E)-dec-2-enal",
     "dec-(e)-2-enal",
-    "Dec-2(E)-enal",
-    "(E)-trans-2-decenal"
+    "Dec-2(E)-enal"
    ],
    "origin": "ifra"
   },
@@ -38920,6 +38941,7 @@
    "odor": "citrus, aldehydic, mandarin, coriander",
    "odorEn": null,
    "synonyms": [
+    "2-Dodecenal",
     "(E)-dodec-2-enal",
     "(E)-2-Dodecen-1-al",
     "(E)-Dodec-2-en-1-al",
@@ -38930,8 +38952,7 @@
     "Dodecenal",
     "(2E)-2-Dodecenal",
     "(2E)-dodec-2-enal",
-    "eryngial",
-    "3-Nonylacrolein"
+    "eryngial"
    ],
    "origin": "ifra"
   },
@@ -39171,7 +39192,9 @@
    "carbons": 13,
    "odor": "citrus, sweet, lemon",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Geranial propylene glycol acetal"
+   ],
    "origin": "ifra"
   },
   {
@@ -39204,7 +39227,9 @@
    "carbons": 12,
    "odor": "citrus, fresh, green",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Geranial dimethyl acetal"
+   ],
    "origin": "ifra"
   },
   {
@@ -39327,6 +39352,7 @@
    "odor": "floral, violet, powdery",
    "odorEn": null,
    "synonyms": [
+    "beta-Ionone epoxide",
     "Ionone Impurity 1"
    ],
    "origin": "ifra"
@@ -39412,13 +39438,13 @@
     "cis-3-Hexenyl hexoate",
     "(3Z)-Hex-3-en-1-yl hexanoate",
     "(Z)-Hex-3-enyl hexanoate",
-    "cis-3-Hexenyl caproate (hexanoate)",
     "(z)-3-hexen-1-yl hexanoate",
     "cis-3-Hexen-1-yl Hexanoate",
     "(3Z)-3-Hexenyl hexanoate",
     "cis-3-Hexenyl n-hexanoate",
     "3-Hexen-1-ol hexanoate, cis",
-    "(Z)-3-Hexen-1-ol, hexanoate"
+    "(Z)-3-Hexen-1-ol, hexanoate",
+    "n-Caproic acid cis-3-hexenyl ester"
    ],
    "origin": "ifra"
   },
@@ -39665,7 +39691,6 @@
    "synonyms": [
     "Cis-isoambrettolide",
     "Oxacycloheptadec-10-en-2-one",
-    "omega-6-Hexadecenlactone (natural)",
     "oxacycloheptadec-10-en-2-on",
     "9-Hexadecenoic acid, o-lactone",
     "10Z-oxacydoheptadec-10-en-2-one"
@@ -39741,8 +39766,8 @@
    "odorEn": null,
    "synonyms": [
     "Geranyl propanoate",
-    "Geranyl propionate (natural)",
     "Propionic acid, geranyl ester",
+    "Geranyl propionate, natural",
     "geraniol propanoate",
     "geranyl-n-propanoate",
     "Geranyl n-propionate"
@@ -40154,14 +40179,12 @@
     "Oleic acid, ethyl ester",
     "Ethyl cis-9-octadecenoate",
     "ethyl (9Z)-octadec-9-enoate",
-    "Ethyl oleate (Standard)",
-    "Ethyl oleate (NF)",
     "9-Octadecenoic acid, ethyl ester",
     "Ethyl 9-octadecenoate",
     "Ethyl Z-9-octadecenoate",
-    "Ethyl oleate (natural)",
     "ethyl-cis-9-octadecanaote",
-    "ethyl (9Z)-octadecenoate"
+    "ethyl (9Z)-octadecenoate",
+    "Ethyl oleate, analytical standard"
    ],
    "origin": "ifra"
   },
@@ -40281,6 +40304,7 @@
    "odor": "woody, floral, powdery",
    "odorEn": null,
    "synonyms": [
+    "gamma-IONONE",
     "gamma-lonone",
     "gamma-Ionon",
     "g-Ionone",
@@ -40322,6 +40346,7 @@
    "odor": "powdery, floral, gourmand",
    "odorEn": null,
    "synonyms": [
+    "alpha-IONOL",
     "alpha-lonol",
     "latilure",
     "a-Ionol (Technical Grade)",
@@ -40363,7 +40388,6 @@
    "synonyms": [
     "(Z)-3-Hexenyl lactate",
     "(Z)-Hex-3-enyl lactate",
-    "cis-3-Hexenyl lactate (natural)",
     "Lactic Acid cis-3-Hexen-1-yl Ester",
     "Lactic acid cis-3-hexenyl ester",
     "(3Z)-3-hexenyl lactate",
@@ -40576,6 +40600,7 @@
    "odor": "fruity, cherry, fresh",
    "odorEn": null,
    "synonyms": [
+    "(Z)-2-Penten-1-ol",
     "(Z)-Pent-2-en-1-ol",
     "cis-Pent-2-ene-1-ol",
     "(Z)-2-pentenol",
@@ -40838,6 +40863,7 @@
    "odor": "green, herbal, vegetable",
    "odorEn": null,
    "synonyms": [
+    "(Z)-hex-4-en-1-ol",
     "(Z)-4-hexen-1-ol",
     "cis-hex-4-en-1-ol",
     "(4Z)-4-Hexen-1-ol",
@@ -40989,7 +41015,6 @@
    "synonyms": [
     "Propenyl butyl ketone",
     "Butyl propenyl ketone",
-    "2-Octen-4-one (natural)",
     "(E)-2-Octen-4-one",
     "(2Z)-oct-2-en-4-one",
     "Oct-2-en-4-one",
@@ -41071,7 +41096,6 @@
    "odor": "fruity, sweet, berry",
    "odorEn": null,
    "synonyms": [
-    "Neryl isobutyrate (natural)",
     "Geranyl 2-methylpropanoate",
     "neryl isobutanoate",
     "geranyl iso-butyrate",
@@ -41691,6 +41715,7 @@
    "odor": "floral, violet, powdery",
    "odorEn": null,
    "synonyms": [
+    "beta-ISOMETHYLIONONE",
     "delta-METHYLIONONE",
     "delta-Iraldeine",
     "Isomethyl-beta-ionone",
@@ -41779,6 +41804,7 @@
    "odor": "spicy, warm, sweet",
    "odorEn": null,
    "synonyms": [
+    "alpha-METHYLCINNAMALDEHYDE",
     "2-Methyl-3-phenylacrylaldehyde",
     "2-Methyl-3-phenyl-2-propenal",
     "2-Methyl-3-phenylacrolein",
@@ -41789,8 +41815,7 @@
     "(E)-Alpha-Methylcinnamaldehyde",
     "(E)-2-Methyl-3-phenylpropenal",
     "alpha-Methylcinnimal",
-    "Cinnamaldehyde, alpha-methyl",
-    "2-Methyl-3-phenyl-2-propen-1-al"
+    "Cinnamaldehyde, alpha-methyl"
    ],
    "origin": "ifra"
   },
@@ -41905,13 +41930,13 @@
    "odorEn": null,
    "synonyms": [
     "Damascone",
+    "beta-DAMASCONE",
     "Damasione",
     "E-beta-damascone",
     "Rose dihydroketone",
     "fA-Damascone",
     "E)-v-Damascon",
-    "damascone (e-beta-)",
-    "|A-Damascone (Standard)"
+    "damascone (e-beta-)"
    ],
    "origin": "ifra"
   },
@@ -41946,6 +41971,7 @@
    "odor": "floral, violet, powdery",
    "odorEn": null,
    "synonyms": [
+    "beta-Irone",
     "6-Methyl-beta-ionone",
     "2-Methyl-beta-ionone",
     "(+)-b-Irone"
@@ -42273,6 +42299,7 @@
    "odor": "floral, jasmin, citrus",
    "odorEn": null,
    "synonyms": [
+    "2-Pentyl-3-phenylprop-2-en-1-ol",
     "2-Benzylideneheptanol",
     "alpha-Pentylcinnamyl alcohol",
     "alpha-Amylcinnamyl alcohol",
@@ -42401,9 +42428,9 @@
     "(-)-Bornan-2-exo-ol",
     "Isobomeol",
     "b-Camphol",
-    "Isoborneol (Standard)",
     "Isoborneol Impurity 4",
-    "Camphor EP Impurity I"
+    "Camphor EP Impurity I",
+    "Isoborneol, analytical standard"
    ],
    "origin": "ifra"
   },
@@ -42473,6 +42500,7 @@
    "odor": "musk like, powdery, soft",
    "odorEn": null,
    "synonyms": [
+    "Exaltenone",
     "(4Z)-cyclopentadec-4-en-1-one",
     "cis-4-Cyclopentadecen-1-one"
    ],
@@ -42724,11 +42752,11 @@
     "Linalool oxide I (cis, furanoid)",
     "cis-Linalyl Oxide",
     "Linalool oxide B",
-    "cis-linalool oxide (furanoid)",
     "Z-linalool oxide",
     "Linalool oxide I",
     "linalyl oxide cis",
-    "cis-Furanoid linalool oxide"
+    "cis-Furanoid linalool oxide",
+    "linalool oxide B (cis-THF)"
    ],
    "origin": "ifra"
   },
@@ -42805,6 +42833,7 @@
    "odor": "gourmand, honey, rose",
    "odorEn": null,
    "synonyms": [
+    "2-Phenylbutenal",
     "(E)-2-phenylbut-2-enal",
     "(E)-2-Phenylcrotonaldehyde",
     "2-phenylbut-2-enal",
@@ -43018,9 +43047,7 @@
    "carbons": 11,
    "odor": "floral, waxy, jasmin",
    "odorEn": null,
-   "synonyms": [
-    "Isojasmone (natural)"
-   ],
+   "synonyms": [],
    "origin": "ifra"
   },
   {
@@ -43054,6 +43081,7 @@
    "odor": "fruity, green, apple",
    "odorEn": null,
    "synonyms": [
+    "cis-5-Octenal",
     "(Z)-5-octen-1-al",
     "(5z)-5-octenal",
     "(5z)-oct-5-enal",
@@ -43483,6 +43511,7 @@
    "odor": "floral, muguet, green",
    "odorEn": null,
    "synonyms": [
+    "(E)-6-ethyl-3-methyloct-6-en-1-ol",
     "3-Methyl-6-ethyl-6-octen-1-ol"
    ],
    "origin": "ifra"
@@ -43730,6 +43759,7 @@
    "odorEn": null,
    "synonyms": [
     "Undecavertol",
+    "4-Methyldec-3-en-5-ol",
     "(E)-4-methyldec-3-en-5-ol",
     "(E)-4-methyl-3-decen-5-ol",
     "(3E)-4-Methyl-3-decen-5-ol"
@@ -44400,6 +44430,7 @@
    "odorEn": null,
    "synonyms": [
     "(R)-alpha-Terpinyl acetate",
+    "(+)-alpha-terpinyl acetate",
     "Alpha Terinyl Acetate",
     "1R-Terpinyl Acetate"
    ],
@@ -45641,6 +45672,7 @@
    "odor": "woody, floral, violet",
    "odorEn": null,
    "synonyms": [
+    "Methyl-alpha-ionone",
     "alpha-Methylionone"
    ],
    "origin": "ifra"
@@ -47195,6 +47227,7 @@
    "odor": "woody, fruity, spicy",
    "odorEn": null,
    "synonyms": [
+    "beta-Caryophyllene alcohol acetate",
     "Caryophyllene acetate",
     "Caryophyllen acetate"
    ],
