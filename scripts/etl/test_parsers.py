@@ -131,6 +131,11 @@ def test_search_synonyms():
             "Methyl (3-oxo-2-pentylcyclopentyl)acetate", "DTXSID4029303", "Kharismal", "MDJ", "HSDB 7495"]
     got = search_synonyms(syns, exclude={"Methyl dihydrojasmonate"})
     assert got == ["Hedione", "Kharismal", "MDJ"], got
+    # Kauppanimi nousee alkuun, toistot ja kirjoitusmuunnelmat karsitaan
+    syns = ["Kharismal", "Cepionate", "Methyldihydrojasmonate", "DIHYDROJASMONIC ACID, METHYL ESTER",
+            ".alpha.-Hedione", "Isoborneol, (-)-", "Sclareolide, 97%", "Jessamona", "Hedione"]
+    got = search_synonyms(syns, exclude={"Methyl dihydrojasmonate"})
+    assert got == ["Kharismal", "Hedione", "Cepionate", "Jessamona"], got
 
 
 if __name__ == "__main__":

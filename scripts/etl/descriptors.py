@@ -190,24 +190,61 @@ SYN_SKIP = re.compile(
 )
 
 
-def search_synonyms(synonyms: list[str], exclude: set[str], limit: int = 10, max_len: int = 34) -> list[str]:
-    """Lyhyet, luettavat synonyymit (myös kauppanimet, kuten Hedione tai Galaxolide)."""
-    out: list[str] = []
-    seen = {e.lower() for e in exclude}
+# Tunnetut aromikemikaalien kauppanimet: pidetään hakusanoina aina, kun PubChem listaa ne yhdisteelle.
+TRADE_NAMES = {
+    n.strip().lower()
+    for n in """
+    Hedione|Hedione HC|Iso E Super|Iso Gamma Super|Galaxolide|Tonalide|Traseolide|Celestolide|Phantolide|Ambroxan|Ambrox|
+    Ambrofix|Cetalox|Ambrocenide|Ambermax|Amber Xtreme|Orcanox|Grisalva|Spirambrene|Trimofix|Boisambrene|Kephalis|
+    Calone|Cashmeran|Habanolide|Helional|Lilial|Lyral|Bourgeonal|Floralozone|Melonal|Adoxal|Majantol|Nympheal|Silvial|
+    Florhydral|Triplal|Ligustral|Stemone|Liffarome|Undecavertol|Cyclal C|Verdox|Vertenex|Dupical|Fructone|Frutonile|
+    Manzanate|Exaltolide|Exaltone|Muscenone|Velvione|Romandolide|Helvetolide|Serenolide|Sylkolide|Nirvanolide|
+    Thibetolide|Cosmone|Globalide|Ambrettolide|Muscone|Civetone|Musk ketone|Musk xylene|Ethylene brassylate|
+    Javanol|Sandalore|Ebanol|Polysantol|Bacdanol|Brahmanol|Timberol|Norlimbanol|Karanal|Vertofix|Georgywood|
+    Clearwood|Akigalawood|Okoumal|Coranol|Florol|Mayol|Rosalva|Peonile|Phenoxanol|Mefranal|Aurantiol|Indolene|
+    Paradisone|Zinarine|Rhubafuran|Oxane|Labienoxime|Vanitrope|Ethyl vanillin|Heliotropin|Piperonal|Veltol|Ethyl maltol|
+    Maltol|Furaneol|Sotolon|Jasmolactone|Jasmonyl|Iralia|Irisone|Orivone|Timbersilk|Prunolide|Violettyl|Methyl ionone|
+    Aldehyde C-8|Aldehyde C-9|Aldehyde C-10|Aldehyde C-11|Aldehyde C-12|Aldehyde C-12 MNA|Aldehyde C-12 lauric|
+    Aldehyde C-14|Aldehyde C-16|Aldehyde C-18|Aldehyde C-12 MOA|Cyclamen aldehyde|Isobutyl quinoline|Corps Racine|
+    Dihydromyrcenol|Tetrahydrolinalool|Lilyall|Lillial|Amyl salicylate|Hexyl cinnamic aldehyde|Methyl pamplemousse|
+    Pamplefleur|Nectaryl|Delta Damascone|Damascone|Ambrinol|Cedramber|Cedryl methyl ether|Vetiveryl acetate|
+    Agrumex|Rosaphen|Mugetanol|Hydroxyambran|Ultrazur|Azurone|Lactoscatone|Toscanol|Moxalone|Ozonil|Scentenal|
+    Floropal|Nerolione|Mandarinal|Citral|Citronitrile|Geranitrile|Lemonile|Neobutenone|Cassyrane|Pomarose|Rose oxide|
+    Methyl laitone|Coumarin|Tonka lactone|Kharismal|Ambrettone|Fixolide|Versalide|Muscenone delta|Musk T|Musk 781
+    """.replace("\n", "").split("|")
+    if n.strip()
+}
+
+DOTTED_GREEK = re.compile(r"\.[a-z]+\.", re.I)
+
+
+def _key(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def search_synonyms(synonyms: list[str], exclude: set[str], limit: int = 12, max_len: int = 34) -> list[str]:
+    """Lyhyet, luettavat synonyymit hakua varten; tunnetut kauppanimet (Hedione, Galaxolide) ensin."""
+    seen = {_key(e) for e in exclude if e}
+    trade: list[str] = []
+    other: list[str] = []
     for s in synonyms:
         t = s.strip()
-        if not (3 <= len(t) <= max_len) or SYN_SKIP.search(t):
+        k = _key(t)
+        if not k or k in seen:
+            continue
+        if t.lower() in TRADE_NAMES:
+            seen.add(k)
+            trade.append(t)
+            continue
+        if not (3 <= len(t) <= max_len) or SYN_SKIP.search(t) or DOTTED_GREEK.search(t) or INVERTED.search(t):
+            continue
+        if any(c in t for c in "%#?!*@"):
             continue
         digits = sum(c.isdigit() for c in t)
         if digits > max(3, len(t) // 4):
             continue
-        if t.isupper() and len(t) > 6 and " " not in t:
+        if t.isupper() and len(t) > 5:
             continue
-        key = t.lower()
-        if key in seen:
-            continue
-        seen.add(key)
-        out.append(t)
-        if len(out) >= limit:
-            break
-    return out
+        seen.add(k)
+        other.append(t)
+    return (trade + other)[:limit]
