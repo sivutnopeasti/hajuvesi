@@ -1,6 +1,6 @@
 # Molekyylidatan raportti
 
-Ajettu 2026-11-21 12:10 UTC. Kuratoidussa siemenlistassa 217 molekyyliä; IFRA-glossaarista lisätty 971. Yhteensä 1188.
+Ajettu 2026-11-21 12:13 UTC. Kuratoidussa siemenlistassa 217 molekyyliä; IFRA-glossaarista lisätty 971. Yhteensä 1188.
 
 Hajuperheet: kukka 260, hedelma 220, vihrea 135, puu 126, havu 124, balsami 113, sitrus 60, myski 55, mauste 49, raikas 36, haihtumaton 6, alkoholi 4
 

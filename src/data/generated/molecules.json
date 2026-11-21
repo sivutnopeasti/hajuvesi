@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T12:10:48Z",
+ "generatedAt": "2026-11-21T12:13:28Z",
  "sources": [
   "PubChem PUG REST and PUG View (NCBI)",
   "Abraham et al. 2012, Chemical Senses 37:207–218, via the Pyrfume archive",
@@ -2038,6 +2038,7 @@
    "odor": "lemon, sweet",
    "odorEn": null,
    "synonyms": [
+    "Citral",
     "cis-Citral",
     "Citral b",
     "(Z)-Citral",
@@ -2437,6 +2438,7 @@
    "odor": "orange peel",
    "odorEn": "Floral-fatty odor; Citrus odor",
    "synonyms": [
+    "Aldehyde C-10",
     "Decyl aldehyde",
     "Capraldehyde",
     "Caprinaldehyde",
@@ -2447,7 +2449,6 @@
     "n-Decyl aldehyde",
     "n-Decaldehyde",
     "1-Decyl aldehyde",
-    "Aldehyde C10",
     "C-10 aldehyde"
    ],
    "origin": "seed"
@@ -3759,6 +3760,7 @@
    "odor": "violet, powdery",
    "odorEn": "It has a warm, woody, floral odor with balsamic and sweet tones and is strongly reminiscent of violet flowers; Sweet-floral odor, reminiscent of violets",
    "synonyms": [
+    "Irisone",
     "(E)-alpha-Ionone",
     "alpha-(E)-ionone",
     "alpha-Ionon",
@@ -3769,8 +3771,7 @@
     "alpha-Ionone (natural)",
     "alpha-Jonone",
     "beta-lonone (natural)",
-    "(+-)-trans-alpha-Ionone",
-    "(E)-alpha-lonone"
+    "(+-)-trans-alpha-Ionone"
    ],
    "origin": "seed"
   },
@@ -6751,6 +6752,7 @@
    "odor": "rose, geranium",
    "odorEn": null,
    "synonyms": [
+    "Rose oxide",
     "l-Rose oxide"
    ],
    "origin": "seed"
@@ -6833,8 +6835,9 @@
    "odorEn": null,
    "synonyms": [
     "Ambroxan",
-    "AMBROFIX",
-    "ORCANOX",
+    "Ambrofix",
+    "Cetalox",
+    "Orcanox",
     "(-)-ambrox",
     "Ambroxane",
     "A1EI5",
@@ -16282,6 +16285,7 @@
    "odor": "musk like, powdery, animal like",
    "odorEn": "Powerful soft, sweet animal musk",
    "synonyms": [
+    "Muscone",
     "3-Methylcyclopentadecanone",
     "3-Methylcyclopentadecan-1-one",
     "Methylexaltone",
@@ -16290,7 +16294,6 @@
     "dl-muscone",
     "5-Methyl-1-cyclopentadecanone",
     "dextro,laevo-muscone",
-    "(+-)-Muscone",
     "L-Muscone",
     "Muscone (Standard)"
    ],
@@ -22697,7 +22700,7 @@
    "odorEn": null,
    "synonyms": [
     "Aldehyde C-12",
-    "Aldehyde C-12 mna",
+    "Aldehyde C-12 MNA",
     "Methylnonylacetaldehyde",
     "Methyl-n-nonylacetaldehyde",
     "2-Methylhendecanal",
@@ -24931,7 +24934,7 @@
    "odor": "gourmand, caramel, sweet",
    "odorEn": null,
    "synonyms": [
-    "sotolon",
+    "Sotolon",
     "Caramel furanone",
     "Sautalone",
     "Fenugreck Lactone"
@@ -27348,7 +27351,9 @@
    "carbons": 12,
    "odor": "fruity, apple, woody",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Verdox"
+   ],
    "origin": "ifra"
   },
   {
@@ -28300,8 +28305,8 @@
    "odor": "green, grassy, citrus",
    "odorEn": null,
    "synonyms": [
+    "Triplal",
     "Ligustral",
-    "TRIPLAL",
     "Cyclal C",
     "BELAL",
     "Vertocitral",
@@ -29748,6 +29753,7 @@
    "odor": "floral, fresh, jasmin",
    "odorEn": null,
    "synonyms": [
+    "Hedione HC",
     "Kharismal",
     "Cepionate",
     "Dihydrojasmonic acid methyl",
@@ -31179,6 +31185,7 @@
    "odor": "woody, cedarwood, amber",
    "odorEn": null,
    "synonyms": [
+    "Vertofix",
     "Vertofix coeur",
     "Methyl cedryl ketone"
    ],
@@ -31449,7 +31456,7 @@
    "odor": "fruity, citrus, green",
    "odorEn": null,
    "synonyms": [
-    "FLOROPAL",
+    "Floropal",
     "Vertacetal",
     "Floralate"
    ],
@@ -31593,7 +31600,7 @@
    "odor": "floral, marine, citrus",
    "odorEn": null,
    "synonyms": [
-    "MEFRANAL",
+    "Mefranal",
     "3-Methyl-5-phenyl-1-pentanal",
     "3-Methyl-5-phenylpentan-1-al",
     "lily pentanal",
@@ -33812,7 +33819,7 @@
    "odor": "marine, watery, fresh",
    "odorEn": null,
    "synonyms": [
-    "calone",
+    "Calone",
     "Watermelon ketone",
     "Watermelon ketone (Standard)"
    ],
@@ -38002,7 +38009,9 @@
    "carbons": 13,
    "odor": "fruity, blackcurrant, grapefruit",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Labienoxime"
+   ],
    "origin": "ifra"
   },
   {
@@ -40869,7 +40878,7 @@
    "odor": "green, fresh, floral",
    "odorEn": null,
    "synonyms": [
-    "LIFFAROME",
+    "Liffarome",
     "(Z)-Hex-3-en-1-yl methyl carbonate",
     "cis-Hex-3-en-1-yl methyl carbonate",
     "cis-3-hexenyl methylcarbonate",
@@ -41895,7 +41904,7 @@
    "odor": "floral, rose, plum",
    "odorEn": null,
    "synonyms": [
-    "damascone",
+    "Damascone",
     "Damasione",
     "E-beta-damascone",
     "Rose dihydroketone",
@@ -42308,7 +42317,9 @@
    "carbons": 8,
    "odor": "green, leafy, pungent",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Stemone"
+   ],
    "origin": "ifra"
   },
   {
@@ -43608,6 +43619,7 @@
    "odor": "floral, muguet, aldehydic",
    "odorEn": null,
    "synonyms": [
+    "Dupical",
     "4-Tricyclodecylidene butanal"
    ],
    "origin": "ifra"
@@ -43643,7 +43655,7 @@
    "odor": "fruity, floral, jasmin",
    "odorEn": null,
    "synonyms": [
-    "JASMOLACTONE",
+    "Jasmolactone",
     "(e)-8-decen-5-olide",
     "petal pyranone",
     "6-(Pent-3-en-1-yl)oxan-2-one",
@@ -44141,7 +44153,7 @@
    "odor": "musk like, warm, powdery",
    "odorEn": null,
    "synonyms": [
-    "HABANOLIDE",
+    "Habanolide",
     "(12E)-oxacyclohexadecen-2-one"
    ],
    "origin": "ifra"
@@ -45214,7 +45226,9 @@
    "carbons": 11,
    "odor": "fruity, sweet, apple",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Pomarose"
+   ],
    "origin": "ifra"
   },
   {
@@ -45413,7 +45427,7 @@
    "odor": "musk like, fruity, pear",
    "odorEn": null,
    "synonyms": [
-    "HELVETOLIDE"
+    "Helvetolide"
    ],
    "origin": "ifra"
   },
@@ -46506,6 +46520,8 @@
    "odor": "woody, dry, amber",
    "odorEn": null,
    "synonyms": [
+    "Cedramber",
+    "Cedryl methyl ether",
     "Methyl cedryl ether"
    ],
    "origin": "ifra"
@@ -46606,7 +46622,9 @@
    "carbons": 15,
    "odor": "woody, amber, dry",
    "odorEn": null,
-   "synonyms": [],
+   "synonyms": [
+    "Spirambrene"
+   ],
    "origin": "ifra"
   },
   {
