@@ -13,11 +13,9 @@ const fromSlider = (v: number) =>
 interface Props {
   timeMin: number
   onChange: (t: number) => void
-  sniffA: number
-  sniffB: number
 }
 
-export function TimeScrubber({ timeMin, onChange, sniffA, sniffB }: Props) {
+export function TimeScrubber({ timeMin, onChange }: Props) {
   const [value, unit] = timeParts(timeMin)
   return (
     <div className="scrubber">
@@ -40,19 +38,6 @@ export function TimeScrubber({ timeMin, onChange, sniffA, sniffB }: Props) {
             onChange={(e) => onChange(fromSlider(Number(e.target.value)))}
             aria-valuetext={timeLabel(timeMin)}
           />
-          {[
-            { t: sniffA, k: 'A' },
-            { t: sniffB, k: 'B' },
-          ].map((s) => (
-            <span
-              key={s.k}
-              className="sniff-mark"
-              style={{ left: `${(toSlider(s.t) / STEPS) * 100}%` }}
-              title={`Haistohetki ${s.k}: ${timeLabel(s.t)}`}
-            >
-              {s.k}
-            </span>
-          ))}
         </div>
         <div className="presets" role="group" aria-label="Pikavalinnat">
           {PRESETS.map((p) => (

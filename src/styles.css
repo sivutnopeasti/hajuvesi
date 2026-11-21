@@ -311,19 +311,8 @@ h3 {
 
 .slider-wrap {
   position: relative;
-  padding-top: 22px;
 }
 
-.sniff-mark {
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: var(--smoke);
-  border-bottom: 1px dashed var(--smoke);
-  padding: 0 4px;
-  pointer-events: none;
-}
 
 input[type='range'] {
   width: 100%;
@@ -679,16 +668,7 @@ input[type='range']::-moz-range-thumb {
   stroke-width: 2.5;
 }
 
-.sniff-line {
-  stroke: var(--ink);
-  stroke-width: 1;
-  stroke-dasharray: 4 4;
-}
 
-.sniff-label {
-  font-size: 13px;
-  fill: var(--ink);
-}
 
 .timeline .legend-colors {
   margin-top: 8px;

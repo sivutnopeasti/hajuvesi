@@ -91,7 +91,7 @@ export default function App() {
           Arvioidut arvot on merkitty ≈-merkillä, ja tulokset ovat suuntaa-antavia.
         </p>
 
-        <TimeScrubber timeMin={timeMin} onChange={setTimeMin} sniffA={sniffA} sniffB={sniffB} />
+        <TimeScrubber timeMin={timeMin} onChange={setTimeMin} />
 
         <div className="map-layout">
           <div className="map-wrap">
@@ -142,7 +142,7 @@ export default function App() {
         </div>
 
         {result && (
-          <Timeline result={result} timeMin={timeMin} sniffA={sniffA} sniffB={sniffB} onTime={setTimeMin} />
+          <Timeline result={result} timeMin={timeMin} onTime={setTimeMin} />
         )}
 
         <section className="section" id="vertailu" aria-labelledby="compare-title">

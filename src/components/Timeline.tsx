@@ -24,12 +24,10 @@ function scales(W: number, H: number) {
 interface Props {
   result: SimResult
   timeMin: number
-  sniffA: number
-  sniffB: number
   onTime: (t: number) => void
 }
 
-export function Timeline({ result, timeMin, sniffA, sniffB, onTime }: Props) {
+export function Timeline({ result, timeMin, onTime }: Props) {
   const [ref, W] = useWidth<HTMLElement>(1000)
   const compact = W < 640
   const H = compact ? 200 : 260
@@ -85,17 +83,6 @@ export function Timeline({ result, timeMin, sniffA, sniffB, onTime }: Props) {
           <text key={t} x={X(t)} y={H - PAD.b + 18} textAnchor="middle" className="tick">
             {timeLabel(t)}
           </text>
-        ))}
-        {[
-          { t: sniffA, k: 'A' },
-          { t: sniffB, k: 'B' },
-        ].map((s) => (
-          <g key={s.k}>
-            <line x1={X(s.t)} x2={X(s.t)} y1={PAD.t - 6} y2={H - PAD.b} className="sniff-line" />
-            <text x={X(s.t)} y={PAD.t - 8} textAnchor="middle" className="sniff-label">
-              {s.k}
-            </text>
-          </g>
         ))}
         <line x1={X(timeMin)} x2={X(timeMin)} y1={PAD.t - 6} y2={H - PAD.b} className="now-line" />
       </svg>
