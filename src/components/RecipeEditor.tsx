@@ -10,15 +10,15 @@ interface Props {
 }
 
 const GROUPS: { label: string; kinds: string[] }[] = [
-  { label: 'Öljyt ja resinoidit', kinds: ['öljy', 'resinoidi'] },
-  { label: 'Liuotin', kinds: ['liuotin'] },
-  { label: 'Eristeet ja synteetit', kinds: ['eriste'] },
+  { label: 'Oils and resinoids', kinds: ['oil', 'resinoid'] },
+  { label: 'Solvents', kinds: ['solvent'] },
+  { label: 'Isolates and synthetics', kinds: ['isolate'] },
 ]
 
 export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
   const total = recipe.reduce((s, l) => s + (l.grams || 0), 0)
   const solvent = recipe
-    .filter((l) => MATERIAL_BY_ID[l.materialId]?.kind === 'liuotin')
+    .filter((l) => MATERIAL_BY_ID[l.materialId]?.kind === 'solvent')
     .reduce((s, l) => s + (l.grams || 0), 0)
   const concentrate = total > 0 ? (total - solvent) / total : 0
 
@@ -29,20 +29,20 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
 
   return (
     <div className="recipe">
-      <h2 id="recipe-title">Resepti</h2>
+      <h2 id="recipe-title">Formula</h2>
       <p className="muted">
-        Anna määrät grammoina. Raaka-aineet puretaan molekyyleiksi tyypillisen koostumuksen mukaan, ja kartta
-        päivittyy heti.
+        Enter amounts in grams. Materials are broken down into molecules by their typical composition, and the map
+        updates immediately.
       </p>
       <table className="recipe-table">
         <thead>
           <tr>
-            <th scope="col">Raaka-aine</th>
+            <th scope="col">Material</th>
             <th scope="col" className="num">
-              Grammaa
+              Grams
             </th>
             <th scope="col">
-              <span className="visually-hidden">Toiminnot</span>
+              <span className="visually-hidden">Actions</span>
             </th>
           </tr>
         </thead>
@@ -51,7 +51,7 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
             <tr key={k}>
               <td>
                 <label className="visually-hidden" htmlFor={`mat-${k}`}>
-                  Raaka-aine {k + 1}
+                  Material {k + 1}
                 </label>
                 <select
                   id={`mat-${k}`}
@@ -71,7 +71,7 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
               </td>
               <td className="num">
                 <label className="visually-hidden" htmlFor={`g-${k}`}>
-                  Grammaa, rivi {k + 1}
+                  Grams, row {k + 1}
                 </label>
                 <input
                   id={`g-${k}`}
@@ -85,7 +85,7 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
               </td>
               <td>
                 <button className="link-button" onClick={() => onChange(recipe.filter((_, n) => n !== k))}>
-                  Poista
+                  Remove
                 </button>
               </td>
             </tr>
@@ -98,19 +98,19 @@ export function RecipeEditor({ recipe, onChange, dose, onDose }: Props) {
           onClick={() => unused && onChange([...recipe, { materialId: unused.id, grams: 0.5 }])}
           disabled={!unused}
         >
-          Lisää raaka-aine
+          Add material
         </button>
         <button className="ghost-button" onClick={() => onChange(DEFAULT_RECIPE)}>
-          Palauta esimerkkiseos
+          Reset to example blend
         </button>
       </div>
       <dl className="recipe-summary">
-        <dt>Yhteensä</dt>
+        <dt>Total</dt>
         <dd>{num(total, 3)} g</dd>
-        <dt>Konsentraatti</dt>
-        <dd>{Math.round(concentrate * 100)} %</dd>
+        <dt>Concentrate</dt>
+        <dd>{Math.round(concentrate * 100)}%</dd>
         <dt>
-          <label htmlFor="dose">Annos iholla / paperilla</label>
+          <label htmlFor="dose">Dose on skin / paper</label>
         </dt>
         <dd>
           <input

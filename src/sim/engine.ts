@@ -17,7 +17,7 @@ const T_REF = 298.15 // K
 const MW_REF = 46.07 // etanoli, aineensiirtokertoimen vertailu
 
 export const DEFAULT_PARAMS: SimParams = {
-  mode: 'iho',
+  mode: 'skin',
   doseMgCm2: 3,
   kRef: 1e-3,
   phi: 0.05,
@@ -25,7 +25,7 @@ export const DEFAULT_PARAMS: SimParams = {
   tEndMin: 24 * 60,
 }
 
-export const temperatureK = (mode: Mode): number => (mode === 'iho' ? 305.15 : 295.15)
+export const temperatureK = (mode: Mode): number => (mode === 'skin' ? 305.15 : 295.15)
 
 /** Höyrynpaine (Pa) lämpötilassa T, Clausius–Clapeyron 25 °C:n arvosta. */
 export function psat(m: Molecule, T: number): number {

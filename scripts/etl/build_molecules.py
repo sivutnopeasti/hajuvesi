@@ -313,6 +313,28 @@ def bp_candidates(texts: list[tuple[str, str]]) -> list[float]:
     return [v for text, _ in texts for v in parse_boiling_point(text)]
 
 
+# Kemiallisten ryhmien englanninkieliset nimet lähdeteksteihin
+GROUP_EN = {
+    "liuotin": "solvent",
+    "monoterpeeni": "monoterpene",
+    "seskviterpeeni": "sesquiterpene",
+    "hiilivety": "other hydrocarbon",
+    "aromaattinen": "aromatic hydrocarbon",
+    "terpeenialkoholi": "terpene alcohol",
+    "seskviterpeenialkoholi": "sesquiterpene alcohol",
+    "alkoholi": "other alcohol",
+    "aldehydi": "aldehyde",
+    "ketoni": "ketone",
+    "esteri": "ester",
+    "laktoni": "lactone",
+    "fenoli": "phenol",
+    "eetteri-oksidi": "ether/oxide",
+    "happo": "acid",
+    "typpi-rikki": "nitrogen/sulfur compound",
+    "muu": "other",
+}
+
+
 # ---------------------------------------------------------------- Rakennemalli puuttuville höyrynpaineille
 
 
@@ -506,20 +528,20 @@ def main() -> int:
                 notes.append((row["id"], "ristiriitainen arvo ohitettu: " + ", ".join(f"{c['v']:.3g} mmHg ({c['src']})" for c in dropped)))
                 tier_a = ok
         if tier_a:
-            vp = summarize_vp(tier_a, "koe")
+            vp = summarize_vp(tier_a, "measured")
             if gw is not None and not (gw / 10 <= vp["value"] <= gw * 10):
                 vp["min"] = min(vp["min"], gw)
                 vp["max"] = max(vp["max"], gw)
                 notes.append((row["id"], f"mitattu {vp['value']:.3g} mmHg poikkeaa kiehumispistearviosta {gw:.3g} mmHg; vaihteluväli kattaa molemmat"))
         elif tier_b:
-            vp = summarize_vp(tier_b, "koe")
+            vp = summarize_vp(tier_b, "measured")
         elif tier_c:
-            vp = summarize_vp(tier_c, "arvio")
-            vp["source"] += " (heikko lähde)"
+            vp = summarize_vp(tier_c, "estimate")
+            vp["source"] += " (weak source)"
         elif gw is not None:
-            vp = {"value": gw, "n": 0, "method": "arvio", "source": f"Arvio kiehumispisteestä {tb:.0f} °C (Grain–Watson)"}
+            vp = {"value": gw, "n": 0, "method": "estimate", "source": f"Estimated from boiling point {tb:.0f} °C (Grain–Watson)"}
         elif pred is not None and group not in ("liuotin",):
-            vp = {"value": pred, "n": 0, "method": "arvio", "source": f"Rakennemalli (virhe noin {10 ** model.rmse:.0f}-kertainen)"}
+            vp = {"value": pred, "n": 0, "method": "estimate", "source": f"Structure model (typical error about {10 ** model.rmse:.0f}×)"}
         else:
             vp = None
             notes.append((row["id"], "ei höyrynpainetta"))
@@ -543,13 +565,13 @@ def main() -> int:
                 "min": min(vals),
                 "max": max(vals),
                 "n": len(vals),
-                "method": "koe",
-                "source": "Abraham ym. 2012 (Pyrfume)" + (", sis. stereoisomeerit" if pooled else ""),
+                "method": "measured",
+                "source": "Abraham et al. 2012 (Pyrfume)" + (", incl. stereoisomers" if pooled else ""),
             }
         else:
             vals = choose_pubchem_odt(exp.get("Odor Threshold", []), mw)
             if vals:
-                odt = {"value": geometric_mean(vals), "min": min(vals), "max": max(vals), "n": len(vals), "method": "koe", "source": "PubChem (HSDB/muut)"}
+                odt = {"value": geometric_mean(vals), "min": min(vals), "max": max(vals), "n": len(vals), "method": "measured", "source": "PubChem (HSDB/other)"}
 
         raw_lines.append(f"### {row['id']} ({p.get('Title')}, CID {cid})")
         for text, src in exp.get("Vapor Pressure", []):
@@ -596,8 +618,8 @@ def main() -> int:
                 m["odt"] = {
                     "value": log_median(vals),
                     "n": 0,
-                    "method": "arvio",
-                    "source": f"Ryhmän ({m['group']}) mediaani, n = {len(vals)}",
+                    "method": "estimate",
+                    "source": f"Median of chemical group ({GROUP_EN.get(m['group'], m['group'])}), n = {len(vals)}",
                 }
 
     for m in molecules:
@@ -614,8 +636,8 @@ def main() -> int:
             {
                 "generatedAt": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "sources": [
-                    "PubChem PUG REST ja PUG View (NCBI)",
-                    "Abraham ym. 2012, Chemical Senses 37:207–218, Pyrfume-arkiston kautta",
+                    "PubChem PUG REST and PUG View (NCBI)",
+                    "Abraham et al. 2012, Chemical Senses 37:207–218, via the Pyrfume archive",
                 ],
                 "molecules": molecules,
             },
@@ -634,11 +656,11 @@ def main() -> int:
 
 def write_report(seed, molecules, unresolved, notes, model):
     n = len(molecules)
-    vp_koe = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "koe")
-    vp_ennuste = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "ennuste")
-    vp_arvio = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "arvio")
-    odt_koe = sum(1 for m in molecules if m["odt"] and m["odt"]["method"] == "koe")
-    odt_arvio = sum(1 for m in molecules if m["odt"] and m["odt"]["method"] == "arvio")
+    vp_koe = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "measured")
+    vp_ennuste = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "predicted")
+    vp_arvio = sum(1 for m in molecules if m["vp25"] and m["vp25"]["method"] == "estimate")
+    odt_koe = sum(1 for m in molecules if m["odt"] and m["odt"]["method"] == "measured")
+    odt_arvio = sum(1 for m in molecules if m["odt"] and m["odt"]["method"] == "estimate")
     lines = [
         "# Molekyylidatan raportti",
         "",

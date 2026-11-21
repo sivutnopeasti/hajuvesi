@@ -7,10 +7,10 @@ import type { SimResult } from '../sim/types.ts'
 const OPTIONS = [1, 5, 10, 15, 30, 45, 60, 90, 120, 180, 240, 360, 480]
 
 const KIND_TITLE: Record<ChangeKind, string> = {
-  katosi: 'Katosi',
-  heikkeni: 'Heikkeni',
-  nousi: 'Nousi esiin',
-  ilmestyi: 'Ylitti tunnistuskynnyksen',
+  vanished: 'Disappeared',
+  faded: 'Faded',
+  rose: 'Came forward',
+  appeared: 'Crossed the recognition threshold',
 }
 
 interface Props {
@@ -25,15 +25,15 @@ interface Props {
 export function ComparePanel({ result, sniffA, sniffB, onA, onB, onShow }: Props) {
   const [a, b] = sniffA <= sniffB ? [sniffA, sniffB] : [sniffB, sniffA]
   const cmp = compare(result, indexAt(result.times, a), indexAt(result.times, b))
-  const kinds: ChangeKind[] = ['katosi', 'heikkeni', 'nousi', 'ilmestyi']
+  const kinds: ChangeKind[] = ['vanished', 'faded', 'rose', 'appeared']
 
   return (
     <div className="compare">
       <div className="compare-head">
-        <h2 id="compare-title">Mikä muuttui haistohetkien välillä?</h2>
+        <h2 id="compare-title">What changed between the two sniffs?</h2>
         <div className="compare-pickers">
           <label>
-            Hetki A
+            First sniff
             <select value={sniffA} onChange={(e) => onA(Number(e.target.value))}>
               {OPTIONS.map((o) => (
                 <option key={o} value={o}>
@@ -43,7 +43,7 @@ export function ComparePanel({ result, sniffA, sniffB, onA, onB, onShow }: Props
             </select>
           </label>
           <label>
-            Hetki B
+            Second sniff
             <select value={sniffB} onChange={(e) => onB(Number(e.target.value))}>
               {OPTIONS.map((o) => (
                 <option key={o} value={o}>
@@ -53,16 +53,16 @@ export function ComparePanel({ result, sniffA, sniffB, onA, onB, onShow }: Props
             </select>
           </label>
           <button className="ghost-button" onClick={() => onShow(sniffA)}>
-            Näytä A kartalla
+            Show first on map
           </button>
           <button className="ghost-button" onClick={() => onShow(sniffB)}>
-            Näytä B kartalla
+            Show second on map
           </button>
         </div>
       </div>
       <p className="compare-summary">{cmp.summary}</p>
       {cmp.changes.length === 0 ? (
-        <p className="muted">Yksikään molekyyli ei muuttunut erotuskynnystä (n. 28 %) enempää.</p>
+        <p className="muted">No molecule changed by more than the difference threshold (about 28%).</p>
       ) : (
         <div className="change-groups">
           {kinds
@@ -90,8 +90,8 @@ export function ComparePanel({ result, sniffA, sniffB, onA, onB, onShow }: Props
         </div>
       )}
       <p className="muted small">
-        Vertailu {timeLabel(a)} → {timeLabel(b)}. Muutos lasketaan, kun osuus kasvaa tai pienenee yli 28 %
-        (hajun erotuskynnys) tai molekyyli ylittää tai alittaa tunnistuskynnyksen.
+        Comparing {timeLabel(a)} → {timeLabel(b)}. A change is counted when a share grows or shrinks by more than
+        28% (the odor difference threshold), or when a molecule crosses the recognition threshold.
       </p>
     </div>
   )

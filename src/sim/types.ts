@@ -1,5 +1,5 @@
-/** Arvon alkuperä: koe = vertaisarvioitu mittaus, ennuste = QSAR-malli, arvio = karkea arvio. */
-export type Method = 'koe' | 'ennuste' | 'arvio'
+/** Origin of a value: measured = peer-reviewed measurement, predicted = QSAR model, estimate = rough estimate. */
+export type Method = 'measured' | 'predicted' | 'estimate'
 
 export type FamilyId =
   | 'alkoholi'
@@ -76,7 +76,7 @@ export interface Molecule {
 export interface Material {
   id: string
   name: string
-  kind: 'öljy' | 'resinoidi' | 'eriste' | 'liuotin'
+  kind: 'oil' | 'resinoid' | 'isolate' | 'solvent'
   /** Koostumus massaprosentteina (molekyyli-id → %) */
   composition: Record<string, number>
   note?: string
@@ -87,7 +87,7 @@ export interface RecipeLine {
   grams: number
 }
 
-export type Mode = 'iho' | 'paperi'
+export type Mode = 'skin' | 'paper'
 
 export interface SimParams {
   mode: Mode

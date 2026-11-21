@@ -2,7 +2,7 @@ import generated from './generated/molecules.json' with { type: 'json' }
 import type { FamilyId, GroupId, Method, Molecule, SourcedValue } from '../sim/types.ts'
 import { DEMO_BY_ID, DEMO_MOLECULES } from './demo.ts'
 
-/** ETL:n (scripts/etl/build_molecules.py) tuottama rivi. */
+/** A row produced by the ETL (scripts/etl/build_molecules.py). */
 interface GeneratedMolecule {
   id: string
   name: string
@@ -31,23 +31,23 @@ interface GeneratedFile {
 export const GENERATED = generated as unknown as GeneratedFile
 
 /**
- * Käsin kuratoidut arvot, jotka ovat parempia kuin automaattisesti haetut.
- * Jokaiselle arvolle lähde.
+ * Hand-curated values that are better than the automatically fetched ones.
+ * Every value has a source.
  */
 const OVERRIDES: Record<string, Partial<Molecule>> = {
-  patsulioli: { odt: { value: 4.4e-7, method: 'koe', source: 'Park 2012 (0,44 ppt), UCSD' } },
+  patsulioli: { odt: { value: 4.4e-7, method: 'measured', source: 'Park 2012 (0.44 ppt), UCSD' } },
 }
 
-/** Molekyylit, joita ei ole PubChemissä yhtenä yhdisteenä (seokset ja haihtumaton jäännös). */
+/** Entries that are not a single PubChem compound (mixtures and non-volatile residue). */
 const PSEUDO_IDS = ['seskviterpeenit', 'hartsi']
 
 function fromGenerated(g: GeneratedMolecule): Molecule {
   const vp25: SourcedValue = g.vp25 ?? {
     value: 0,
-    method: 'arvio',
-    source: 'Ei höyrynpainetta eikä kiehumispistettä – käsitellään haihtumattomana',
+    method: 'estimate',
+    source: 'No vapor pressure or boiling point found; treated as non-volatile',
   }
-  const odt: SourcedValue = g.odt ?? { value: Number.POSITIVE_INFINITY, method: 'arvio', source: 'Ei hajukynnystä' }
+  const odt: SourcedValue = g.odt ?? { value: Number.POSITIVE_INFINITY, method: 'estimate', source: 'No odor threshold' }
   return {
     id: g.id,
     name: g.name,
@@ -71,7 +71,7 @@ function fromGenerated(g: GeneratedMolecule): Molecule {
 function buildLibrary(): Molecule[] {
   const out = new Map<string, Molecule>()
   for (const g of GENERATED.molecules) out.set(g.id, fromGenerated(g))
-  // Varalle: demon molekyylit, joita generoitu data ei (vielä) sisällä
+  // Fallback: demo molecules that the generated data does not (yet) contain
   for (const m of DEMO_MOLECULES) if (!out.has(m.id)) out.set(m.id, m)
   for (const id of PSEUDO_IDS) out.set(id, DEMO_BY_ID[id])
   for (const [id, patch] of Object.entries(OVERRIDES)) {

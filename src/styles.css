@@ -735,8 +735,8 @@ input[type='number'] {
   border-bottom: 1px solid var(--ink);
 }
 
-.change-group.kind-nousi h3,
-.change-group.kind-ilmestyi h3 {
+.change-group.kind-rose h3,
+.change-group.kind-appeared h3 {
   color: var(--indigo);
   border-color: var(--indigo);
 }

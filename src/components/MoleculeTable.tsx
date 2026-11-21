@@ -13,7 +13,7 @@ interface Props {
 function Sourced({ v, unit }: { v: SourcedValue; unit: string }) {
   return (
     <span title={`${v.source} (${v.method})`}>
-      {v.method === 'koe' ? '' : '≈ '}
+      {v.method === 'measured' ? '' : '≈ '}
       {num(v.value)} {unit}
     </span>
   )
@@ -27,34 +27,34 @@ export function MoleculeTable({ result, j, timeMin, onSelect }: Props) {
 
   return (
     <div className="molecules">
-      <h2>Molekyylit seoksessa</h2>
+      <h2>Molecules in the blend</h2>
       <p className="muted">
-        Järjestetty haihtuvimmasta hitaimpaan. ≈ tarkoittaa arviota; vie hiiri arvon päälle nähdäksesi
-        lähteen. Pinta: {result.params.mode === 'iho' ? 'iho 32 °C' : 'paperi 22 °C'}.
+        Sorted from most to least volatile. ≈ marks an estimate; hover over a value to see its source. Surface:{' '}
+        {result.params.mode === 'skin' ? 'skin 32 °C' : 'paper 22 °C'}.
       </p>
       <div className="table-scroll">
         <table className="data-table">
           <thead>
             <tr>
-              <th scope="col">Molekyyli</th>
-              <th scope="col">Ryhmä</th>
+              <th scope="col">Molecule</th>
+              <th scope="col">Group</th>
               <th scope="col" className="num">
                 MW
               </th>
               <th scope="col" className="num">
-                Höyrynpaine
+                Vapor pressure
               </th>
               <th scope="col" className="num">
-                Hajukynnys
+                Odor threshold
               </th>
               <th scope="col" className="num">
-                Seoksessa
+                In blend
               </th>
               <th scope="col" className="num">
-                90 % haihtunut
+                90% evaporated
               </th>
               <th scope="col" className="num">
-                Osuus {timeLabel(timeMin)}
+                Share at {timeLabel(timeMin)}
               </th>
             </tr>
           </thead>
@@ -69,12 +69,12 @@ export function MoleculeTable({ result, j, timeMin, onSelect }: Props) {
                 <td>{GROUP_BY_ID[m.group].name}</td>
                 <td className="num">{num(m.mw, 3)}</td>
                 <td className="num">
-                  {m.vp25.value > 0 ? <Sourced v={m.vp25} unit="mmHg" /> : 'haihtumaton'}
+                  {m.vp25.value > 0 ? <Sourced v={m.vp25} unit="mmHg" /> : 'non-volatile'}
                 </td>
                 <td className="num">{Number.isFinite(m.odt.value) ? <Sourced v={m.odt} unit="ppm" /> : '–'}</td>
                 <td className="num">{pct(result.initialMass[i] / total)}</td>
                 <td className="num">
-                  {m.vp25.value <= 0 ? '–' : result.t90[i] === null ? 'yli 24 h' : timeLabel(result.t90[i]!)}
+                  {m.vp25.value <= 0 ? '–' : result.t90[i] === null ? 'over 24 h' : timeLabel(result.t90[i]!)}
                 </td>
                 <td className="num">{pct(result.share[i][j])}</td>
               </tr>

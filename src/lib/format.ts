@@ -12,31 +12,31 @@ const SUP: Record<string, string> = {
   '9': '⁹',
 }
 
-/** Suomalainen lukumuotoilu; hyvin pienet luvut muodossa 1,2 × 10⁻⁴. */
+/** English number formatting; very small numbers as 1.2 × 10⁻⁴. */
 export function num(v: number, digits = 2): string {
   if (!Number.isFinite(v)) return '–'
   if (v === 0) return '0'
   const abs = Math.abs(v)
   if (abs >= 0.01 && abs < 1e6) {
-    return v.toLocaleString('fi-FI', { maximumSignificantDigits: digits + 1 })
+    return v.toLocaleString('en-US', { maximumSignificantDigits: digits + 1 })
   }
   const [mant, exp] = v.toExponential(digits - 1).split('e')
   const e = String(Number(exp))
     .split('')
     .map((c) => SUP[c] ?? c)
     .join('')
-  return `${mant.replace('.', ',')} × 10${e}`
+  return `${mant} × 10${e}`
 }
 
 export function pct(v: number): string {
-  if (v > 0 && v < 0.005) return '<1 %'
-  return `${Math.round(v * 100)} %`
+  if (v > 0 && v < 0.005) return '<1%'
+  return `${Math.round(v * 100)}%`
 }
 
-/** Aika minuuteista luettavaan muotoon. */
+/** Minutes to a readable time. */
 export function timeLabel(min: number): string {
   if (min < 1) return `${Math.round(min * 60)} s`
-  if (min < 10) return `${(Math.round(min * 10) / 10).toLocaleString('fi-FI')} min`
+  if (min < 10) return `${(Math.round(min * 10) / 10).toLocaleString('en-US')} min`
   if (min < 60) return `${Math.round(min)} min`
   const h = Math.floor(min / 60)
   const m = Math.round(min - h * 60)
@@ -44,9 +44,9 @@ export function timeLabel(min: number): string {
   return `${h} h ${m} min`
 }
 
-/** Iso aikalukema: [luku, yksikkö] */
+/** Large time readout: [number, unit] */
 export function timeParts(min: number): [string, string] {
   if (min < 1) return [String(Math.round(min * 60)), 's']
-  if (min < 60) return [min < 10 ? (Math.round(min * 10) / 10).toLocaleString('fi-FI') : String(Math.round(min)), 'min']
-  return [(Math.round((min / 60) * 10) / 10).toLocaleString('fi-FI'), 'h']
+  if (min < 60) return [min < 10 ? (Math.round(min * 10) / 10).toLocaleString('en-US') : String(Math.round(min)), 'min']
+  return [(Math.round((min / 60) * 10) / 10).toLocaleString('en-US'), 'h']
 }

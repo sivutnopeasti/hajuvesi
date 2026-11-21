@@ -1,20 +1,20 @@
 const NAV = [
-  { href: '#kartta', label: 'Kartta' },
-  { href: '#vertailu', label: 'Vertailu' },
-  { href: '#resepti', label: 'Resepti' },
-  { href: '#tausta', label: 'Tausta' },
+  { href: '#map', label: 'Map' },
+  { href: '#compare', label: 'Compare' },
+  { href: '#formula', label: 'Formula' },
+  { href: '#about', label: 'About' },
 ]
 
 export function Header() {
   return (
     <header className="site-header">
-      <div className="topbar">Kehitysversio</div>
+      <div className="topbar">Development version</div>
       <div className="brand">
-        <a href="#kartta" className="wordmark" aria-label="Hajuvesi, etusivu">
+        <a href="#map" className="wordmark" aria-label="Hajuvesi, home">
           <span className="wordmark-main">HAJUVESI</span>
-          <span className="wordmark-sub">MOLEKYYLIKARTTA</span>
+          <span className="wordmark-sub">MOLECULE MAP</span>
         </a>
-        <nav aria-label="Päävalikko">
+        <nav aria-label="Main menu">
           <ul>
             {NAV.map((n, i) => (
               <li key={n.href}>

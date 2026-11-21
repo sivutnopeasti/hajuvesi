@@ -22,7 +22,7 @@ interface Geometry extends Domain {
   compact: boolean
 }
 
-/** Mitat todellisissa CSS-pikseleissä, jotta teksti pysyy luettavana myös puhelimella. */
+/** Dimensions in real CSS pixels so that text stays readable on phones too. */
 function geometry(width: number, d: Domain): Geometry {
   const compact = width < 640
   const W = width
@@ -48,9 +48,9 @@ function decadeTicks(d: Domain, compact: boolean): number[] {
 const Y_STEP = 50
 const ZONE_BOUNDS = [0.5, 0.01]
 const ZONE_LABELS = [
-  { label: 'Nopeasti haihtuvat', short: 'Nopeat' },
-  { label: 'Keskihaihtuvat', short: 'Keski' },
-  { label: 'Hitaasti haihtuvat', short: 'Hitaat' },
+  { label: 'Fast evaporating', short: 'Fast' },
+  { label: 'Medium evaporating', short: 'Medium' },
+  { label: 'Slow evaporating', short: 'Slow' },
 ]
 
 interface Props {
@@ -77,7 +77,7 @@ const textWidth = (s: string) => s.length * 6.6
 const radiusFor = (mass: number, ref: number, scale = 1) =>
   scale * Math.min(36, 2.5 + 30 * Math.sqrt(Math.max(mass, 0) / ref))
 
-/** Yksinkertainen ahne nimilappujen sijoittelu: oikealle, vasemmalle, ylös tai alas – ensimmäinen vapaa. */
+/** Simple greedy label placement: right, left, above or below, whichever is free first. */
 function placeLabels(items: { id: string; x: number; y: number; r: number; label: string }[], g: Geometry) {
   const boxes: { x0: number; x1: number; y0: number; y1: number }[] = items.map((b) => ({
     x0: b.x - b.r,
@@ -157,7 +157,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
   const rs = g.compact ? 0.72 : 1
   const radius = (mass: number) => radiusFor(mass, mRef, rs)
 
-  // Nimilaput sijoitetaan alkuperäisten kuplien mukaan, jotta ne eivät hypi aikaa siirrettäessä.
+  // Labels are placed by the original bubbles so they do not jump around when the time changes.
   const labels = useMemo(
     () =>
       placeLabels(
@@ -200,7 +200,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
       <svg
         viewBox={`0 0 ${W} ${H}`}
         role="img"
-        aria-label="Molekyylikartta: molekyylipaino ja höyrynpaine, kuplan koko kertoo jäljellä olevan määrän"
+        aria-label="Molecule map: molecular weight and vapor pressure; bubble size shows the amount left"
         onClick={() => onSelect(null)}
       >
         {zones.map((z, k) => (
@@ -235,14 +235,14 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
           </g>
         ))}
         <text x={(PAD.l + W - PAD.r) / 2} y={H - 14} textAnchor="middle" className="axis-title">
-          {g.compact ? 'Höyrynpaine 25 °C (mmHg), haihtuvin vasemmalla' : 'Höyrynpaine 25 °C:ssa (mmHg, log-asteikko) – haihtuvin vasemmalla'}
+          {g.compact ? 'Vapor pressure at 25 °C (mmHg), most volatile left' : 'Vapor pressure at 25 °C (mmHg, log scale), most volatile on the left'}
         </text>
         <text
           transform={`translate(${g.compact ? 12 : 18} ${(PAD.t + H - PAD.b) / 2}) rotate(-90)`}
           textAnchor="middle"
           className="axis-title"
         >
-          Molekyylipaino (g/mol) – kevyt ylhäällä
+          Molecular weight (g/mol), light at the top
         </text>
 
         {placed.map((p) => {
@@ -250,7 +250,7 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
           if (!vp.min || !vp.max || vp.max / vp.min < 1.5) return null
           return (
             <g key={`range-${p.id}`} className="vp-range">
-              <title>{`Höyrynpaine lähteittäin ${num(vp.min)}–${num(vp.max)} mmHg`}</title>
+              <title>{`Vapor pressure across sources ${num(vp.min)}–${num(vp.max)} mmHg`}</title>
               <line x1={X(vp.max)} x2={X(vp.min)} y1={p.y} y2={p.y} />
               <line x1={X(vp.max)} x2={X(vp.max)} y1={p.y - 4} y2={p.y + 4} />
               <line x1={X(vp.min)} x2={X(vp.min)} y1={p.y - 4} y2={p.y + 4} />
@@ -268,8 +268,8 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
           const state = o >= recog ? 'recognized' : o >= 1 ? 'detected' : 'silent'
           const c = colorOf(p.id)
           const sel = p.id === selectedId
-          const label = `${m.name}: ${pct(result.remaining[i][j])} jäljellä, ${
-            state === 'recognized' ? 'tunnistettava' : state === 'detected' ? 'havaittava' : 'ei havaittava'
+          const label = `${m.name}: ${pct(result.remaining[i][j])} left, ${
+            state === 'recognized' ? 'recognizable' : state === 'detected' ? 'detectable' : 'not detectable'
           }`
           return (
             <g
@@ -320,19 +320,19 @@ export function MoleculeMap({ result, j, colorBy, selectedId, onSelect }: Props)
         <ul className="legend-states">
           <li>
             <span className="state-dot recognized" />
-            Tunnistettava
+            Recognizable
           </li>
           <li>
             <span className="state-dot detected" />
-            Havaittava
+            Detectable
           </li>
           <li>
             <span className="state-dot silent" />
-            Kynnyksen alla
+            Below threshold
           </li>
           <li>
             <span className="state-dot ghost-dot" />
-            Alkuperäinen määrä
+            Initial amount
           </li>
         </ul>
       </figcaption>

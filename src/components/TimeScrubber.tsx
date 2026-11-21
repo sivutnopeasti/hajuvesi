@@ -22,11 +22,11 @@ export function TimeScrubber({ timeMin, onChange }: Props) {
       <div className="scrubber-readout" aria-live="polite">
         <span className="readout-num">{value}</span>
         <span className="readout-unit">{unit}</span>
-        <span className="readout-caption">levityksestä</span>
+        <span className="readout-caption">after application</span>
       </div>
       <div className="scrubber-track">
         <label htmlFor="time" className="visually-hidden">
-          Aika levityksestä
+          Time after application
         </label>
         <div className="slider-wrap">
           <input
@@ -39,7 +39,7 @@ export function TimeScrubber({ timeMin, onChange }: Props) {
             aria-valuetext={timeLabel(timeMin)}
           />
         </div>
-        <div className="presets" role="group" aria-label="Pikavalinnat">
+        <div className="presets" role="group" aria-label="Quick picks">
           {PRESETS.map((p) => (
             <button
               key={p}

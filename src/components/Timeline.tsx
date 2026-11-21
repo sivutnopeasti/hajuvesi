@@ -53,12 +53,12 @@ export function Timeline({ result, timeMin, onTime }: Props) {
   return (
     <section className="timeline" aria-labelledby="timeline-title" ref={ref}>
       <h2 id="timeline-title" className="panel-title">
-        Hajuperheiden osuus ajan funktiona
+        Share of odor families over time
       </h2>
       <svg
         viewBox={`0 0 ${W} ${H}`}
         role="img"
-        aria-label="Hajuperheiden osuus havaitusta voimakkuudesta ajan funktiona. Napsauta valitaksesi ajan."
+        aria-label="Share of perceived intensity by odor family over time. Click to choose a time."
         onClick={(e) => {
           const svg = e.currentTarget
           const pt = svg.createSVGPoint()
@@ -76,7 +76,7 @@ export function Timeline({ result, timeMin, onTime }: Props) {
         ))}
         {[0, 0.5, 1].map((v) => (
           <text key={v} x={PAD.l - 8} y={Y(v) + 4} textAnchor="end" className="tick">
-            {Math.round(v * 100)} %
+            {Math.round(v * 100)}%
           </text>
         ))}
         {(compact ? TICKS_COMPACT : TICKS).map((t) => (

@@ -26,7 +26,7 @@ function loadRecipe(): RecipeLine[] {
       if (Array.isArray(parsed) && parsed.length > 0) return parsed
     }
   } catch {
-    /* tallennus ei käytettävissä */
+    /* storage not available */
   }
   return DEFAULT_RECIPE
 }
@@ -35,13 +35,13 @@ function saveRecipe(recipe: RecipeLine[]) {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(recipe))
   } catch {
-    /* tallennus ei käytettävissä */
+    /* storage not available */
   }
 }
 
 export default function App() {
   const [recipe, setRecipeState] = useState<RecipeLine[]>(loadRecipe)
-  const [mode, setMode] = useState<Mode>('iho')
+  const [mode, setMode] = useState<Mode>('skin')
   const [dose, setDose] = useState(DEFAULT_PARAMS.doseMgCm2)
   const [timeMin, setTimeMin] = useState(30)
   const [sniffA, setSniffA] = useState(10)
@@ -62,16 +62,16 @@ export default function App() {
     <>
       <Header />
       <main>
-        <section className="hero" id="kartta" aria-labelledby="hero-title">
+        <section className="hero" id="map" aria-labelledby="hero-title">
           <div className="hero-text">
-            <h1 id="hero-title">Mitä tuoksussasi tapahtuu puolen tunnin kohdalla?</h1>
+            <h1 id="hero-title">What happens to your scent at the half-hour mark?</h1>
             <p className="lede">
-              Siirrä aikaa ja katso, mitkä molekyylit haihtuvat ja mitkä nousevat esiin. Kuplan koko on
-              jäljellä oleva määrä, täyttö kertoo, tunnistaako nenä sen.
+              Move through time and see which molecules evaporate and which come forward. Bubble size is the
+              amount left; the fill shows whether the nose can recognize it.
             </p>
           </div>
-          <div className="mode-switch" role="radiogroup" aria-label="Pinta">
-            {(['iho', 'paperi'] as Mode[]).map((m) => (
+          <div className="mode-switch" role="radiogroup" aria-label="Surface">
+            {(['skin', 'paper'] as Mode[]).map((m) => (
               <button
                 key={m}
                 role="radio"
@@ -79,16 +79,18 @@ export default function App() {
                 className={mode === m ? 'is-active' : ''}
                 onClick={() => setMode(m)}
               >
-                {m === 'iho' ? 'Iho, 32 °C' : 'Paperi, 22 °C'}
+                {m === 'skin' ? 'Skin, 32 °C' : 'Paper, 22 °C'}
               </button>
             ))}
           </div>
         </section>
 
         <p className="demo-note">
-          Kehitysversio: kirjastossa {MOLECULES.length} molekyyliä ja {OILS.length} luonnonraaka-ainetta
-          {GENERATED.generatedAt ? ` (data haettu ${new Date(GENERATED.generatedAt).toLocaleDateString('fi-FI')})` : ''}.
-          Arvioidut arvot on merkitty ≈-merkillä, ja tulokset ovat suuntaa-antavia.
+          Development version: the library has {MOLECULES.length} molecules and {OILS.length} natural materials
+          {GENERATED.generatedAt
+            ? ` (data fetched ${new Date(GENERATED.generatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })})`
+            : ''}
+          . Estimated values are marked with ≈, and the results are indicative.
         </p>
 
         <TimeScrubber timeMin={timeMin} onChange={setTimeMin} />
@@ -104,10 +106,10 @@ export default function App() {
                 onSelect={setSelectedId}
               />
             ) : (
-              <div className="loading">Lasketaan…</div>
+              <div className="loading">Calculating…</div>
             )}
             <div className="map-controls">
-              <span id="colorby-label">Väritys</span>
+              <span id="colorby-label">Color by</span>
               <div className="segmented" role="radiogroup" aria-labelledby="colorby-label">
                 <button
                   role="radio"
@@ -115,7 +117,7 @@ export default function App() {
                   className={colorBy === 'family' ? 'is-active' : ''}
                   onClick={() => setColorBy('family')}
                 >
-                  Hajuperhe
+                  Odor family
                 </button>
                 <button
                   role="radio"
@@ -123,7 +125,7 @@ export default function App() {
                   className={colorBy === 'group' ? 'is-active' : ''}
                   onClick={() => setColorBy('group')}
                 >
-                  Kemiallinen ryhmä
+                  Chemical group
                 </button>
               </div>
             </div>
@@ -145,7 +147,7 @@ export default function App() {
           <Timeline result={result} timeMin={timeMin} onTime={setTimeMin} />
         )}
 
-        <section className="section" id="vertailu" aria-labelledby="compare-title">
+        <section className="section" id="compare" aria-labelledby="compare-title">
           {result && (
             <ComparePanel
               result={result}
@@ -158,7 +160,7 @@ export default function App() {
           )}
         </section>
 
-        <section className="section recipe-section" id="resepti" aria-labelledby="recipe-title">
+        <section className="section recipe-section" id="formula" aria-labelledby="recipe-title">
           <RecipeEditor recipe={recipe} onChange={setRecipe} dose={dose} onDose={setDose} />
           {result && <MoleculeTable result={result} j={j} timeMin={timeMin} onSelect={setSelectedId} />}
         </section>
@@ -167,8 +169,8 @@ export default function App() {
       </main>
       <footer className="footer">
         <p>
-          Malli: monikomponenttinen haihtuminen (Raoultin laki) ja odor value -havaintomalli. Lähteet ja
-          rajoitteet on kuvattu kohdassa Tausta.
+          Model: multicomponent evaporation (Raoult’s law) and an odor-value perception model. Sources and
+          limitations are described under About.
         </p>
       </footer>
     </>
